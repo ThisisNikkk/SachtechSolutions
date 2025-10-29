@@ -13,13 +13,13 @@ const Navigation = () => {
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-5 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
             <Cpu className="w-6 h-6 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold text-foreground">IT Company.</span>
+          <span className="text-lg font-poppins font-semibold text-foreground">Sachtech Solutions.</span>
         </a>
 
         {/* Navigation Links */}
@@ -28,7 +28,7 @@ const Navigation = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 link.active
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
@@ -40,7 +40,7 @@ const Navigation = () => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden md:inline-flex">
+        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-12">
           Get A Quote
         </Button>
       </div>
