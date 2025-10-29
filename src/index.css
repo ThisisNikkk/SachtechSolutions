@@ -20,6 +20,7 @@ All colors MUST be HSL.
     /* Brand Blue - Primary */
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 95%;
     
     /* Dark Navy - For top bar and overlays */
     --navy: 222 84% 5%;
