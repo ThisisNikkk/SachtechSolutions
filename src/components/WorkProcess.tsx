@@ -46,7 +46,7 @@ const WorkProcess = () => {
         </div>
 
         {/* Horizontal Process Visual */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 max-w-6xl mx-auto mb-16">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-6xl mx-auto mb-16">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             const isLastStep = index === steps.length - 1;
@@ -56,12 +56,12 @@ const WorkProcess = () => {
                 {/* Icon Circle with Number Badge */}
                 <div className="relative mb-6">
                   {/* Large Icon Circle */}
-                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center relative z-10">
                     <IconComponent className="w-16 h-16 text-primary-foreground" />
                   </div>
 
                   {/* Number Badge */}
-                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-navy rounded-full flex items-center justify-center z-20">
                     <span className="text-navy-foreground font-bold text-lg">
                       {step.number}
                     </span>
@@ -69,7 +69,7 @@ const WorkProcess = () => {
 
                   {/* Connecting Line */}
                   {!isLastStep && (
-                    <div className="hidden lg:block absolute top-1/2 -right-[50%] w-full h-0.5 bg-primary -translate-y-1/2 z-[-1]"></div>
+                    <div className="hidden lg:block absolute left-[calc(100%+0.5rem)] top-1/2 w-[calc(100%+2rem)] h-[2px] bg-primary -translate-y-1/2"></div>
                   )}
                 </div>
 
