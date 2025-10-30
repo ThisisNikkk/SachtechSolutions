@@ -5,6 +5,7 @@ import ServicesTicker from "@/components/ServicesTicker";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import WorkProcess from "@/components/WorkProcess";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const Index = () => {
   return (
@@ -16,6 +17,8 @@ const Index = () => {
       <AboutUs />
       <Services />
       <WorkProcess />
+      <ServicesTicker />
+      <WhyChooseUs />
       <ServicesTicker />
     </div>
   );
