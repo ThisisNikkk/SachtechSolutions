@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Cpu } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const navLinks = [
@@ -16,10 +16,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-5 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-            <Cpu className="w-6 h-6 text-primary-foreground" />
-          </div>
-          <span className="text-lg font-poppins font-semibold text-foreground">Sachtech Solutions.</span>
+          <img src={logo} alt="Sachtech Solutions" className="w-50 h-20" />
         </a>
 
         {/* Navigation Links */}
@@ -40,7 +37,7 @@ const Navigation = () => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-12">
+        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-14">
           Get A Quote
         </Button>
       </div>

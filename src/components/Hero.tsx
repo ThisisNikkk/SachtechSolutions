@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[585px] flex items-center">
+    <section className="relative min-h-[630px] flex items-center">
 
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -38,7 +38,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-7">
-            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-base font-bold">
+            <Button size="lg" className="gap-4 rounded-full h-14 font-montserrat text-base font-bold">
               Explore More
               <ArrowRight className="w-10 h-10" />
             </Button>

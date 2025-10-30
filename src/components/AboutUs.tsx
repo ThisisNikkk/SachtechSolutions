@@ -1,18 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import StatsCount from "@/components/ui/statscount";
 import teamWorkingImage from "@/assets/team-working.jpg";
+import { ArrowRight } from "lucide-react";
 
 const AboutUs = () => {
   const stats = [
-    { value: "250+", label: "Team Members" },
-    { value: "300+", label: "Happy Clients" },
-    { value: "99%", label: "Client Satisfaction" },
+    { value: 50, suffix: "+", label: "Team Members" },
+    { value: 300, suffix: "+", label: "Happy Clients" },
+    { value: 99, suffix: "%", label: "Client Satisfaction" },
   ];
 
   return (
     <section className="bg-background py-16 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text & Stats */}
           <div className="space-y-8">
             {/* Text Content */}
@@ -20,18 +21,18 @@ const AboutUs = () => {
               {/* Pre-headline */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-primary"></div>
-                <span className="text-muted-foreground text-sm">Why Choose Us</span>
+                <span className="text-muted-foreground text-sm font-monntserrat">Why Choose Us</span>
               </div>
 
               {/* Main Headline */}
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-poppins font-bold leading-tight ">
                 Transforming <span className="text-primary">ideas</span>
                 <br />
                 <span className="text-primary">into Digital Reality</span>
               </h2>
 
               {/* Description */}
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-montserrat">
                 Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. 
                 Sunt qui esse pariatur duis deserunt mollit dolore cillum minim 
                 tempor enim. Elit aute irure tempor cupidatat incididunt sint 
@@ -40,19 +41,12 @@ const AboutUs = () => {
             </div>
 
             {/* CTA Button */}
-            <Button variant="outline" className="rounded-none border-foreground text-foreground hover:bg-foreground hover:text-background">
+            <Button variant="outline" className="rounded-full border-foreground text-foreground hover:bg-foreground hover:text-background h-12 px-10 font-montserrat font-medium">
               Learn More
             </Button>
 
             {/* Stats Bar */}
-            <div className="bg-primary text-primary-foreground p-8 grid grid-cols-3 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-sm opacity-90">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <StatsCount stats={stats} className="bg-primary text-primary-foreground p-2 font-poppins" />
           </div>
 
           {/* Right Column - Image & Graphics */}
@@ -76,9 +70,10 @@ const AboutUs = () => {
               <div className="text-center mt-6">
                 <a 
                   href="#team" 
-                  className="text-white inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
+                  className="inline-flex items-center gap-2 text-navy-foreground hover:text-black transition-colors underline underline-offset-4 font-montserrat font-semibold"  
                 >
-                  See Our Team <ArrowRight className="w-5 h-5" />
+                  See Our Team
+                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>
