@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
       icon: Users,
       title: "Professional Team",
       description:
-        "Our skilled team delivers reliable, high-quality cleaning with attention to detail.",
+        "Our team delivers reliable, high-quality cleaning with attention to detail.",
     },
     {
       icon: Briefcase,
@@ -41,17 +41,18 @@ const WhyChooseUs = () => {
               <div className="w-12 h-0.5 bg-primary"></div>
               <span className="text-navy-foreground text-sm font-montserrat">Why Choose Us</span>
             </div>
+            <br />
 
             {/* Main Headline */}
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-navy-foreground font-poppins">
-              Why Trust Us For 
-              <br/>
+              Why Trust Us For
+              <br className="px-4"/>
               Your IT Needs? 
             </h2>
           </div>
 
           {/* Right Column - CTA Button */}
-          <Button className="rounded-lg px-8 py-6 text-base">
+          <Button className="rounded-lg px-8 py-6 text-base font-montserrat font-semibold bg-primary hover:bg-navy-foreground hover:text-primary rounded-full">
             Get a Quote
           </Button>
         </div>
@@ -65,14 +66,6 @@ const WhyChooseUs = () => {
               alt="Team collaborating on IT project"
               className="w-full h-auto object-cover"
             />
-            {/* Play Button Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-              <div className="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                  <Play className="w-8 h-8 text-primary fill-primary ml-1" />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Features Grid */}
@@ -80,17 +73,19 @@ const WhyChooseUs = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="space-y-3">
+                <div key={index}>
                   {/* Icon */}
-                  <IconComponent className="w-12 h-12 text-navy-foreground" strokeWidth={1.5} />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                  <IconComponent className="w-10 h-10 text-navy-foreground" strokeWidth={1.5} />
+                  </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-navy-foreground">
+                  <h3 className="text-xl font-medium text-navy-foreground font-poppins">
                     {feature.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-navy-foreground/80 leading-relaxed">
+                  <p className="text-navy-foreground/80 leading-relaxed font-montserrat">
                     {feature.description}
                   </p>
                 </div>
@@ -104,3 +99,4 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+

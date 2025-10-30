@@ -37,7 +37,7 @@ const Navigation = () => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-14">
+        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-12">
           Get A Quote
         </Button>
       </div>
