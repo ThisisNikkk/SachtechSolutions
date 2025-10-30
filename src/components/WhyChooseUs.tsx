@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
             <img
               src={teamCollaboration}
               alt="Team collaborating on IT project"
-              className="w-full h-auto object-cover"
+              className="w-[95%] h-auto object-cover rounded-lg"
             />
           </div>
 
