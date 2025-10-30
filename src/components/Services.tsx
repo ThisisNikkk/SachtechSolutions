@@ -57,9 +57,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className={`p-8 rounded-3xl shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 ${
-                  service.featured ? "bg-primary-light" : "bg-background"
-                }`}
+                className="p-8 rounded-3xl shadow-sm bg-background transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 hover:bg-primary-light"
               >
                 {/* Icon */}
                 <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6">
