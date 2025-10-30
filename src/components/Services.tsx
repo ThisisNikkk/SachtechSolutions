@@ -57,7 +57,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className={`p-8 rounded-3xl shadow-sm ${
+                className={`p-8 rounded-3xl shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 ${
                   service.featured ? "bg-primary-light" : "bg-background"
                 }`}
               >
