@@ -36,11 +36,11 @@ const WorkProcess = () => {
           {/* Pre-headline */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-0.5 bg-primary"></div>
-            <span className="text-foreground text-sm">Our Work Process</span>
+            <span className="text-foreground text-sm font-montserrat">Our Work Process</span>
           </div>
 
           {/* Main Headline */}
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold leading-tight font-poppins">
             Our Proven <span className="text-primary">Work Process</span>
           </h2>
         </div>
@@ -61,7 +61,7 @@ const WorkProcess = () => {
                   </div>
 
                   {/* Number Badge */}
-                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-navy rounded-full flex items-center justify-center z-20">
+                  <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-navy rounded-full flex items-center justify-center z-20">
                     <span className="text-navy-foreground font-bold text-lg">
                       {step.number}
                     </span>
@@ -74,12 +74,12 @@ const WorkProcess = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mb-3 text-center">
+                <h3 className="text-2xl font-medium text-foreground mb-3 text-center font-poppins">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-center max-w-[250px]">
+                <p className="text-muted-foreground text-center max-w-[250px] font-montserrat">
                   {step.description}
                 </p>
               </div>

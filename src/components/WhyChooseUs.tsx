@@ -39,14 +39,14 @@ const WhyChooseUs = () => {
             {/* Pre-headline */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-0.5 bg-primary"></div>
-              <span className="text-navy-foreground text-sm">Why Choose Us</span>
+              <span className="text-navy-foreground text-sm font-montserrat">Why Choose Us</span>
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-navy-foreground">
-              Why Trust Us For Your
-              <br />
-              IT Needs?
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-navy-foreground font-poppins">
+              Why Trust Us For 
+              <br/>
+              Your IT Needs? 
             </h2>
           </div>
 

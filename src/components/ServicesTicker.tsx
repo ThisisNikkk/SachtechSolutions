@@ -14,7 +14,6 @@ const ServicesTicker = () => {
     "Digital Marketing",
   ];
 
-  // Duplicate the services array for seamless infinite scroll
   const duplicatedServices = [...services, ...services];
 
   return (

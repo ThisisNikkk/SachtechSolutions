@@ -1,23 +1,41 @@
 import { Button } from "@/components/ui/button";
-import { Monitor, Smartphone, Tag } from "lucide-react";
+import { ChartBarDecreasingIcon, ComputerIcon, Monitor, ShoppingCart, Smartphone, Tag } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
+      icon: Smartphone,
+      title: "Android Development",
+      description: "We work on mobile applications by researching the user experience.",
+      featured: false,
+    },
+    {
       icon: Monitor,
-      title: "Website Design",
+      title: "Web Development",
       description: "We provide outstanding style with a minimalist, clean, futuristic design.",
       featured: true,
     },
     {
       icon: Smartphone,
-      title: "Mobile Application",
+      title: "iOS Developement",
       description: "We work on mobile applications by researching the user experience.",
       featured: false,
     },
     {
-      icon: Tag,
-      title: "Branding",
+      icon: ChartBarDecreasingIcon,
+      title: "UX/UI Design",
+      description: "We work on mobile applications by researching the user experience.",
+      featured: false,
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-commerce Solutions",
+      description: "We provide outstanding style with a minimalist, clean, futuristic design.",
+      featured: true,
+    },
+    {
+      icon: ComputerIcon,
+      title: "Software Maintenance",
       description: "We help implement what the company wants.",
       featured: false,
     },
@@ -33,11 +51,11 @@ const Services = () => {
             {/* Pre-headline */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-0.5 bg-primary"></div>
-              <span className="text-muted-foreground text-sm">Our Services</span>
+              <span className="text-muted-foreground text-sm font-montserrat">Our Services</span>
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight font-poppins font-bold">
               Services we provide to
               <br />
               <span className="text-primary">Elevate Your Business</span>
@@ -45,7 +63,7 @@ const Services = () => {
           </div>
 
           {/* Right Column - CTA Button */}
-          <Button className="rounded-full px-8 py-6 text-base">
+          <Button className="rounded-full px-8 py-7 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background">
             See all Services
           </Button>
         </div>
@@ -65,12 +83,12 @@ const Services = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-poppins font-medium">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-montserrat">
                   {service.description}
                 </p>
               </div>
