@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ServicesTicker from "@/components/ServicesTicker";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
+import WorkProcess from "@/components/WorkProcess";
 
 const Index = () => {
   return (
@@ -14,6 +15,8 @@ const Index = () => {
       <ServicesTicker />
       <AboutUs />
       <Services />
+      <WorkProcess />
+      <ServicesTicker />
     </div>
   );
 };
