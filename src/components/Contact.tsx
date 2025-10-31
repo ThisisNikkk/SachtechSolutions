@@ -75,9 +75,9 @@ const Contact = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-[2px] bg-primary"></div>
-                <p className="text-foreground font-medium">Contact Us</p>
+                <p className="text-foreground font-montserrat">Contact Us</p>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-4xl md:text-5xl font-bold font-poppins">
                 <span className="text-foreground">Get Your </span>
                 <span className="text-primary">Free Quote</span>
                 <span className="text-foreground"> Today!</span>
@@ -90,68 +90,65 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
-                    Your Name *
+                  <label className="block text-foreground font-poppins mb-2">
+                    Your Name
                   </label>
                   <Input
                     type="text"
                     placeholder="Ex. John Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className={errors.name ? "border-destructive" : ""}
                   />
                   {errors.name && (
-                    <p className="text-destructive text-sm mt-1">{errors.name}</p>
+                    <p className="text-sm mt-1">{errors.name}</p>
                   )}
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
-                    Email*
+                  <label className="block text-foreground font-poppins mb-2">
+                    Email
                   </label>
                   <Input
                     type="email"
                     placeholder="example@gmail.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className={errors.email ? "border-destructive" : ""}
                   />
                   {errors.email && (
-                    <p className="text-destructive text-sm mt-1">{errors.email}</p>
+                    <p className="text-sm mt-1">{errors.email}</p>
                   )}
                 </div>
 
                 {/* Phone */}
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
-                    Phone*
+                  <label className="block text-foreground font-poppins mb-2">
+                    Phone
                   </label>
                   <Input
                     type="tel"
                     placeholder="Enter Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className={errors.phone ? "border-destructive" : ""}
                   />
                   {errors.phone && (
-                    <p className="text-destructive text-sm mt-1">{errors.phone}</p>
+                    <p className="text-sm mt-1">{errors.phone}</p>
                   )}
                 </div>
 
                 {/* Service */}
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
+                  <label className="block text-foreground font-poppins mb-2">
                     Service
                   </label>
                   <Select
                     value={formData.service}
                     onValueChange={(value) => setFormData({ ...formData, service: value })}
                   >
-                    <SelectTrigger className={errors.service ? "border-destructive" : ""}>
+                    <SelectTrigger className="h-12 rounded-lg font-montserrat">
                       <SelectValue placeholder="Select services" />
                     </SelectTrigger>
-                    <SelectContent className="bg-card z-50">
+                    <SelectContent className="bg-card z-50 font-montserrat">
                       <SelectItem value="android">Android Development</SelectItem>
                       <SelectItem value="ios">iOS Development</SelectItem>
                       <SelectItem value="web">Website Development</SelectItem>
@@ -162,30 +159,29 @@ const Contact = () => {
                     </SelectContent>
                   </Select>
                   {errors.service && (
-                    <p className="text-destructive text-sm mt-1">{errors.service}</p>
+                    <p className="text-sm mt-1">{errors.service}</p>
                   )}
                 </div>
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-foreground font-medium mb-2">
-                  Your Message *
+                <label className="block text-foreground font-poppins mb-2">
+                  Your Message
                 </label>
                 <Textarea
                   placeholder="Enter Here..."
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={errors.message ? "border-destructive" : ""}
                 />
                 {errors.message && (
-                  <p className="text-destructive text-sm mt-1">{errors.message}</p>
+                  <p className="text-sm mt-1">{errors.message}</p>
                 )}
               </div>
 
               {/* Submit Button */}
-              <Button type="submit" size="lg" className="rounded-md">
+              <Button type="submit" className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-10 border-foreground text-background hover:bg-foreground hover:text-background">
                 Send Message
               </Button>
             </form>
