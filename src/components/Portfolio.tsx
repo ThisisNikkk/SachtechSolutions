@@ -11,25 +11,25 @@ const Portfolio = () => {
       id: 1,
       title: "Care Connect - Doctor Appointment App",
       image: careConnect,
-      tags: ["UX/ui Design", "App Design", "Wireframe"],
+      tags: ["UX/UI Design", "App Design", "Wireframe"],
     },
     {
       id: 2,
       title: "Dental - Dentist and Dental Clinic Website UIUX Design",
       image: dentalClinic,
-      tags: ["UX/ui Design", "Web Design", "Wireframe"],
+      tags: ["UX/UI Design", "App Design", "Wireframe"],
     },
     {
       id: 3,
       title: "Car Rental - Car Rental Booking Mobile App",
       image: carRental,
-      tags: ["UX/ui Design", "App Design", "Wireframe"],
+      tags: ["UX/UI Design", "App Design", "Wireframe"],
     },
     {
       id: 4,
       title: "Hotel Booking - Hotel Booking App Landing Page UIUX Design",
       image: hotelBooking,
-      tags: ["UX/ui Design", "Landing page", "Wireframe"],
+      tags: ["UX/UI Design", "App Design", "Wireframe"],
     },
   ];
 
@@ -40,9 +40,9 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-[2px] bg-primary"></div>
-            <p className="text-foreground font-medium">Our Latest Projects</p>
+            <p className="text-foreground  font-montserrat">Our Latest Projects</p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins">
             <span className="text-foreground">Explore Our Showcase of </span>
             <span className="text-primary">Featured Work</span>
           </h2>
@@ -96,7 +96,7 @@ const Portfolio = () => {
         <div className="text-center">
           <Button
             size="lg"
-            className="rounded-full px-8 py-6 text-base font-semibold"
+            className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background"
           >
             View All Works
           </Button>

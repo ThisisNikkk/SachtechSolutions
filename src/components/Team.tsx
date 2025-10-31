@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Globe } from "lucide-react";
+import { Linkedin, Globe, Twitter } from "lucide-react";
 import xIcon from "@/assets/x-icon.jpg";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
@@ -119,16 +119,16 @@ const Team = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-[2px] bg-primary"></div>
-              <p className="text-foreground font-medium">Our Team</p>
+              <p className="text-foreground font-montserrat">Our Team</p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold font-poppins">
               <span className="text-foreground">Meet Our </span>
               <span className="text-primary">Expert team</span>
             </h2>
           </div>
 
           {/* Right - View All Button */}
-          <Button size="lg" className="rounded-full px-8">
+          <Button className="rounded-full px-12 py-6 text-base font-montserrat font-medium border-foreground text-background hover:bg-foreground hover:text-background">
             View All
           </Button>
         </div>
@@ -152,15 +152,15 @@ const Team = () => {
               </div>
 
               {/* Name */}
-              <h3 className="text-lg font-bold text-foreground mb-1">
+              <h3 className="text-lg font-medium font-poppins text-foreground mb-1">
                 {member.name}
               </h3>
 
               {/* Title */}
-              <p className="text-primary font-medium mb-3">{member.title}</p>
+              <p className="text-primary font-poppins mb-3">{member.title}</p>
 
               {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground font- montserrat leading-relaxed mb-4">
                 {member.description}
               </p>
 
@@ -168,24 +168,24 @@ const Team = () => {
               <div className="flex items-center justify-center gap-3">
                 <a
                   href={member.social.twitter}
-                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-secondary transition-colors"
                   aria-label={`${member.name}'s Twitter`}
                 >
-                  <img src={xIcon} alt="X" className="w-3 h-3" />
+                  <Twitter className="w-4 h-4 text-black" />
                 </a>
                 <a
                   href={member.social.linkedin}
-                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-secondary transition-colors"
                   aria-label={`${member.name}'s LinkedIn`}
                 >
-                  <Linkedin className="w-4 h-4 text-muted-foreground" />
+                  <Linkedin className="w-4 h-4 text-black" />
                 </a>
                 <a
                   href={member.social.website}
-                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-secondary transition-colors"
                   aria-label={`${member.name}'s Website`}
                 >
-                  <Globe className="w-4 h-4 text-muted-foreground" />
+                  <Globe className="w-4 h-4 text-black" />
                 </a>
               </div>
             </div>
