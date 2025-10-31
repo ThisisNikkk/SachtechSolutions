@@ -68,9 +68,9 @@ const Contact = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Left Column - Contact Form */}
-          <div>
+          <div className="lg:col-span-3">
             {/* Header */}
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
@@ -127,7 +127,7 @@ const Contact = () => {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="Enter Phone Number"
+                    placeholder="+91-1234567890"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
@@ -170,6 +170,7 @@ const Contact = () => {
                   Your Message
                 </label>
                 <Textarea
+                  className="font-montserrat text-sm"
                   placeholder="Enter Here..."
                   rows={6}
                   value={formData.message}
@@ -188,58 +189,58 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Contact Info Card */}
-          <div className="bg-navy text-navy-foreground rounded-3xl p-8 lg:p-12 h-fit">
+          <div className="bg-navy text-navy-foreground rounded-3xl p-8 lg:p-12 h-fit lg:col-span-2">
             {/* Address */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-3">Address</h3>
-              <p className="opacity-90">
-                2464 Royal Ln. Mesa,
+              <h3 className="text-2xl font-medium font-poppins mb-3">Address</h3>
+              <p className="opacity-90 font-montserrat text-sm">
+                Plot No : C-86, Phase 7, Industrial Area, Sector 74,
                 <br />
-                New Jersey 45463
+                Mohali, Punjab 160055
               </p>
             </div>
 
             {/* Contact */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-3">Contact</h3>
-              <p className="opacity-90 mb-1">Phone: +(200) 000-000</p>
-              <p className="opacity-90">Email: example@gmail.com</p>
+              <h3 className="text-2xl font-medium font-poppins mb-3">Contact</h3>
+              <p className="opacity-90 font-montserrat text-sm">Phone: +(91) 7087425488</p>
+              <p className="opacity-90 font-montserrat text-sm">Email: kapil.dhawan@sachtechsolution.com</p>
             </div>
 
             {/* Open Time */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-3">Open Time</h3>
-              <p className="opacity-90">Monday - Friday | 10:00 - 20:00</p>
+              <h3 className="text-2xl font-medium font-poppins mb-3">Open Time</h3>
+              <p className="opacity-90 font-montserrat text-sm">Monday - Friday | 11:00 - 20:00</p>
             </div>
 
             {/* Stay Connected */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Stay Connected</h3>
+              <h3 className="text-2xl font-medium font-poppins mb-4">Stay Connected</h3>
               <div className="flex gap-3">
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="YouTube"
                 >
                   <Youtube className="w-5 h-5" />

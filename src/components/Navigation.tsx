@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const navLinks = [
     { name: "Home", href: "#", active: true },
     { name: "Services", href: "#services" },
@@ -13,19 +17,19 @@ const Navigation = () => {
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-5 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 sm:py-5 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-4">
-          <img src={logo} alt="Sachtech Solutions" className="w-50 h-20" />
+          <img src={logo} alt="Sachtech Solutions" className="max-w-xs h-16 sm:w-50 sm:h-20" />
         </a>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`font-montserrat font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors text-sm lg:text-base ${
                 link.active
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
@@ -37,10 +41,54 @@ const Navigation = () => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden md:inline-flex rounded-full text-sm font-poppins font-regular h-12">
+        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-poppins font-regular h-12">
           Get A Quote
         </Button>
+
+        {/* Hamburger Menu */}
+        <div className="lg:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 bg-background z-50 flex flex-col items-center justify-center">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-4 right-4"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <X className="h-6 w-6" />
+          </Button>
+          <div className="flex flex-col items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`font-montserrat font-medium transition-colors text-lg ${
+                  link.active
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12">
+              Get A Quote
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

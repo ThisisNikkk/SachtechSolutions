@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-30 relative z-10">
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-2xl">
           {/* Pre-headline */}
           <div className="flex items-center gap-2 mb-4">
@@ -38,16 +38,10 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-7">
-            <Button size="lg" className="gap-4 rounded-full h-14 font-montserrat text-base font-bold ">
+            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-sm font-bold ">
               Explore More
               <ArrowRight className="w-10 h-10" />
             </Button>
-            <a 
-              href="#services" 
-              className="text-navy-foreground hover:text-primary transition-colors underline underline-offset-4 font-montserrat font-semibold" 
-            >
-              View All Services
-            </a>
           </div>
         </div>
       </div>
