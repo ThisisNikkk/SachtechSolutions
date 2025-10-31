@@ -6,6 +6,7 @@ import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import WorkProcess from "@/components/WorkProcess";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Portfolio from "@/components/Portfolio";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <ServicesTicker />
       <WhyChooseUs />
       <ServicesTicker />
+      <Portfolio />
     </div>
   );
 };
