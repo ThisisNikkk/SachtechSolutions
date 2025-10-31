@@ -9,6 +9,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
+import Team from "@/components/Team";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <WhyChooseUs />
       <ServicesTicker />
       <Portfolio />
+      <Team />
       <Testimonials />
       <ServicesTicker />
       <Contact />
