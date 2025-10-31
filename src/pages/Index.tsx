@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import WorkProcess from "@/components/WorkProcess";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Portfolio from "@/components/Portfolio";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
@@ -22,6 +23,8 @@ const Index = () => {
       <WhyChooseUs />
       <ServicesTicker />
       <Portfolio />
+      <Contact />
+      <ServicesTicker />
     </div>
   );
 };
