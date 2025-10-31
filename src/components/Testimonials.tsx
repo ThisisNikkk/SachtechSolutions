@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import autoplay from "embla-carousel-autoplay";
 import { Star, Quote } from "lucide-react";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
@@ -7,11 +8,14 @@ import testimonial3 from "@/assets/testimonial-3.jpg";
 import testimonial4 from "@/assets/testimonial-4.jpg";
 
 const Testimonials = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    loop: true,
-    slidesToScroll: 1,
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      align: "start",
+      loop: true,
+      slidesToScroll: 1,
+    },
+    [autoplay({ delay: 2000 })]
+  );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const testimonials = [
@@ -81,15 +85,15 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="py-20 bg-navy text-navy-foreground">
+    <section className="py-32 bg-navy text-navy-foreground">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-[2px] bg-primary"></div>
-            <p className="text-navy-foreground font-medium">Testimonial</p>
+            <p className="text-navy-foreground font-montserrat">Testimonial</p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins text-navy-foreground">
             What Our Clients Say
           </h2>
         </div>
@@ -106,55 +110,54 @@ const Testimonials = () => {
                   {pair.map((testimonial) => (
                     <div
                       key={testimonial.id}
-                      className="bg-card text-card-foreground rounded-3xl p-8"
+                      className="relative bg-card text-card-foreground rounded-3xl p-12 shadow-lg pt-32" 
                     >
-                      {/* Card Top */}
-                      <div className="flex items-start justify-between mb-6">
-                        {/* Left Side - User Info */}
-                        <div className="flex items-center gap-4">
-                          <div className="relative">
-                            <div className="w-20 h-20 rounded-full overflow-hidden ring-4 ring-primary">
-                              <img
-                                src={testimonial.image}
-                                alt={testimonial.name}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-lg text-card-foreground">
-                              {testimonial.name}
-                            </h3>
-                            <p className="text-sm text-muted-foreground mb-2">
-                              {testimonial.title}
-                            </p>
-                            <div className="flex items-center gap-2">
-                              <div className="flex gap-0.5">
-                                {[...Array(5)].map((_, i) => (
-                                  <Star
-                                    key={i}
-                                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                                  />
-                                ))}
-                              </div>
-                              <span className="text-sm font-semibold text-card-foreground">
-                                {testimonial.rating}
-                              </span>
-                            </div>
-                          </div>
+                      {/* Quote Icon */}
+                      <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
+                        <Quote className="w-6 h-6 text-primary" />
+                      </div>
+
+                      {/* Header Area */}
+                      <div className="absolute top-0 left-0 flex items-center gap-5 w-full"> {/* Positioned absolutely at top-left */}
+                        {/* Image block with colored pill background */}
+                        <div className="relative w-40 h-28 flex-shrink-0 bg-primary rounded-r-full flex items-center justify-end pr-4">
+                          <img
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-24 h-24 rounded-full object-cover ring-4 ring-white"
+                          />
                         </div>
 
-                        {/* Right Side - Quote Icon */}
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Quote className="w-6 h-6 text-primary fill-primary" />
+                        {/* Text Content */}
+                        <div className="flex-grow pt-4"> {/* Added padding to align with image */}
+                          <h3 className="font-poppins font-medium text-lg text-card-foreground">
+                            {testimonial.name}
+                          </h3>
+                          <p className="text-sm font-poppins text-muted-foreground mb-2">
+                            {testimonial.title}
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <div className="flex gap-0.5">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                                />
+                              ))}
+                            </div>
+                            <span className="text-sm font-montserrat font-semibold text-card-foreground">
+                              {testimonial.rating}
+                            </span>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Card Bottom - Quote Text */}
-                      <p className="text-muted-foreground leading-relaxed">
+                      {/* Quote Text */}
+                      <p className="text-muted-foreground font-montserrat leading-relaxed mt-6">
                         {testimonial.quote}
                       </p>
                     </div>
+                    // --- END OF UPDATED CARD FOR TOP-LEFT PILL ---
                   ))}
                 </div>
               </div>
