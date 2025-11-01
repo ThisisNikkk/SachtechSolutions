@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import FAQs from "@/components/FAQs";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -32,7 +33,7 @@ const Index = () => {
       <FAQs />
       <ServicesTicker />
       <Contact />
-      <ServicesTicker />
+      <Footer />
     </div>
   );
 };
