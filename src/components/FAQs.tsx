@@ -44,9 +44,9 @@ const FAQs = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-0.5 bg-primary"></div>
-            <span className="text-foreground font-medium">FAQs</span>
+            <span className="text-foreground font-montserrat">FAQs</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins">
             <span className="text-foreground">Questions? </span>
             <span className="text-primary">Look here</span>
           </h2>
@@ -68,7 +68,7 @@ const FAQs = () => {
             >
               <AccordionTrigger className="hover:no-underline py-6 group">
                 <div className="flex items-center justify-between w-full pr-4">
-                  <span className="text-left text-foreground font-medium">
+                  <span className="text-left text-foreground font-medium font-poppins">
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0 w-8 h-8 rounded-full border border-border flex items-center justify-center ml-4">
@@ -80,7 +80,7 @@ const FAQs = () => {
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-6">
+              <AccordionContent className="text-muted-foreground font-montserrat pb-6">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

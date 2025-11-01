@@ -41,7 +41,7 @@ const Navigation = () => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-poppins font-regular h-12">
+        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-montserrat font-medium h-12 hover:bg-foreground hover:text-background">
           Get A Quote
         </Button>
 
