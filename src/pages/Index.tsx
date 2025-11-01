@@ -10,6 +10,7 @@ import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
+import FAQs from "@/components/FAQs";
 
 const Index = () => {
   return (
@@ -27,6 +28,8 @@ const Index = () => {
       <Portfolio />
       <Team />
       <Testimonials />
+      <ServicesTicker />
+      <FAQs />
       <ServicesTicker />
       <Contact />
       <ServicesTicker />
