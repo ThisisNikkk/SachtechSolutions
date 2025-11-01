@@ -58,37 +58,37 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-background z-50 flex flex-col items-center justify-center">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-4 right-4"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <X className="h-6 w-6" />
+      <div
+        className={`lg:hidden fixed inset-0 bg-background z-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-4 right-4"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <X className="h-6 w-6" />
+        </Button>
+        <div className="flex flex-col items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`font-montserrat font-medium transition-colors text-lg ${
+                link.active
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
+              }`}
+            >
+              {link.name}
+            </a>
+          ))}
+          <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12">
+            Get A Quote
           </Button>
-          <div className="flex flex-col items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-montserrat font-medium transition-colors text-lg ${
-                  link.active
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12">
-              Get A Quote
-            </Button>
-          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

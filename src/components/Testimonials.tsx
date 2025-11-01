@@ -22,7 +22,7 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Leslie Alexander",
-      title: "CEO, Software Company",
+      title: "Founder",
       rating: 5.0,
       image: testimonial1,
       quote:
@@ -106,34 +106,33 @@ const Testimonials = () => {
                 key={pairIndex}
                 className="flex-[0_0_100%] min-w-0 px-4"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:grid-cols-2">
                   {pair.map((testimonial) => (
                     <div
                       key={testimonial.id}
-                      className="relative bg-card text-card-foreground rounded-3xl p-12 shadow-lg pt-32" 
+                      className="relative bg-card text-card-foreground rounded-3xl p-4 md:p-8 lg:p-12 shadow-lg pt-24 md:pt-28 lg:pt-32"
                     >
                       {/* Quote Icon */}
-                      <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                        <Quote className="w-6 h-6 text-primary" />
+                      <div className="absolute top-3 right-3 md:top-4 md:right-4 lg:top-6 lg:right-6 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
+                        <Quote className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-primary" />
                       </div>
 
                       {/* Header Area */}
-                      <div className="absolute top-0 left-0 flex items-center gap-5 w-full"> {/* Positioned absolutely at top-left */}
-                        {/* Image block with colored pill background */}
-                        <div className="relative w-40 h-28 flex-shrink-0 bg-primary rounded-r-full flex items-center justify-end pr-4">
+                      <div className="absolute top-0 left-0 flex items-center gap-2 w-full">
+                        <div className="relative w-28 md:w-32 lg:w-40 h-24 md:h-24 lg:h-28 flex-shrink-0 bg-primary rounded-r-full flex items-center justify-end pr-2 md:pr-2 lg:pr-2">
                           <img
                             src={testimonial.image}
                             alt={testimonial.name}
-                            className="w-24 h-24 rounded-full object-cover ring-4 ring-white"
+                            className="w-20 h-20 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full object-cover ring-4 ring-white"
                           />
                         </div>
 
                         {/* Text Content */}
-                        <div className="flex-grow pt-4"> {/* Added padding to align with image */}
+                        <div className="flex-grow pt-4">
                           <h3 className="font-poppins font-medium text-lg text-card-foreground">
                             {testimonial.name}
                           </h3>
-                          <p className="text-sm font-poppins text-muted-foreground mb-2">
+                          <p className="text-sm font-poppins text-muted-foreground mb-2 ">
                             {testimonial.title}
                           </p>
                           <div className="flex items-center gap-2">
@@ -157,7 +156,6 @@ const Testimonials = () => {
                         {testimonial.quote}
                       </p>
                     </div>
-                    // --- END OF UPDATED CARD FOR TOP-LEFT PILL ---
                   ))}
                 </div>
               </div>

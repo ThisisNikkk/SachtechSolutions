@@ -103,7 +103,7 @@ const Footer = () => {
 
       {/* Main Footer */}
       <section className="py-16 bg-navy">
-        <div className="container mx-auto px-10">
+        <div className="container mx-auto px-4 ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-20 lg:gap-48 mb-12">
             {/* Column 1: Logo & Links */}
             <div className="space-y-6">
@@ -113,20 +113,20 @@ const Footer = () => {
               <p className="text-background font-poppins md:text-sm">
                 Design amazing digital experiences that create more happy in the world
               </p>
-              <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium">
-                <a href="#about" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[11px]">
+              <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium pb-4">
+                <a href="#about" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   About Us
                 </a>
-                <a href="#careers" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[11px]">
+                <a href="#careers" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Careers
                 </a>
-                <a href="#contact" className="text-navy-foreground hover:text-primary transition-colors  lg:text-[14px]md:text-[11px]">
+                <a href="#contact" className="text-navy-foreground hover:text-primary transition-colors  lg:text-[14px] md:text-[12px]">
                   Contact us
                 </a>
-                <a href="#projects" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[11px]">
+                <a href="#projects" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Projects
                 </a>
-                <a href="#privacy" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[11px]">
+                <a href="#privacy" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Privacy
                 </a>
               </nav>
