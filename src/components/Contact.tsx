@@ -194,9 +194,9 @@ const Contact = () => {
             <div className="mb-8">
               <h3 className="text-2xl font-medium font-poppins mb-3">Address</h3>
               <p className="opacity-90 font-montserrat text-sm">
-                Plot No : C-86, Phase 7, Industrial Area, Sector 74,
+                C-86, Phase 7, Industrial Area, Sector 74,
                 <br />
-                Mohali, Punjab 160055
+                Sahibzada Ajit Singh Nagar, Punjab 160055
               </p>
             </div>
 

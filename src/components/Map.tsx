@@ -17,8 +17,8 @@ const Map = () => {
   useEffect(() => {
     if (!mapContainer.current || map.current) return;
 
-    // SachTech Solution Private Limited coordinates
-    const companyLocation: [number, number] = [30.7046, 76.6931];
+    // SachTech Solution Private Limited coordinates (C-86, Phase 7, Sector 74, Mohali)
+    const companyLocation: [number, number] = [30.7135, 76.6935];
     
     // Initialize map
     map.current = L.map(mapContainer.current).setView(companyLocation, 15);
@@ -35,9 +35,10 @@ const Map = () => {
       <div style="font-family: system-ui, -apple-system, sans-serif; padding: 4px;">
         <strong style="font-size: 14px; display: block; margin-bottom: 6px;">SachTech Solution Pvt. Ltd.</strong>
         <span style="font-size: 13px; color: #666;">
-          Plot No.E-110, Phase-7<br/>
-          Industrial Area, Mohali<br/>
-          Punjab 160059
+          C-86, Phase 7<br/>
+          Industrial Area, Sector 74<br/>
+          Sahibzada Ajit Singh Nagar<br/>
+          Punjab 160055
         </span>
       </div>
     `);
@@ -50,9 +51,13 @@ const Map = () => {
   }, []);
 
   return (
-    <div className="w-full h-[500px]">
-      <div ref={mapContainer} className="w-full h-full rounded-lg" />
-    </div>
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="h-[500px] rounded-3xl overflow-hidden shadow-lg">
+          <div ref={mapContainer} className="w-full h-full" />
+        </div>
+      </div>
+    </section>
   );
 };
 
