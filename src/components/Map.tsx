@@ -9,14 +9,17 @@ const Map = () => {
   useEffect(() => {
     if (!mapContainer.current) return;
 
-    // Replace with your Mapbox public token
-    mapboxgl.accessToken = 'pk.eyJ1IjoibG92YWJsZS1kZW1vIiwiYSI6ImNtNTR2Nnd6YzBkcHcyanM2NzlrazJ5ZjUifQ.dQM8JhYqsjywhXy_lvUTbg';
+    // TODO: Replace with your Mapbox public token from https://mapbox.com/
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+    
+    // SachTech Solution Private Limited coordinates
+    const companyLocation: [number, number] = [76.6931, 30.7046];
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-94.6, 46.7], // Centered on the location from the image
-      zoom: 14,
+      center: companyLocation,
+      zoom: 15,
     });
 
     // Add navigation controls
@@ -25,9 +28,15 @@ const Map = () => {
       'top-right'
     );
 
-    // Add a marker at the location
-    new mapboxgl.Marker()
-      .setLngLat([-94.6, 46.7])
+    // Add a marker at the company location with popup
+    new mapboxgl.Marker({ color: '#0066cc' })
+      .setLngLat(companyLocation)
+      .setPopup(
+        new mapboxgl.Popup({ offset: 25 })
+          .setHTML(
+            '<div style="padding: 8px;"><strong>SachTech Solution Pvt. Ltd.</strong><br/>Plot No.E-110, Phase-7<br/>Industrial Area, Mohali<br/>Punjab 160059</div>'
+          )
+      )
       .addTo(map.current);
 
     // Cleanup
