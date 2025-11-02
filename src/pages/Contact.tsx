@@ -2,9 +2,14 @@ import Navigation from '@/components/Navigation'
 import PageBanner from '@/components/PageBanner'
 import TopBar from '@/components/TopBar'
 import ContactComponent from '@/components/Contact'
+import Map from '@/components/Map'
 import React from 'react'
 
-function Contact({ onNavigate }) {
+interface ContactProps {
+  onNavigate: () => void;
+}
+
+function Contact({ onNavigate }: ContactProps) {
   return (
     <div className="min-h-screen">
        <TopBar/>
@@ -17,6 +22,7 @@ function Contact({ onNavigate }) {
         ]} 
       />
       <ContactComponent/>
+      <Map />
     </div>
   )
 }

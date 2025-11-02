@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
-import Contact from "./pages/Contact";
 
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));

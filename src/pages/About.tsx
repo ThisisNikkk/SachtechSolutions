@@ -10,7 +10,11 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import WorkProcess from '@/components/WorkProcess'
 import React from 'react'
 
-function About({ onNavigate }) {
+interface AboutProps {
+  onNavigate: () => void;
+}
+
+function About({ onNavigate }: AboutProps) {
   return (
     <div className="min-h-screen">
        <TopBar/>

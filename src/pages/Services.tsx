@@ -9,7 +9,11 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Contact from '@/components/Contact';
 import FAQs from '@/components/FAQs';
 
-const Services: React.FC = ({ onNavigate }:any) => {
+interface ServicesProps {
+  onNavigate: () => void;
+}
+
+const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
       <TopBar />

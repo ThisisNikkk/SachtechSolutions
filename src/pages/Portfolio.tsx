@@ -7,7 +7,11 @@ import React from 'react';
 import ServicesTicker from '@/components/ServicesTicker';
 import Contact from '@/components/Contact';
 
-const Portfolio: React.FC = ({ onNavigate }) => {
+interface PortfolioProps {
+  onNavigate: () => void;
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
       <TopBar />
