@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import StatsCount from "@/components/ui/statscount";
 import teamWorkingImage from "@/assets/team-working.jpg";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
-const AboutUs = () => {
+const AboutComponent = () => {
   const stats = [
     { value: 50, suffix: "+", label: "Team Members" },
     { value: 300, suffix: "+", label: "Happy Clients" },
@@ -14,7 +13,7 @@ const AboutUs = () => {
   return (
     <section className="bg-background py-16 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text & Stats */}
           <div className="space-y-8">
             {/* Text Content */}
@@ -34,16 +33,29 @@ const AboutUs = () => {
 
               {/* Description */}
               <p className="text-muted-foreground leading-relaxed font-montserrat">
-                At SachTech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
-              </p>
-            </div>
+                SachTech Solution Private Limited, incorporated on August 11, 2016 under the Companies Act, 2013 (CIN: U72900CH2016PTC041177), is a leading technology company headquartered in Mohali, India.
+                Driven by a team of passionate and innovative young entrepreneurs, SachTech has established a strong presence in the global IT industry. We proudly serve clients across multiple countries, including the USA, Canada, UK, Brazil, Spain, Malaysia, UAE, Egypt, Australia, Finland, and many others.
+                <br/>
+                <br/>
+                At SachTech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.             
+                </p>
 
-            {/* CTA Button */}
-            <Button variant="outline" className="rounded-full border-foreground text-foreground hover:bg-foreground hover:text-background h-12 px-10 font-montserrat font-medium">
-              <Link to={'/about'}>
-              Learn More
-              </Link>
-            </Button>
+              {/* Mission and Vision */}
+              <div className="space-y-8">
+                  <div>
+                      <h3 className="text-2xl font-bold text-primary mb-2 font-poppins">Our Mission</h3>
+                      <p className="text-muted-foreground leading-relaxed font-montserrat">
+                        We design and execute market-leading performance roadmaps by blending creative thinking, technological expertise, and global reach. Our goal is to eliminate the gap between client needs and our solutions—achieving complete alignment through continuous innovation. We strive to anticipate unspoken challenges and deliver transformative solutions that drive value. Committed to sustainability, we ensure that our growth—and that of our clients—supports economic, social, and environmental progress. 
+                     </p>
+                  </div>
+                  <div>
+                      <h3 className="text-2xl font-bold text-primary mb-2 font-poppins">Our Vision</h3>
+                      <p className="text-muted-foreground leading-relaxed font-montserrat">
+                          To be a globally recognized leader in IT solutions, known for our commitment to excellence, integrity, and client success.
+                      </p>
+                  </div>
+              </div>
+            </div>
 
             {/* Stats Bar */}
             <StatsCount stats={stats} className="bg-primary text-primary-foreground p-2 font-poppins" />
@@ -75,4 +87,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutComponent;

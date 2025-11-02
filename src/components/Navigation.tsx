@@ -13,10 +13,10 @@ const Navigation = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "Projects", href: "/projects" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Career", href: "/blogs" },
+    { name: "Contact Us", href: "/pricing" },
   ];
 
   // Helper function to determine if a link is active

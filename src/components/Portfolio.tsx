@@ -4,6 +4,7 @@ import careConnect from "@/assets/portfolio-care-connect.jpg";
 import dentalClinic from "@/assets/portfolio-dental-clinic.jpg";
 import carRental from "@/assets/portfolio-car-rental.jpg";
 import hotelBooking from "@/assets/portfolio-hotel-booking.jpg";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -49,11 +50,12 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid */}
+        <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {portfolioItems.map((item) => (
             <div
               key={item.id}
-              className="relative h-[400px] rounded-3xl overflow-hidden group cursor-pointer"
+                className="relative aspect-square rounded-3xl overflow-hidden group cursor-pointer"
             >
               {/* Background Image */}
               <img
@@ -91,15 +93,18 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+        </div>
 
         {/* View All Button */}
         <div className="text-center">
+          <Link to={'/portfolio'}>
           <Button
             size="lg"
             className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background"
           >
             View All Works
           </Button>
+          </Link>
         </div>
       </div>
     </section>

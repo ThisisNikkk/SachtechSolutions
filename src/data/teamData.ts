@@ -1,0 +1,323 @@
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
+import team4 from "@/assets/team-4.jpg";
+import team5 from "@/assets/team-5.jpg";
+import team6 from "@/assets/team-6.jpg";
+import team7 from "@/assets/team-7.jpg";
+import team8 from "@/assets/team-8.jpg";
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Amélie Laurent",
+    title: "Founder & CEO",
+    description: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    image: team1,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 2,
+    name: "Nikolas Gibbons",
+    title: "Engineering Manager",
+    description: "Lead engineering teams at Figma, Pitch, and Deck-Lynx.",
+    image: team2,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 3,
+    name: "Sienna Hewitt",
+    title: "Product Manager",
+    description: "Former PM for Linear, Lambda School, and On Deck.",
+    image: team3,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 4,
+    name: "Lily-Rose Chedjou",
+    title: "Frontend Developer",
+    description: "Former frontend dev for Linear, Coinbase, and Postscript.",
+    image: team4,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 5,
+    name: "Zahra Christensen",
+    title: "Backend Developer",
+    description: "Lead backend dev at ClearBit. Former ClearDial and GoDel.",
+    image: team5,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 6,
+    name: "Caitlyn King",
+    title: "Product Designer",
+    description: "Founding design team at Figma. Former Pleo, Stripe, and Tile.",
+    image: team6,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 7,
+    name: "Zaid Schwartz",
+    title: "UX Researcher",
+    description: "Lead user research for Slack. Contractor for Netflix and Udacity.",
+    image: team7,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 8,
+    name: "Marco Kelly",
+    title: "Customer Success",
+    description: "Lead CX at Wealthsimple. Former PagerDuty and Sqreen.",
+    image: team8,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 9,
+    name: "John Doe",
+    title: "Software Engineer",
+    description: "Passionate about building scalable and maintainable software.",
+    image: team1,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 10,
+    name: "Jane Smith",
+    title: "QA Engineer",
+    description: "Ensuring the quality of our products is my top priority.",
+    image: team2,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 11,
+    name: "Peter Jones",
+    title: "DevOps Engineer",
+    description: "Automating and streamlining our development processes.",
+    image: team3,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 12,
+    name: "Mary Williams",
+    title: "UI/UX Designer",
+    description: "Creating beautiful and user-friendly interfaces.",
+    image: team4,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 13,
+    name: "David Brown",
+    title: "Data Scientist",
+    description: "Extracting valuable insights from data.",
+    image: team5,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 14,
+    name: "Susan Garcia",
+    title: "Project Manager",
+    description: "Keeping our projects on track and on budget.",
+    image: team6,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 15,
+    name: "Michael Miller",
+    title: "Business Analyst",
+    description: "Bridging the gap between business and technology.",
+    image: team7,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 16,
+    name: "Linda Rodriguez",
+    title: "Marketing Manager",
+    description: "Spreading the word about our amazing products.",
+    image: team8,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 17,
+    name: "Robert White",
+    title: "Cloud Engineer",
+    description: "Designing and implementing robust cloud infrastructure.",
+    image: team1,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 18,
+    name: "Patricia Green",
+    title: "Cybersecurity Analyst",
+    description: "Protecting our systems and data from threats.",
+    image: team2,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 19,
+    name: "Thomas Black",
+    title: "Network Engineer",
+    description: "Building and maintaining our network infrastructure.",
+    image: team3,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 20,
+    name: "Jennifer Hall",
+    title: "Technical Writer",
+    description: "Creating clear and concise documentation for our products.",
+    image: team4,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 21,
+    name: "Charles King",
+    title: "IT Support Specialist",
+    description: "Providing excellent technical support to our users.",
+    image: team5,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 22,
+    name: "Elizabeth Wright",
+    title: "Database Administrator",
+    description: "Managing and optimizing our database systems.",
+    image: team6,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 23,
+    name: "Richard Lopez",
+    title: "Mobile Developer",
+    description: "Developing innovative mobile applications.",
+    image: team7,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 24,
+    name: "Barbara Hill",
+    title: "Frontend Lead",
+    description: "Leading the development of engaging user interfaces.",
+    image: team8,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 25,
+    name: "Joseph Scott",
+    title: "Backend Lead",
+    description: "Architecting robust and scalable backend systems.",
+    image: team1,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+  {
+    id: 26,
+    name: "Jessica Green",
+    title: "DevOps Lead",
+    description: "Driving automation and efficiency in our operations.",
+    image: team2,
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      website: "#",
+    },
+  },
+];

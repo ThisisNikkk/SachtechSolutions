@@ -49,7 +49,7 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Hero overlay */
-    --hero-overlay: 0 0% 20% / 0.85;
+    --hero-overlay: 0 0% 20% / 0.95;
 
     --sidebar-background: 0 0% 98%;
 

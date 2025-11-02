@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChartBarDecreasingIcon, ComputerIcon, Monitor, ShoppingCart, Smartphone, Tag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -63,9 +64,11 @@ const Services = () => {
           </div>
 
           {/* Right Column - CTA Button */}
-          <Button className="rounded-full px-8 py-7 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background">
-            See all Services
-          </Button>
+          <Link to="/services">
+            <Button className="rounded-full px-8 py-7 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background">
+              See all Services
+            </Button>
+          </Link>
         </div>
 
         {/* Service Cards Grid */}

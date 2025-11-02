@@ -22,7 +22,7 @@ const PageBanner = ({ title, breadcrumbs }: PageBannerProps) => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0" style={{ background: 'var(--hero-overlay)' }}></div>
+        <div className="absolute inset-0 bg-navy/85"></div>
       </div>
 
       {/* Content */}
@@ -40,12 +40,12 @@ const PageBanner = ({ title, breadcrumbs }: PageBannerProps) => {
                 <BreadcrumbItem>
                   {crumb.href ? (
                     <BreadcrumbLink asChild>
-                      <Link to={crumb.href} className="text-navy-foreground hover:text-navy-foreground/80">
+                      <Link to={crumb.href} className="text-navy-foreground font-montserrat hover:text-navy-foreground/80">
                         {crumb.label}
                       </Link>
                     </BreadcrumbLink>
                   ) : (
-                    <BreadcrumbPage className="text-navy-foreground">
+                    <BreadcrumbPage className="text-navy-foreground font-montserrat">
                       {crumb.label}
                     </BreadcrumbPage>
                   )}
