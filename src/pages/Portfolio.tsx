@@ -7,11 +7,11 @@ import React from 'react';
 import ServicesTicker from '@/components/ServicesTicker';
 import Contact from '@/components/Contact';
 
-const Portfolio: React.FC = () => {
+const Portfolio: React.FC = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
       <TopBar />
-      <Navigation />
+      <Navigation onNavigate={onNavigate} />
       <PageBanner 
         title="Portfolio" 
         breadcrumbs={[

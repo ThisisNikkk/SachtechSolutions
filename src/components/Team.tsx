@@ -9,6 +9,7 @@ import team5 from "@/assets/team-5.jpg";
 import team6 from "@/assets/team-6.jpg";
 import team7 from "@/assets/team-7.jpg";
 import team8 from "@/assets/team-8.jpg";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   const teamMembers = [
@@ -129,7 +130,9 @@ const Team = () => {
 
           {/* Right - View All Button */}
           <Button className="rounded-full px-12 py-6 text-base font-montserrat font-medium border-foreground text-background hover:bg-foreground hover:text-background">
+            <Link to={'/about'}>
             View All
+            </Link>
           </Button>
         </div>
 

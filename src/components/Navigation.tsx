@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 
-const Navigation = () => {
+const Navigation = ({ onNavigate }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   // Get the current location, including pathname and hash
   const { pathname, hash } = useLocation();
@@ -15,8 +15,8 @@ const Navigation = () => {
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "About Us", href: "/about" },
-    { name: "Career", href: "/blogs" },
-    { name: "Contact Us", href: "/pricing" },
+    { name: "Career", href: "/career" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   // Helper function to determine if a link is active
@@ -29,11 +29,17 @@ const Navigation = () => {
     return pathname === href;
   };
 
+  const handleLinkClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+  };
+
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 sm:py-5 flex items-center justify-between">
         {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-4">
+        <NavLink to="/" className="flex items-center gap-4" onClick={handleLinkClick}>
           <img src={logo} alt="Sachtech Solutions" className="max-w-xs h-16 sm:w-50 sm:h-20" />
         </NavLink>
 
@@ -45,6 +51,7 @@ const Navigation = () => {
               <NavLink
                 key={link.name}
                 to={link.href}
+                onClick={handleLinkClick}
                 className={`font-montserrat font-medium transition-colors text-sm lg:text-base ${
                   isActive ? "text-primary" : "text-foreground"
                 }`}
@@ -91,7 +98,10 @@ const Navigation = () => {
               <NavLink
                 key={link.name}
                 to={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  handleLinkClick();
+                }}
                 className={`font-montserrat font-medium transition-colors text-lg ${
                   isActive ? "text-primary" : "text-foreground"
                 }`}

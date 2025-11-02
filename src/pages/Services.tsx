@@ -9,11 +9,11 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Contact from '@/components/Contact';
 import FAQs from '@/components/FAQs';
 
-const Services: React.FC = () => {
+const Services: React.FC = ({ onNavigate }:any) => {
   return (
     <div className="min-h-screen">
       <TopBar />
-      <Navigation />
+      <Navigation onNavigate={onNavigate} />
       <PageBanner 
         title="Services" 
         breadcrumbs={[

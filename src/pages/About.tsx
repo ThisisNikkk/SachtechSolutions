@@ -10,11 +10,11 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import WorkProcess from '@/components/WorkProcess'
 import React from 'react'
 
-function About() {
+function About({ onNavigate }) {
   return (
     <div className="min-h-screen">
        <TopBar/>
-       <Navigation/>
+       <Navigation onNavigate={onNavigate} />
        <PageBanner
         title="About Us" 
         breadcrumbs={[

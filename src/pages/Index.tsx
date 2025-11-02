@@ -13,11 +13,11 @@ import Team from "@/components/Team";
 import FAQs from "@/components/FAQs";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Index = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
       <TopBar />
-      <Navigation />
+      <Navigation onNavigate={onNavigate} />
       <Hero />
       <ServicesTicker />
       <AboutUs />
