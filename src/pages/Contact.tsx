@@ -4,6 +4,8 @@ import TopBar from '@/components/TopBar'
 import ContactComponent from '@/components/Contact'
 import Map from '@/components/Map'
 import React from 'react'
+import ServicesTicker from '@/components/ServicesTicker'
+import Footer from '@/components/Footer'
 
 interface ContactProps {
   onNavigate: () => void;
@@ -23,6 +25,8 @@ function Contact({ onNavigate }: ContactProps) {
       />
       <ContactComponent/>
       <Map />
+      <ServicesTicker/>
+      <Footer/>
     </div>
   )
 }

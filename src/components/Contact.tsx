@@ -21,7 +21,7 @@ const contactFormSchema = z.object({
   message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
 });
 
-const Contact = () => {
+const Contact = ({ onNavigate }) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -39,6 +39,10 @@ const Contact = () => {
       contactFormSchema.parse(formData);
       setErrors({});
       
+      if (onNavigate) {
+        onNavigate();
+      }
+
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you soon.",

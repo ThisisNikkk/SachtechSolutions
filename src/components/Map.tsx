@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import '@maptiler/sdk/dist/maptiler-sdk.css';
+import * as maptilersdk from '@maptiler/leaflet-maptilersdk';
 
 // Fix for default marker icon in production
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -18,15 +20,15 @@ const Map = () => {
     if (!mapContainer.current || map.current) return;
 
     // SachTech Solution Private Limited coordinates (C-86, Phase 7, Sector 74, Mohali)
-    const companyLocation: [number, number] = [30.7135, 76.6935];
+    const companyLocation: [number, number] = [30.7170, 76.69486];
     
     // Initialize map
     map.current = L.map(mapContainer.current).setView(companyLocation, 15);
 
-    // Add OpenStreetMap tiles (completely free, no API key needed)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 19,
+    // Add MapTiler OMT layer
+    maptilersdk.maptilerLayer({
+      apiKey: import.meta.env.VITE_MAPTILER_API_KEY as string,
+      style: maptilersdk.MapStyle.STREETS.PASTEL,
     }).addTo(map.current);
 
     // Add marker with popup
@@ -38,7 +40,8 @@ const Map = () => {
           C-86, Phase 7<br/>
           Industrial Area, Sector 74<br/>
           Sahibzada Ajit Singh Nagar<br/>
-          Punjab 160055
+          Punjab 160055<br/>
+          India
         </span>
       </div>
     `);

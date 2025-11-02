@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChartBarDecreasingIcon, ComputerIcon, Monitor, ShoppingCart, Smartphone, Tag } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Services = () => {
+const Services = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: Smartphone,
@@ -42,6 +43,13 @@ const Services = () => {
     },
   ];
 
+  const handleSeeAllServicesClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/services");
+  };
+
   return (
     <section className="bg-muted py-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -64,11 +72,9 @@ const Services = () => {
           </div>
 
           {/* Right Column - CTA Button */}
-          <Link to="/services">
-            <Button className="rounded-full px-8 py-7 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background">
-              See all Services
-            </Button>
-          </Link>
+          <Button className="rounded-full px-8 py-7 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background" onClick={handleSeeAllServicesClick}>
+            See all Services
+          </Button>
         </div>
 
         {/* Service Cards Grid */}

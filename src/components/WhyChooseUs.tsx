@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { DollarSign, Users, Briefcase, Trophy, Play } from "lucide-react";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
+import { useNavigate } from "react-router-dom";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const features = [
     {
       icon: DollarSign,
@@ -29,6 +31,13 @@ const WhyChooseUs = () => {
     },
   ];
 
+  const handleGetAQuoteClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/contact");
+  };
+
   return (
     <section className="bg-navy py-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -52,7 +61,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Right Column - CTA Button */}
-          <Button className="rounded-lg px-8 py-6 text-base font-montserrat font-semibold bg-primary hover:bg-navy-foreground hover:text-primary rounded-full">
+          <Button className="rounded-lg px-8 py-6 text-base font-montserrat font-semibold bg-primary hover:bg-navy-foreground hover:text-primary rounded-full" onClick={handleGetAQuoteClick}>
             Get a Quote
           </Button>
         </div>
@@ -99,4 +108,3 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
-

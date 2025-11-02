@@ -18,21 +18,21 @@ const Index = ({ onNavigate }) => {
     <div className="min-h-screen">
       <TopBar />
       <Navigation onNavigate={onNavigate} />
-      <Hero />
+      <Hero onNavigate={onNavigate} />
       <ServicesTicker />
-      <AboutUs />
-      <Services />
+      <AboutUs onNavigate={onNavigate} />
+      <Services onNavigate={onNavigate} />
       <WorkProcess />
       <ServicesTicker />
-      <WhyChooseUs />
+      <WhyChooseUs onNavigate={onNavigate} />
       <ServicesTicker />
-      <Portfolio />
-      <Team />
+      <Portfolio onNavigate={onNavigate} />
+      <Team onNavigate={onNavigate} />
       <Testimonials />
       <ServicesTicker />
       <FAQs />
       <ServicesTicker />
-      <Contact />
+      <Contact onNavigate={onNavigate} />
       <Footer />
     </div>
   );

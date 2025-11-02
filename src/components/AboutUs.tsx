@@ -2,14 +2,22 @@ import { Button } from "@/components/ui/button";
 import StatsCount from "@/components/ui/statscount";
 import teamWorkingImage from "@/assets/team-working.jpg";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const AboutUs = () => {
+const AboutUs = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const stats = [
     { value: 50, suffix: "+", label: "Team Members" },
     { value: 300, suffix: "+", label: "Happy Clients" },
     { value: 99, suffix: "%", label: "Client Satisfaction" },
   ];
+
+  const handleLearnMoreClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/about");
+  };
 
   return (
     <section className="bg-background py-16 lg:py-24">
@@ -39,10 +47,8 @@ const AboutUs = () => {
             </div>
 
             {/* CTA Button */}
-            <Button variant="outline" className="rounded-full border-foreground text-foreground hover:bg-foreground hover:text-background h-12 px-10 font-montserrat font-medium">
-              <Link to={'/about'}>
+            <Button variant="outline" className="rounded-full border-foreground text-foreground hover:bg-foreground hover:text-background h-12 px-10 font-montserrat font-medium" onClick={handleLearnMoreClick}>
               Learn More
-              </Link>
             </Button>
 
             {/* Stats Bar */}

@@ -1,12 +1,13 @@
 import { useState } from "react";
 // Import useLocation
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 
 const Navigation = ({ onNavigate }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
   // Get the current location, including pathname and hash
   const { pathname, hash } = useLocation();
 
@@ -33,6 +34,13 @@ const Navigation = ({ onNavigate }) => {
     if (onNavigate) {
       onNavigate();
     }
+  };
+
+  const handleGetAQuoteClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/contact");
   };
 
   return (
@@ -63,7 +71,7 @@ const Navigation = ({ onNavigate }) => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-montserrat font-medium h-12 hover:bg-foreground hover:text-background">
+        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-montserrat font-medium h-12 hover:bg-foreground hover:text-background" onClick={handleGetAQuoteClick}>
           Get A Quote
         </Button>
 
@@ -110,7 +118,11 @@ const Navigation = ({ onNavigate }) => {
               </NavLink>
             );
           })}
-          <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12">
+          <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12" onClick={() => {
+            setIsMobileMenuOpen(false);
+            handleGetAQuoteClick();
+          }}>
+
             Get A Quote
           </Button>
         </div>

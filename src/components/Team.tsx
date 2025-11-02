@@ -9,9 +9,10 @@ import team5 from "@/assets/team-5.jpg";
 import team6 from "@/assets/team-6.jpg";
 import team7 from "@/assets/team-7.jpg";
 import team8 from "@/assets/team-8.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Team = () => {
+const Team = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const teamMembers = [
     {
       id: 1,
@@ -111,6 +112,13 @@ const Team = () => {
     },
   ];
 
+  const handleViewAllClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/about");
+  };
+
   return (
     <section className="py-20 bg-background border-b border-border">
       <div className="container mx-auto px-4">
@@ -129,10 +137,8 @@ const Team = () => {
           </div>
 
           {/* Right - View All Button */}
-          <Button className="rounded-full px-12 py-6 text-base font-montserrat font-medium border-foreground text-background hover:bg-foreground hover:text-background">
-            <Link to={'/about'}>
+          <Button className="rounded-full px-12 py-6 text-base font-montserrat font-medium border-foreground text-background hover:bg-foreground hover:text-background" onClick={handleViewAllClick}>
             View All
-            </Link>
           </Button>
         </div>
 

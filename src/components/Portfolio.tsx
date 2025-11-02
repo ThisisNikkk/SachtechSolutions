@@ -4,9 +4,10 @@ import careConnect from "@/assets/portfolio-care-connect.jpg";
 import dentalClinic from "@/assets/portfolio-dental-clinic.jpg";
 import carRental from "@/assets/portfolio-car-rental.jpg";
 import hotelBooking from "@/assets/portfolio-hotel-booking.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Portfolio = () => {
+const Portfolio = ({ onNavigate }) => {
+  const navigate = useNavigate();
   const portfolioItems = [
     {
       id: 1,
@@ -33,6 +34,13 @@ const Portfolio = () => {
       tags: ["UX/UI Design", "App Design", "Wireframe"],
     },
   ];
+
+  const handlePortfolioClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/portfolio");
+  };
 
   return (
     <section className="py-20 bg-background">
@@ -86,7 +94,7 @@ const Portfolio = () => {
                 </div>
                 
                 {/* CTA Button */}
-                <button className="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ml-4 transition-transform duration-300 group-hover:scale-110">
+                <button className="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ml-4 transition-transform duration-300 group-hover:scale-110" onClick={handlePortfolioClick}>
                   <ArrowUpRight className="w-6 h-6 text-primary-foreground" />
                 </button>
               </div>
@@ -97,14 +105,13 @@ const Portfolio = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Link to={'/portfolio'}>
           <Button
             size="lg"
             className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-12 border-foreground text-background hover:bg-foreground hover:text-background"
+            onClick={handlePortfolioClick}
           >
             View All Works
           </Button>
-          </Link>
         </div>
       </div>
     </section>
