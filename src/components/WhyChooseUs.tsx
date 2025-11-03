@@ -3,7 +3,7 @@ import { DollarSign, Users, Briefcase, Trophy, Play } from "lucide-react";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import { useNavigate } from "react-router-dom";
 
-const WhyChooseUs = ({ onNavigate }) => {
+const WhyChooseUs = ({ onNavigate }: { onNavigate?: () => void }) => {
   const navigate = useNavigate();
   const features = [
     {
