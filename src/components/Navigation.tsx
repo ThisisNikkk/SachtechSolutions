@@ -50,7 +50,7 @@ const Navigation = ({ onNavigate }) => {
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "About Us", href: "/about" },
-    { name: "Career", href: "/career" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact Us", href: "/contact" },
   ];
 

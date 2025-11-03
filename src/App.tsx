@@ -13,6 +13,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Careers = lazy(() => import("./pages/Careers"));
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => {
               <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
               <Route path="/about" element={<About onNavigate={handleNavigation} />} />
               <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />
+              <Route path="/careers" element={<Careers onNavigate={handleNavigation} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
