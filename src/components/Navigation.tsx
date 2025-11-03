@@ -1,9 +1,43 @@
 import { useState } from "react";
-// Import useLocation
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
-import { Menu, X } from "lucide-react";
+
+/**
+ * An animated hamburger icon that transforms into an 'X'.
+ * @param {object} props - The component props.
+ * @param {boolean} props.isOpen - Whether the menu is open or not.
+ * @param {string} [props.lineClassName] - Optional class for the line color. Defaults to 'bg-current'.
+ */
+const AnimatedHamburgerIcon = ({ isOpen, lineClassName = "bg-current" }) => {
+  // Common classes for all three lines
+  const commonClasses =
+    `block absolute h-0.5 w-6 ${lineClassName} transform transition-all duration-300 ease-in-out left-0`;
+
+  return (
+    // The container that matches the size of the lucide icons
+    <div className="relative w-6 h-6">
+      {/* Top line */}
+      <span
+        className={`${commonClasses} ${
+          isOpen ? "rotate-45 top-[11px]" : "top-[6px]"
+        }`}
+      />
+      {/* Middle line */}
+      <span
+        className={`${commonClasses} top-[11px] ${
+          isOpen ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      {/* Bottom line */}
+      <span
+        className={`${commonClasses} ${
+          isOpen ? "-rotate-45 top-[11px]" : "top-[16px]"
+        }`}
+      />
+    </div>
+  );
+};
 
 const Navigation = ({ onNavigate }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -75,30 +109,36 @@ const Navigation = ({ onNavigate }) => {
           Get A Quote
         </Button>
 
-        {/* Hamburger Menu */}
+        {/* --- MODIFIED Hamburger Menu Button (Open) --- */}
         <div className="lg:hidden">
           <Button
-            variant="ghost"
+            variant="ghost" 
             size="icon"
-            className="hover:bg-primary hover:rounded-full"
+            className="active:bg-transparent"  
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {/* Pass bg-black to make the lines black */}
+            <AnimatedHamburgerIcon isOpen={isMobileMenuOpen} lineClassName="bg-black" />
           </Button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-opacity duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
       >
+        {/* Close Button (Stays the same: primary bg with white icon) */}
         <Button
-          variant="ghost"
           size="icon"
-          className="absolute top-4 right-4 hover:bg-primary hover:text-background rounded-full"
+          className="absolute top-4 right-4 text-primary-foreground rounded-full"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <X className="h-6 w-6" />
+          {/* Defaults to bg-current (white) */}
+          <AnimatedHamburgerIcon isOpen={true} />
         </Button>
         <div className="flex flex-col items-center gap-8">
           {navLinks.map((link) => {
