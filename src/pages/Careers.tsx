@@ -125,7 +125,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
                   <span className="text-foreground font-montserrat font-semibold">Our Culture</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-                  Why Work With <span className="text-primary">IT Company</span>?
+                  Why Work With <span className="text-primary">Sachtech Solutions</span>?
                 </h2>
               </div>
               <img 
@@ -176,11 +176,31 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               <span className="text-foreground font-montserrat font-semibold">A Glimpse Inside</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-              Life at <span className="text-primary">IT Company</span>
+              Life at <span className="text-primary">Sachtech Solutions</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <img 
+              src={modernOffice} 
+              alt="Modern office space" 
+              className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <img 
+              src={officeSpace} 
+              alt="Team collaboration" 
+              className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <img 
+              src={teamLunch} 
+              alt="Team lunch" 
+              className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <img 
+              src={casualGathering} 
+              alt="Casual gathering" 
+              className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+            />
             <img 
               src={modernOffice} 
               alt="Modern office space" 
@@ -220,12 +240,12 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
                 Explore Our <span className="text-primary">Open Roles</span>
               </h2>
             </div>
-            <Button 
+            {/* <Button 
               size="lg"
               className="rounded-full font-montserrat font-semibold"
             >
               Submit Resume
-            </Button>
+            </Button> */}
           </div>
 
           {/* Search and Filter Bar */}
@@ -242,7 +262,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               </div>
               <div>
                 <Select value={locationFilter} onValueChange={setLocationFilter}>
-                  <SelectTrigger className="w-full h-12">
+                  <SelectTrigger className="w-full h-12 font-montserrat">
                     <SelectValue placeholder="All Locations" />
                   </SelectTrigger>
                   <SelectContent>
@@ -256,7 +276,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               </div>
               <div>
                 <Select value={departmentFilter} onValueChange={setDepartmentFilter}>
-                  <SelectTrigger className="w-full h-12">
+                  <SelectTrigger className="w-full h-12 font-montserrat">
                     <SelectValue placeholder="All Departments" />
                   </SelectTrigger>
                   <SelectContent>
@@ -297,7 +317,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
       <ServicesTicker />
 
       {/* Perks & Benefits Section */}
-      <section className="py-20 bg-background">
+      <section className="py-28 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-2">
@@ -333,7 +353,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
       <ServicesTicker />
 
       {/* Call to Action */}
-      <section className="py-20 bg-navy">
+      <section className="py-32 bg-navy">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-navy-foreground mb-4 font-poppins">
             Ready to Make an Impact?
