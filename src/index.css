@@ -127,11 +127,5 @@ All colors MUST be HSL.
     }
   }
   
-  .animate-scroll-left {
-    animation: scroll-left 30s linear infinite;
-  }
 
-  .animate-scroll-left {
-    animation: scroll-left 30s linear infinite;
-  }
 }

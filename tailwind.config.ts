@@ -94,7 +94,8 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-left": "scroll-left 5s linear infinite",
+        "scroll-left-desktop": "scroll-left 10s linear infinite",
       },
     },
   },

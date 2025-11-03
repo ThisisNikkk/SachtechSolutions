@@ -109,16 +109,16 @@ const Navigation = ({ onNavigate }) => {
           Get A Quote
         </Button>
 
-        {/* --- MODIFIED Hamburger Menu Button (Open) --- */}
-        <div className="lg:hidden">
+        {/* --- Hamburger Menu Button (Open) --- */}
+        <div className={`lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
           <Button
             variant="ghost" 
             size="icon"
             className="active:bg-transparent"  
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {/* Pass bg-black to make the lines black */}
-            <AnimatedHamburgerIcon isOpen={isMobileMenuOpen} lineClassName="bg-black" />
+            {/* This button is now *always* a hamburger */}
+            <AnimatedHamburgerIcon isOpen={false} lineClassName="bg-black" />
           </Button>
         </div>
       </div>
@@ -137,7 +137,7 @@ const Navigation = ({ onNavigate }) => {
           className="absolute top-4 right-4 text-primary-foreground rounded-full"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          {/* Defaults to bg-current (white) */}
+          {/* This button is now *always* an 'X' */}
           <AnimatedHamburgerIcon isOpen={true} />
         </Button>
         <div className="flex flex-col items-center gap-8">
