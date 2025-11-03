@@ -31,9 +31,7 @@ const Hero = ({ onNavigate }) => {
 
           {/* Description */}
           <p className="text-navy-foreground/80 text-lg mb-8 leading-relaxed font-montserrat">
-            Your trusted partner for professional, reliable, and affordable 
-            cleaning solutions—delivering spotless results for homes, offices, 
-            and commercial spaces with care and precision.
+            We specialize in crafting high-quality digital solutions that empower businesses to grow and innovate. From software and mobile app development to cloud integration and enterprise solutions, we combine technical expertise with a creative approach to deliver results that matter.
           </p>
 
           {/* CTA Buttons */}
