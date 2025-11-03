@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as maptilersdk from '@maptiler/leaflet-maptilersdk';
 
-// Fix for default marker icon in production
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
@@ -19,19 +18,16 @@ const Map = () => {
   useEffect(() => {
     if (!mapContainer.current || map.current) return;
 
-    // SachTech Solution Private Limited coordinates (C-86, Phase 7, Sector 74, Mohali)
     const companyLocation: [number, number] = [30.7170, 76.69486];
     
-    // Initialize map
     map.current = L.map(mapContainer.current).setView(companyLocation, 15);
 
-    // Add MapTiler OMT layer
     maptilersdk.maptilerLayer({
       apiKey: import.meta.env.VITE_MAPTILER_API_KEY as string,
       style: maptilersdk.MapStyle.STREETS.PASTEL,
     }).addTo(map.current);
 
-    // Add marker with popup
+
     const marker = L.marker(companyLocation).addTo(map.current);
     marker.bindPopup(`
       <div style="font-family: system-ui, -apple-system, sans-serif; padding: 4px;">
@@ -46,7 +42,7 @@ const Map = () => {
       </div>
     `);
 
-    // Cleanup
+
     return () => {
       map.current?.remove();
       map.current = null;
@@ -56,7 +52,7 @@ const Map = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="h-[500px] rounded-3xl overflow-hidden shadow-lg">
+        <div className="h-[500px] rounded-3xl overflow-hidden shadow-lg relative z-10">          
           <div ref={mapContainer} className="w-full h-full" />
         </div>
       </div>

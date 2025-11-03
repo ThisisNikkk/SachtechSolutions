@@ -1,25 +1,30 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import illustration from "@/assets/404-illustration.png";
+import { ArrowLeft, Loader2 } from "lucide-react";
+import illustration from "@/assets/NotFound.svg";
 
 const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isNavigating, setIsNavigating] = useState(false);
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
   const handleBackHome = () => {
+    setIsNavigating(true);
     if (onNavigate) {
       onNavigate();
     }
-    navigate("/");
+    setTimeout(() => {
+      navigate("/");
+      setIsNavigating(false);
+    }, 500); // 1 second delay
   };
 
   return (
@@ -28,7 +33,7 @@ const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
       <Navigation onNavigate={onNavigate} />
       
       {/* 404 Hero Section */}
-      <section className="py-20 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
             {/* Robot Illustration */}
@@ -36,7 +41,7 @@ const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
               <img 
                 src={illustration} 
                 alt="404 Robot" 
-                className="w-full max-w-md mx-auto"
+                className="w-full max-w-lg h-96 mx-auto"
               />
             </div>
 
@@ -55,9 +60,14 @@ const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
               onClick={handleBackHome}
               size="lg" 
               className="rounded-full gap-2 font-montserrat font-medium"
+              disabled={isNavigating}
             >
-              <ArrowLeft className="w-5 h-5" />
-              BACK TO HOME
+              {isNavigating ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <ArrowLeft className="w-5 h-5" />
+              )}
+              {isNavigating ? "REDIRECTING..." : "BACK TO HOME"}
             </Button>
           </div>
         </div>

@@ -80,6 +80,7 @@ const Navigation = ({ onNavigate }) => {
           <Button
             variant="ghost"
             size="icon"
+            className="hover:bg-primary hover:rounded-full"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -89,12 +90,12 @@ const Navigation = ({ onNavigate }) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background z-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-4 right-4"
+          className="absolute top-4 right-4 hover:bg-primary hover:text-background rounded-full"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <X className="h-6 w-6" />
