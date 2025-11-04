@@ -114,7 +114,7 @@ const Footer = () => {
                 We take pride in fostering a culture of integrity, collaboration, responsibility.              
               </p>
               <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium pb-4">
-                <a href="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                <a href ="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Service
                 </a>
                 <a href="/portfolio" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
