@@ -111,23 +111,23 @@ const Footer = () => {
                 <img src={logo } alt="IT Company" className="max-w-xs h-16 sm:w-50 sm:h-20" />
               </div>
               <p className="text-background font-poppins md:text-sm">
-                Design amazing digital experiences that create more happy in the world
+                We take pride in fostering a culture of integrity, collaboration, responsibility.              
               </p>
               <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium pb-4">
-                <a href="#about" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                <a href="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                  Service
+                </a>
+                <a href="/portfolio" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                  Portfolio
+                </a>
+                <a href="/about" className="text-navy-foreground hover:text-primary transition-colors  lg:text-[14px] md:text-[12px]">
                   About Us
                 </a>
-                <a href="#careers" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                <a href="/career" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Careers
                 </a>
-                <a href="#contact" className="text-navy-foreground hover:text-primary transition-colors  lg:text-[14px] md:text-[12px]">
-                  Contact us
-                </a>
-                <a href="#projects" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Projects
-                </a>
-                <a href="#privacy" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Privacy
+                <a href="/contact" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                  Contact Us
                 </a>
               </nav>
             </div>

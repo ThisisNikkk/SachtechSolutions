@@ -140,7 +140,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins">
                 We Empower Our People
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4fo">
                 {benefits.map((benefit, index) => {
                   const Icon = benefit.icon;
                   return (
@@ -350,7 +350,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <ServicesTicker />
+      {/* <ServicesTicker /> */}
 
       {/* Call to Action */}
       <section className="py-32 bg-navy">
