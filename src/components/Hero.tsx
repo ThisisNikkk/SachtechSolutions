@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Hero = ({ onNavigate }) => {
+  const navigate = useNavigate();
+
+  const handleExplore = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+    navigate("/about");
+  };
+
   return (
     <section className="relative min-h-[630px] flex items-center">
 
@@ -36,7 +46,7 @@ const Hero = ({ onNavigate }) => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-7">
-            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-sm font-bold " onClick={onNavigate}>
+            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-sm font-bold " onClick={handleExplore} >
               Explore More
               <ArrowRight className="w-10 h-10" />
             </Button>
