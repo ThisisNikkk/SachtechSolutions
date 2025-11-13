@@ -137,7 +137,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
 
             {/* Right Column - Benefits */}
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins">
+              <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins lg:mt-24">
                 We Empower Our People
               </h3>
               <ul className="space-y-4fo">
@@ -152,7 +152,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
                         <h4 className="font-semibold text-foreground font-montserrat mb-1">
                           {benefit.title}
                         </h4>
-                        <p className="text-foreground/80 font-montserrat">
+                        <p className="text-foreground/80 font-montserrat mb-2">
                           {benefit.description}
                         </p>
                       </div>
