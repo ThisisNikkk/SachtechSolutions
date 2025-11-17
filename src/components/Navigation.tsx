@@ -111,10 +111,11 @@ const Navigation = ({ onNavigate }) => {
 
       {/* Mobile Menu Overlay - Fullscreen Animated */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center 
+          transition-opacity duration-300 ease-in-out ${ // MODIFICATION: Changed 'transition-all' to 'transition-opacity' and adjusted duration/easing
           isMobileMenuOpen
-            ? "translate-y-0 opacity-100 pointer-events-auto"
-            : "-translate-y-full opacity-0 pointer-events-none"
+            ? "opacity-100 pointer-events-auto" // MODIFICATION: Removed 'translate-y-0'
+            : "opacity-0 pointer-events-none" // MODIFICATION: Removed '-translate-y-full'
         }`}
       >
         <div className="flex flex-col items-center gap-8">
@@ -132,8 +133,8 @@ const Navigation = ({ onNavigate }) => {
                   isActive ? "text-primary" : "text-foreground"
                 } ${
                   isMobileMenuOpen 
-                    ? "translate-y-0 opacity-100" 
-                    : "-translate-y-4 opacity-0" // <-- CHANGED THIS LINE
+                    ? "opacity-100" // MODIFICATION: Removed 'translate-y-0'
+                    : "opacity-0" // MODIFICATION: Removed 'translate-y-4'
                 }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${100 + index * 50}ms` : "0ms"
@@ -147,8 +148,8 @@ const Navigation = ({ onNavigate }) => {
             size="lg" 
             className={`mt-8 rounded-full text-sm font-montserrat font-medium h-12 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
               isMobileMenuOpen 
-                ? "translate-y-0 opacity-100" 
-                : "-translate-y-4 opacity-0" // <-- CHANGED THIS LINE
+                ? "opacity-100" // MODIFICATION: Removed 'translate-y-0'
+                : "opacity-0" // MODIFICATION: Removed 'translate-y-4'
             }`}
             style={{
               transitionDelay: isMobileMenuOpen ? `${100 + navLinks.length * 50}ms` : "0ms"
