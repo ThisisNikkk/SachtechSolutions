@@ -169,7 +169,7 @@ const Team = ({ onNavigate }) => {
               <p className="text-primary font-poppins mb-3">{member.title}</p>
 
               {/* Description */}
-              <p className="text-sm text-muted-foreground font- montserrat leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground font-montserrat leading-relaxed mb-4">
                 {member.description}
               </p>
 

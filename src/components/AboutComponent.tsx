@@ -5,7 +5,7 @@ const AboutComponent = () => {
     <section className="bg-background py-16 lg:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header & Intro */}
-        <div className="max-w-4xl mb-12 space-y-6">
+        <div className="mb-12 space-y-6">
           {/* Pre-headline */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-0.5 bg-primary"></div>
@@ -21,13 +21,12 @@ const AboutComponent = () => {
 
           {/* Intro Paragraph */}
           <p className="text-foreground leading-relaxed font-montserrat">
-            SachTech Solution Private Limited, incorporated on August 11, 2016 under the Companies Act, 2013 (CIN: U72900CH2016PTC041177), is a leading technology company headquartered in Mohali, India.
-            Driven by a team of passionate and innovative young entrepreneurs, SachTech has established a strong presence in the global IT industry. We proudly serve clients across multiple countries, including the USA, Canada, UK, Brazil, Spain, Malaysia, UAE, Egypt, Australia, Finland, and many others.
+            SachTech Solution Private Limited, incorporated on August 11, 2016 under the Companies Act, 2013 (CIN: U72900CH2016PTC041177), is a leading technology company headquartered in Mohali, India. Driven by a team of passionate and innovative young entrepreneurs, SachTech has established a strong presence in the global IT industry. We proudly serve clients across multiple countries, including the USA, Canada, UK, Brazil, Spain, Malaysia, UAE, Egypt, Australia, Finland, and many others. Specializing in custom software development, mobile applications, and comprehensive web solutions, we are dedicated to transforming our clients' visions into tangible, high-quality products. Our core mission is to build robust, scalable, and innovative technology that delivers measurable results and helps businesses thrive in the digital age.
           </p>
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-4 gap-4 auto-rows-[280px]">
+        <div className="grid grid-cols-4 gap-4 auto-rows-[200px]">
           {/* Cell 1: The Image (2x2) */}
           <div className="col-span-4 md:col-span-2 row-span-2 rounded-[var(--radius)] overflow-hidden">
             <img 
@@ -40,7 +39,7 @@ const AboutComponent = () => {
           {/* Cell 2: Our Mission (2x1) */}
           <div className="col-span-4 md:col-span-2 row-span-1 rounded-[var(--radius)] bg-muted p-6">
             <h3 className="text-2xl font-bold text-foreground mb-3 font-poppins">Our Mission</h3>
-            <p className="text-foreground leading-relaxed font-montserrat text-sm">
+            <p className="text-foreground leading-relaxed font-montserrat">
               We design and execute market-leading performance roadmaps by blending creative thinking, technological expertise, and global reach. Our goal is to eliminate the gap between client needs and our solutions—achieving complete alignment through continuous innovation.
             </p>
           </div>
@@ -58,13 +57,15 @@ const AboutComponent = () => {
             <h3 className="text-2xl font-bold text-foreground mb-3 font-poppins">Our Culture</h3>
             <p className="text-foreground leading-relaxed font-montserrat">
               At SachTech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
-            </p>
+              <br/>
+              <br/>
+              We believe in continuous learning and provide our team with the resources to grow both personally and professionally. Our open-door policy encourages transparent communication, and we celebrate diverse perspectives, knowing that the best ideas can come from anywhere.            </p>
           </div>
 
           {/* Cell 5: Team Members Stat (1x1) - Pop Cell */}
           <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-primary p-6 flex flex-col items-center justify-center text-center">
-            <div className="text-5xl font-bold text-primary-foreground font-poppins mb-2">50+</div>
-            <div className="text-primary-foreground font-montserrat">Team Members</div>
+            <div className="text-5xl font-bold text-primary-foreground font-poppins mb-2">14+</div>
+            <div className="text-primary-foreground font-montserrat">Years Of Experience</div>
           </div>
 
           {/* Cell 6: Happy Clients Stat (1x1) - Pop Cell */}
@@ -77,6 +78,10 @@ const AboutComponent = () => {
           <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-primary p-6 flex flex-col items-center justify-center text-center">
             <div className="text-5xl font-bold text-primary-foreground font-poppins mb-2">99%</div>
             <div className="text-primary-foreground font-montserrat">Client Satisfaction</div>
+          </div>
+          <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-primary p-6 flex flex-col items-center justify-center text-center">
+            <div className="text-5xl font-bold text-primary-foreground font-poppins mb-2">50+</div>
+            <div className="text-primary-foreground font-montserrat">Team Members</div>
           </div>
         </div>
       </div>

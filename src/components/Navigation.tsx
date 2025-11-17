@@ -133,7 +133,7 @@ const Navigation = ({ onNavigate }) => {
                 } ${
                   isMobileMenuOpen 
                     ? "translate-y-0 opacity-100" 
-                    : "translate-y-4 opacity-0"
+                    : "-translate-y-4 opacity-0" // <-- CHANGED THIS LINE
                 }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${100 + index * 50}ms` : "0ms"
@@ -148,7 +148,7 @@ const Navigation = ({ onNavigate }) => {
             className={`mt-8 rounded-full text-sm font-montserrat font-medium h-12 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
               isMobileMenuOpen 
                 ? "translate-y-0 opacity-100" 
-                : "translate-y-4 opacity-0"
+                : "-translate-y-4 opacity-0" // <-- CHANGED THIS LINE
             }`}
             style={{
               transitionDelay: isMobileMenuOpen ? `${100 + navLinks.length * 50}ms` : "0ms"

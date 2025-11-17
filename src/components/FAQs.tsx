@@ -13,27 +13,27 @@ const FAQs = () => {
   const faqs = [
     {
       question: "What services does your company provide?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt.",
+      answer: "We offer a wide range of IT services, including iOS and Android App Development, Windows App Development, OpenGL, App Maintenance, SEO, PHP Development, Java Development, E-Commerce Development, CMS Development, Software Maintenance, Email Marketing, Web Designing Services, Website Maintenance, IT Strategy and Consulting, Internet of Things, Cloud Solutions, and Data Analytics.",
     },
     {
       question: "What industries do you serve?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt ut labore et dolore.",
+      answer: "We serve a diverse range of industries, from highly regulated sectors like Healthcare, Fintech, and Legal to dynamic consumer markets like Fashion, Hospitality, and Food Delivery. Our expertise also covers Logistics, Real Estate, Automotive, and more.",
     },
     {
       question: "Do you offer customized IT solutions?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt.",
+      answer: "Yes, we specialize in custom software development, mobile applications, and comprehensive web solutions. We can also develop custom content management systems to meet your specific needs.",
     },
     {
       question: "How can I contact your support team?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt.",
+      answer: "You can contact our support team by phone at +(91) 7087425488, by email at kapil.dhawan@sachtechsolution.com, or by filling out the contact form on our website.",
     },
     {
       question: "How secure are your IT solutions?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt.",
+      answer: "We prioritize the security of our IT solutions. Our website maintenance services ensure your site is secure and up-to-date, and we provide scalable and secure cloud solutions tailored to your business needs.",
     },
     {
       question: "Do you offer 24/7 technical support?",
-      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt.",
+      answer: "Our official support hours are Monday to Friday, from 11:00 AM to 8:00 PM. For urgent issues, we recommend contacting us by phone.",
     },
   ];
 

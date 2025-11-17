@@ -159,16 +159,13 @@ const Footer = () => {
                 © 2025 Sachtech Solutions . All rights reserved.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#twitter" className="text-navy-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#linkedin" className="text-navy-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/company/sachtech-solution-private-limited" className="text-navy-foreground hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#facebook" className="text-navy-foreground hover:text-primary transition-colors">
+                <a href="https://facebook.com/SachTechSol" className="text-navy-foreground hover:text-primary transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#github" className="text-navy-foreground hover:text-primary transition-colors">
+                <a href="https://instagram.com/sach.tech" className="text-navy-foreground hover:text-primary transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>

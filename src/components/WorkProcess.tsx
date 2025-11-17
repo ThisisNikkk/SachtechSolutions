@@ -6,25 +6,29 @@ const WorkProcess = () => {
       icon: ClipboardList,
       number: "01",
       title: "Consultation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "We begin by understanding your vision, goals, and challenges through in-depth discussions, ensuring precise requirements gathering and project alignment.",
     },
     {
       icon: Lightbulb,
       number: "02",
       title: "Strategy",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Based on our consultation, we craft a tailored strategy, optimal technologies, architecture, and a clear roadmap for successful project execution.",
     },
     {
       icon: Layers,
       number: "03",
       title: "Implementation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Our expert team brings the strategy to life, developing and rigorously testing your solution with agile methodologies and transparent communication.",
     },
     {
       icon: Smile,
       number: "04",
       title: "Final Result",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "We deliver a high-quality, fully functional product, ensuring it meets your expectations and provides measurable value, followed by ongoing support.",
     },
   ];
 
@@ -36,7 +40,9 @@ const WorkProcess = () => {
           {/* Pre-headline */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-0.5 bg-primary"></div>
-            <span className="text-foreground text-sm font-montserrat">Our Work Process</span>
+            <span className="text-foreground text-sm font-montserrat">
+              Our Work Process
+            </span>
           </div>
 
           {/* Main Headline */}
@@ -79,7 +85,8 @@ const WorkProcess = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-center max-w-[250px] font-montserrat">
+                {/* MODIFICATION: Added "min-h-[100px]" to equalize heights */}
+                <p className="text-muted-foreground text-center max-w-[250px] font-montserrat min-h-[100px]">
                   {step.description}
                 </p>
               </div>

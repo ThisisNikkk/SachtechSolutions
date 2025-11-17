@@ -1,4 +1,4 @@
-import { Phone, Mail, Twitter, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const TopBar = () => {
   return (
@@ -17,16 +17,16 @@ const TopBar = () => {
         
         <div className="flex items-center gap-3">
           <a 
-            href="https://twitter.com" 
+            href="https://www.linkedin.com/company/sachtech-solution-private-limited" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-full flex items-center justify-center bg-background text-primary hover:bg-primary hover:text-white transition-all"
             aria-label="Twitter"
           >
-            <Twitter className="w-4 h-4" />
+            <Linkedin className="w-4 h-4" />
           </a>
           <a 
-            href="https://facebook.com" 
+            href="https://facebook.com/SachTechSol" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-full flex items-center justify-center bg-background text-primary hover:bg-primary hover:text-white transition-all"
@@ -35,7 +35,7 @@ const TopBar = () => {
             <Facebook className="w-4 h-4" />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://instagram.com/sach.tech" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-full flex items-center justify-center bg-background text-primary hover:bg-primary hover:text-white transition-all"
