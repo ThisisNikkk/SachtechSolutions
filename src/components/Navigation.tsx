@@ -5,34 +5,24 @@ import logo from "@/assets/logo.png";
 
 /**
  * An animated hamburger icon that transforms into an 'X'.
- * @param {object} props - The component props.
- * @param {boolean} props.isOpen - Whether the menu is open or not.
- * @param {string} [props.lineClassName] - Optional class for the line color. Defaults to 'bg-current'.
+ * Two-line design for smooth animation.
  */
-const AnimatedHamburgerIcon = ({ isOpen, lineClassName = "bg-current" }) => {
-  // Common classes for all three lines
+const AnimatedHamburgerIcon = ({ isOpen }: { isOpen: boolean }) => {
   const commonClasses =
-    `block absolute h-0.5 w-6 ${lineClassName} transform transition-all duration-300 ease-in-out left-0`;
+    "block absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] left-0";
 
   return (
-    // The container that matches the size of the lucide icons
     <div className="relative w-6 h-6">
       {/* Top line */}
       <span
         className={`${commonClasses} ${
-          isOpen ? "rotate-45 top-[11px]" : "top-[6px]"
-        }`}
-      />
-      {/* Middle line */}
-      <span
-        className={`${commonClasses} top-[11px] ${
-          isOpen ? "opacity-0" : "opacity-100"
+          isOpen ? "rotate-45 top-[11px]" : "top-[8px]"
         }`}
       />
       {/* Bottom line */}
       <span
         className={`${commonClasses} ${
-          isOpen ? "-rotate-45 top-[11px]" : "top-[16px]"
+          isOpen ? "-rotate-45 top-[11px]" : "top-[14px]"
         }`}
       />
     </div>
@@ -109,39 +99,26 @@ const Navigation = ({ onNavigate }) => {
           Get A Quote
         </Button>
 
-        {/* --- Hamburger Menu Button (Open) --- */}
-        <div className={`lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
-          <Button
-            variant="ghost" 
-            size="icon"
-            className="active:bg-transparent"  
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {/* This button is now *always* a hamburger */}
-            <AnimatedHamburgerIcon isOpen={false} lineClassName="bg-black" />
-          </Button>
-        </div>
+        {/* Hamburger Menu Button */}
+        <button
+          className="lg:hidden z-[60] relative"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <AnimatedHamburgerIcon isOpen={isMobileMenuOpen} />
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Fullscreen Animated */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-opacity duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
           isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        {/* Close Button (Stays the same: primary bg with white icon) */}
-        <Button
-          size="icon"
-          className="absolute top-4 right-4 text-primary-foreground rounded-full"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          {/* This button is now *always* an 'X' */}
-          <AnimatedHamburgerIcon isOpen={true} />
-        </Button>
         <div className="flex flex-col items-center gap-8">
-          {navLinks.map((link) => {
+          {navLinks.map((link, index) => {
             const isActive = checkIsActive(link.href);
             return (
               <NavLink
@@ -151,19 +128,36 @@ const Navigation = ({ onNavigate }) => {
                   setIsMobileMenuOpen(false);
                   handleLinkClick();
                 }}
-                className={`font-montserrat font-medium transition-colors text-lg ${
+                className={`font-montserrat font-medium transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] text-2xl ${
                   isActive ? "text-primary" : "text-foreground"
+                } ${
+                  isMobileMenuOpen 
+                    ? "translate-y-0 opacity-100" 
+                    : "translate-y-4 opacity-0"
                 }`}
+                style={{
+                  transitionDelay: isMobileMenuOpen ? `${100 + index * 50}ms` : "0ms"
+                }}
               >
                 {link.name}
               </NavLink>
             );
           })}
-          <Button size="lg" className="mt-8 rounded-full text-sm font-poppins font-regular h-12" onClick={() => {
-            setIsMobileMenuOpen(false);
-            handleGetAQuoteClick();
-          }}>
-
+          <Button 
+            size="lg" 
+            className={`mt-8 rounded-full text-sm font-montserrat font-medium h-12 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+              isMobileMenuOpen 
+                ? "translate-y-0 opacity-100" 
+                : "translate-y-4 opacity-0"
+            }`}
+            style={{
+              transitionDelay: isMobileMenuOpen ? `${100 + navLinks.length * 50}ms` : "0ms"
+            }}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              handleGetAQuoteClick();
+            }}
+          >
             Get A Quote
           </Button>
         </div>
