@@ -14,7 +14,7 @@ const WorkProcess = () => {
       number: "02",
       title: "Strategy",
       description:
-        "Based on our consultation, we craft a tailored strategy, optimal technologies, architecture, and a clear roadmap for successful project execution.",
+        "Based on our consultation, we craft a tailored strategy, outlining optimal technologies, architecture, and a clear roadmap for successful project execution.",
     },
     {
       icon: Layers,
@@ -85,8 +85,7 @@ const WorkProcess = () => {
                 </h3>
 
                 {/* Description */}
-                {/* MODIFICATION: Added "min-h-[100px]" to equalize heights */}
-                <p className="text-muted-foreground text-center max-w-[250px] font-montserrat min-h-[100px]">
+                <p className="text-muted-foreground text-center max-w-[250px] font-montserrat">
                   {step.description}
                 </p>
               </div>
