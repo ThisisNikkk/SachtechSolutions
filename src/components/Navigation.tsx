@@ -70,7 +70,7 @@ const Navigation = ({ onNavigate }) => {
       <div className="container mx-auto px-4 py-3 sm:py-5 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-4" onClick={handleLinkClick}>
-          <img src={logo} alt="Sachtech Solutions" className="h-28 sm:h-24 w-auto object-contain" />
+          <img src={logo} alt="Solario Tech" className="h-28 sm:h-24 w-auto object-contain" />
         </NavLink>
 
         {/* Navigation Links */}

@@ -34,11 +34,11 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       contactFormSchema.parse(formData);
       setErrors({});
-      
+
       if (onNavigate) {
         onNavigate();
       }
@@ -47,7 +47,7 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
         title: "Message sent successfully!",
         description: "We'll get back to you soon.",
       });
-      
+
       // Reset form
       setFormData({
         name: "",
@@ -208,7 +208,7 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
             <div className="mb-8">
               <h3 className="text-2xl font-medium font-poppins mb-3">Contact</h3>
               <p className="opacity-90 font-montserrat text-sm">Phone: +(91) 7087425488</p>
-              <p className="opacity-90 font-montserrat text-sm">Email: kapil.dhawan@sachtechsolution.com</p>
+              <p className="opacity-90 font-montserrat text-sm">Email: contact@solariotech.com</p>
             </div>
 
             {/* Open Time */}

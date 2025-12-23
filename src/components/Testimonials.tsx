@@ -26,7 +26,7 @@ const Testimonials = () => {
       rating: 5.0,
       image: testimonial1,
       quote:
-        "SachTech Solutions transformed our vision into a tangible product with exceptional precision and creativity. Their team's dedication and expertise were evident at every stage, delivering a solution that exceeded our expectations and significantly boosted our market presence.",
+        "Solario Tech transformed our vision into a tangible product with exceptional precision and creativity. Their team's dedication and expertise were evident at every stage, delivering a solution that exceeded our expectations and significantly boosted our market presence.",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Testimonials = () => {
       rating: 5.0,
       image: testimonial2,
       quote:
-        "Working with SachTech was a seamless experience. Their agile approach and transparent communication ensured we were always aligned. The quality of their work and their commitment to our success truly set them apart. Highly recommended for any complex IT project.",
+        "Working with Solario Tech was a seamless experience. Their agile approach and transparent communication ensured we were always aligned. The quality of their work and their commitment to our success truly set them apart. Highly recommended for any complex IT project.",
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const Testimonials = () => {
       rating: 5.0,
       image: testimonial3,
       quote:
-        "The innovative solutions provided by SachTech have revolutionized our product line. Their deep understanding of emerging technologies and their ability to implement them effectively gave us a significant competitive edge. A truly invaluable partner.",
+        "The innovative solutions provided by Solario Tech have revolutionized our product line. Their deep understanding of emerging technologies and their ability to implement them effectively gave us a significant competitive edge. A truly invaluable partner.",
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const Testimonials = () => {
       rating: 5.0,
       image: testimonial4,
       quote:
-        "SachTech's technical prowess and strategic insights were instrumental in scaling our operations. They delivered a robust and scalable platform that not only met our immediate needs but also positioned us for future growth. An outstanding team to collaborate with.",
+        "Solario Tech's technical prowess and strategic insights were instrumental in scaling our operations. They delivered a robust and scalable platform that not only met our immediate needs but also positioned us for future growth. An outstanding team to collaborate with.",
     },
   ];
 
@@ -169,11 +169,10 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => scrollTo(index)}
-              className={`h-1 rounded-full transition-all ${
-                index === selectedIndex
-                  ? "w-8 bg-primary"
-                  : "w-8 bg-border hover:bg-border/80"
-              }`}
+              className={`h-1 rounded-full transition-all ${index === selectedIndex
+                ? "w-8 bg-primary"
+                : "w-8 bg-border hover:bg-border/80"
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

@@ -22,6 +22,18 @@ const ServicesComponent = () => {
       featured: false,
     },
     {
+      icon: Monitor,
+      title: "Artificial Intelligence",
+      description: "We develop intelligent solutions leveraging AI and machine learning to solve complex business challenges.",
+      featured: false,
+    },
+    {
+      icon: LayoutGrid,
+      title: "Automation",
+      description: "We implement automation solutions to streamline your business processes and improve efficiency.",
+      featured: false,
+    },
+    {
       icon: ComputerIcon,
       title: "Open GL",
       description: "We leverage OpenGL to create high-performance 2D and 3D graphics applications.",
@@ -58,12 +70,6 @@ const ServicesComponent = () => {
       featured: false,
     },
     {
-      icon: LayoutGrid,
-      title: "CMS Development",
-      description: "We develop custom content management systems to meet your specific needs.",
-      featured: false,
-    },
-    {
       icon: Wrench,
       title: "Software Maintenance",
       description: "We offer comprehensive software maintenance services to ensure your software remains up-to-date and bug-free.",
@@ -73,12 +79,6 @@ const ServicesComponent = () => {
       icon: Mail,
       title: "Email Marketing",
       description: "We create and manage effective email marketing campaigns to engage your audience.",
-      featured: false,
-    },
-    {
-      icon: Palette,
-      title: "Web Designing Services",
-      description: "We design visually appealing and user-friendly websites that leave a lasting impression.",
       featured: false,
     },
     {

@@ -1,127 +1,185 @@
-import careConnect from "@/assets/portfolio-care-connect.jpg";
-import dentalClinic from "@/assets/portfolio-dental-clinic.jpg";
-import carRental from "@/assets/portfolio-car-rental.jpg";
-import hotelBooking from "@/assets/portfolio-hotel-booking.jpg";
+import p1 from "@/assets/website/1.png";
+import p2 from "@/assets/website/2.png";
+import p3 from "@/assets/website/3.png";
+import p4 from "@/assets/website/4.png";
+import p5 from "@/assets/website/5.png";
+import p6 from "@/assets/website/6.png";
+import p7 from "@/assets/website/7.png";
+import p8 from "@/assets/website/8.png";
+import p9 from "@/assets/website/9.png";
+import p10 from "@/assets/website/10.png";
+import p11 from "@/assets/website/11.png";
+import p12 from "@/assets/website/12.png";
+import p14 from "@/assets/website/14.png";
+import p15 from "@/assets/website/15.png";
+import p16 from "@/assets/website/16.png";
+import p17 from "@/assets/website/17.png";
+import p18 from "@/assets/website/18.png";
+import p19 from "@/assets/website/19.png";
+import p20 from "@/assets/website/20.png";
+import p23 from "@/assets/website/23.png";
+import p24 from "@/assets/website/24.png";
+import p25 from "@/assets/website/25.png";
+import p26 from "@/assets/website/26.png";
+import p27 from "@/assets/website/27.png";
+import p28 from "@/assets/website/28.png";
+import p22 from "@/assets/website/22.png";
 
 export const portfolioItems = [
-    {
-      id: 1,
-      title: "Care Connect - Doctor Appointment App",
-      image: careConnect,
-      tags: ["UX/UI Design", "App Design", "Wireframe"],
-    },
-    {
-      id: 2,
-      title: "Dental - Dentist and Dental Clinic Website UIUX Design",
-      image: dentalClinic,
-      tags: ["UX/UI Design", "App Design", "Wireframe"],
-    },
-    {
-      id: 3,
-      title: "Car Rental - Car Rental Booking Mobile App",
-      image: carRental,
-      tags: ["UX/UI Design", "App Design", "Wireframe"],
-    },
-    {
-      id: 4,
-      title: "Hotel Booking - Hotel Booking App Landing Page UIUX Design",
-      image: hotelBooking,
-      tags: ["UX/UI Design", "App Design", "Wireframe"],
-    },
-    {
-      id: 5,
-      title: "E-commerce Platform for a Fashion Brand",
-      image: carRental,
-      tags: ["E-commerce", "Web Development", "UX/UI Design"],
-    },
-    {
-      id: 6,
-      title: "SaaS Dashboard for a Fintech Company",
-      image: hotelBooking,
-      tags: ["SaaS", "Web Development", "App Design"],
-    },
-    {
-      id: 7,
-      title: "Branding and Website for a Creative Agency",
-      image: careConnect,
-      tags: ["Branding", "Web Design", "Marketing"],
-    },
-    {
-      id: 8,
-      title: "Mobile App for a Food Delivery Service",
-      image: dentalClinic,
-      tags: ["Mobile App", "App Design", "UX/UI Design"],
-    },
-    {
-      id: 9,
-      title: "Landing Page for a Tech Conference",
-      image: carRental,
-      tags: ["Landing Page", "Web Design", "Marketing"],
-    },
-    {
-      id: 10,
-      title: "Website for a Real Estate Agency",
-      image: hotelBooking,
-      tags: ["Web Development", "UX/UI Design", "Branding"],
-    },
-    {
-      id: 11,
-      title: "Mobile App for a Fitness Brand",
-      image: careConnect,
-      tags: ["Mobile App", "App Design", "UX/UI Design"],
-    },
-    {
-      id: 12,
-      title: "Website for a Law Firm",
-      image: dentalClinic,
-      tags: ["Web Design", "Branding", "Marketing"],
-    },
-    {
-      id: 13,
-      title: "CRM System for a Sales Team",
-      image: careConnect,
-      tags: ["Web Development", "SaaS", "UX/UI Design"],
-    },
-    {
-      id: 14,
-      title: "Educational Platform for Online Courses",
-      image: dentalClinic,
-      tags: ["E-learning", "Web Development", "App Design"],
-    },
-    {
-      id: 15,
-      title: "Inventory Management System",
-      image: carRental,
-      tags: ["Software Development", "Logistics", "UX/UI Design"],
-    },
-    {
-      id: 16,
-      title: "Healthcare Portal for Patients and Doctors",
-      image: hotelBooking,
-      tags: ["Healthcare", "Web Development", "App Design"],
-    },
-    {
-      id: 17,
-      title: "Social Media Analytics Dashboard",
-      image: careConnect,
-      tags: ["Data Analytics", "Web Development", "UX/UI Design"],
-    },
-    {
-      id: 18,
-      title: "Booking System for a Travel Agency",
-      image: dentalClinic,
-      tags: ["E-commerce", "Web Development", "App Design"],
-    },
-    {
-      id: 19,
-      title: "Restaurant Management Software",
-      image: carRental,
-      tags: ["Software Development", "Hospitality", "UX/UI Design"],
-    },
-    {
-      id: 20,
-      title: "Personal Finance Tracker Mobile App",
-      image: hotelBooking,
-      tags: ["Mobile App", "Fintech", "App Design"],
-    },
-  ];
+  {
+    id: 1,
+    title: "AI Truck Parking",
+    image: p1,
+    tags: ["UX/UI Design", "App Design", "Website"],
+  },
+  {
+    id: 2,
+    title: "Auto1Source",
+    image: p2,
+    tags: ["UX/UI Design", "App Design", "Wireframe"],
+  },
+  {
+    id: 3,
+    title: "Brooks Network Service LLC",
+    image: p3,
+    tags: ["UX/UI Design", "App Design", "Wireframe"],
+  },
+  {
+    id: 4,
+    title: "Bullet Proof For BJJ",
+    image: p4,
+    tags: ["UX/UI Design", "App Design", "Wireframe"],
+  },
+  {
+    id: 5,
+    title: "CASA - Child & Adolescent Screening App",
+    image: p5,
+    tags: ["E-commerce", "Web Development", "UX/UI Design"],
+  },
+  {
+    id: 6,
+    title: "ClasShare",
+    image: p6,
+    tags: ["SaaS", "Web Development", "App Design"],
+  },
+  {
+    id: 7,
+    title: "CultureScore",
+    image: p7,
+    tags: ["Branding", "Web Design", "Marketing"],
+  },
+  {
+    id: 8,
+    title: "HEDONE",
+    image: p8,
+    tags: ["Mobile App", "App Design", "UX/UI Design"],
+  },
+  {
+    id: 9,
+    title: "LifeSuite",
+    image: p9,
+    tags: ["Landing Page", "Web Design", "Marketing"],
+  },
+  {
+    id: 10,
+    title: "LonelyAF",
+    image: p10,
+    tags: ["Web Development", "UX/UI Design", "Branding"],
+  },
+  {
+    id: 11,
+    title: "LugIt",
+    image: p11,
+    tags: ["Mobile App", "App Design", "UX/UI Design"],
+  },
+  {
+    id: 12,
+    title: "MiracleCloset",
+    image: p12,
+    tags: ["Web Design", "Branding", "Marketing"],
+  },
+  {
+    id: 13,
+    title: "Ufndr",
+    image: p23,
+    tags: ["Web Development", "SaaS", "UX/UI Design"],
+  },
+  {
+    id: 14,
+    title: "MyEdPrep",
+    image: p14,
+    tags: ["E-learning", "Web Development", "App Design"],
+  },
+  {
+    id: 15,
+    title: "NFT Treasure Quest",
+    image: p15,
+    tags: ["Software Development", "Logistics", "UX/UI Design"],
+  },
+  {
+    id: 16,
+    title: "No Sweat Desk Yoga",
+    image: p16,
+    tags: ["Healthcare", "Web Development", "App Design"],
+  },
+  {
+    id: 17,
+    title: "The PediDose",
+    image: p17,
+    tags: ["Data Analytics", "Web Development", "UX/UI Design"],
+  },
+  {
+    id: 18,
+    title: "PlateMe",
+    image: p18,
+    tags: ["E-commerce", "Web Development", "App Design"],
+  },
+  {
+    id: 19,
+    title: "SoberFish",
+    image: p19,
+    tags: ["Software Development", "Hospitality", "UX/UI Design"],
+  },
+  {
+    id: 20,
+    title: "Rhombus",
+    image: p20,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 21,
+    title: "Midnight Express",
+    image: p24,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 22,
+    title: "BarCrawl",
+    image: p25,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 23,
+    title: "Digital Hybrid Car Service",
+    image: p26,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 24,
+    title: "FTI Coach",
+    image: p27,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 25,
+    title: "Curl Planet",
+    image: p28,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+  {
+    id: 26,
+    title: "Smart Drone Delivery",
+    image: p22,
+    tags: ["Mobile App", "Fintech", "App Design"],
+  },
+];

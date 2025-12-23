@@ -42,7 +42,7 @@ const AboutUs = ({ onNavigate }) => {
 
               {/* Description */}
               <p className="text-muted-foreground leading-relaxed font-montserrat">
-                At SachTech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
+                At Solario Tech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
               </p>
             </div>
 
@@ -68,9 +68,9 @@ const AboutUs = ({ onNavigate }) => {
 
             {/* Blue framed image */}
             <div className="relative z-10 bg-primary p-4">
-              <img 
-                src={teamWorkingImage} 
-                alt="Team members collaborating at computer" 
+              <img
+                src={teamWorkingImage}
+                alt="Team members collaborating at computer"
                 className="w-full h-auto"
               />
             </div>

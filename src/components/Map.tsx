@@ -20,7 +20,15 @@ const Map = () => {
 
     const companyLocation: [number, number] = [30.7170, 76.69486];
 
-    map.current = L.map(mapContainer.current).setView(companyLocation, 15);
+    map.current = L.map(mapContainer.current, {
+      scrollWheelZoom: false,
+      zoomControl: false,
+      doubleClickZoom: false,
+      touchZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      dragging: false
+    }).setView(companyLocation, 15);
 
     maptilersdk.maptilerLayer({
       apiKey: import.meta.env.VITE_MAPTILER_API_KEY as string,

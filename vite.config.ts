@@ -15,4 +15,14 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'mobile-portfolio': ['@/data/mobilePortfolio'],
+          'website-portfolio': ['@/data/portfolioData'],
+        }
+      }
+    }
+  }
 }));

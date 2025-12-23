@@ -25,7 +25,7 @@ const FAQs = () => {
     },
     {
       question: "How can I contact your support team?",
-      answer: "You can contact our support team by phone at +(91) 7087425488, by email at kapil.dhawan@sachtechsolution.com, or by filling out the contact form on our website.",
+      answer: "You can contact our support team by phone at +(91) 7087425488, by email at contact@solariotech.com, or by filling out the contact form on our website.",
     },
     {
       question: "How secure are your IT solutions?",
