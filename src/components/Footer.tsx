@@ -73,11 +73,11 @@ const Footer = () => {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold font-poppins">
               <span className="text-foreground block mb-2">Subscribe{' '}
-                <span className="text-primary">For Expert IT 
-                <br/>
-                Tips And Social Offer
+                <span className="text-primary">For Expert IT
+                  <br />
+                  Tips And Social Offer
                 </span>
-                </span>
+              </span>
             </h2>
           </div>
 
@@ -108,13 +108,13 @@ const Footer = () => {
             {/* Column 1: Logo & Links */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <img src={logo } alt="IT Company" className="max-w-xs h-16 sm:w-50 sm:h-20" />
+                <img src={logo} alt="IT Company" className="h-28 sm:h-24 w-auto object-contain" />
               </div>
               <p className="text-background font-poppins md:text-sm">
-                We take pride in fostering a culture of integrity, collaboration, responsibility.              
+                Future-focused technology company, with a stronger emphasis on innovation, scalability, and global standards.
               </p>
               <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium pb-4">
-                <a href ="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
+                <a href="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
                   Service
                 </a>
                 <a href="/portfolio" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
@@ -156,7 +156,7 @@ const Footer = () => {
           <div className="border-t border-white/8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-navy-foreground text-sm font-montserrat ">
-                © 2025 Sachtech Solutions . All rights reserved.
+                © 2026 Solario Tech . All rights reserved.
               </p>
               <div className="flex items-center gap-4">
                 <a href="https://www.linkedin.com/company/sachtech-solution-private-limited" className="text-navy-foreground hover:text-primary transition-colors">

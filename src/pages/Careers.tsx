@@ -40,10 +40,10 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
   const filteredJobs = useMemo(() => {
     return jobsData.filter(job => {
       const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           job.description.toLowerCase().includes(searchQuery.toLowerCase());
+        job.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesLocation = locationFilter === 'all' || job.location === locationFilter;
       const matchesDepartment = departmentFilter === 'all' || job.department === departmentFilter;
-      
+
       return matchesSearch && matchesLocation && matchesDepartment;
     });
   }, [searchQuery, locationFilter, departmentFilter]);
@@ -103,14 +103,14 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
     <div className="min-h-screen">
       <TopBar />
       <Navigation onNavigate={onNavigate} />
-      
+
       {/* Page Banner */}
-      <PageBanner 
-        title="Careers" 
+      <PageBanner
+        title="Careers"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Careers' }
-        ]} 
+        ]}
       />
 
       {/* Why Join Us Section */}
@@ -125,12 +125,12 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
                   <span className="text-foreground font-montserrat font-semibold">Our Culture</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-                  Why Work With <span className="text-primary">Sachtech Solutions</span>?
+                  Why Work With <span className="text-primary">Solario Tech</span>?
                 </h2>
               </div>
-              <img 
-                src={teamCollaborating} 
-                alt="Team collaborating" 
+              <img
+                src={teamCollaborating}
+                alt="Team collaborating"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
               />
             </div>
@@ -176,49 +176,49 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               <span className="text-foreground font-montserrat font-semibold">A Glimpse Inside</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-              Life at <span className="text-primary">Sachtech Solutions</span>
+              Life at <span className="text-primary">Solario Tech</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <img 
-              src={modernOffice} 
-              alt="Modern office space" 
+            <img
+              src={modernOffice}
+              alt="Modern office space"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={officeSpace} 
-              alt="Team collaboration" 
+            <img
+              src={officeSpace}
+              alt="Team collaboration"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={teamLunch} 
-              alt="Team lunch" 
+            <img
+              src={teamLunch}
+              alt="Team lunch"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={casualGathering} 
-              alt="Casual gathering" 
+            <img
+              src={casualGathering}
+              alt="Casual gathering"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={modernOffice} 
-              alt="Modern office space" 
+            <img
+              src={modernOffice}
+              alt="Modern office space"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={officeSpace} 
-              alt="Team collaboration" 
+            <img
+              src={officeSpace}
+              alt="Team collaboration"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={teamLunch} 
-              alt="Team lunch" 
+            <img
+              src={teamLunch}
+              alt="Team lunch"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
-            <img 
-              src={casualGathering} 
-              alt="Casual gathering" 
+            <img
+              src={casualGathering}
+              alt="Casual gathering"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -361,7 +361,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
           <p className="text-xl text-navy-foreground mb-8 font-montserrat">
             Explore our opportunities and grow with us.
           </p>
-          <Button 
+          <Button
             size="lg"
             className="rounded-full font-montserrat font-semibold text-lg px-8"
             onClick={() => {

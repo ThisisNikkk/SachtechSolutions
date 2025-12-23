@@ -19,7 +19,7 @@ const Map = () => {
     if (!mapContainer.current || map.current) return;
 
     const companyLocation: [number, number] = [30.7170, 76.69486];
-    
+
     map.current = L.map(mapContainer.current).setView(companyLocation, 15);
 
     maptilersdk.maptilerLayer({
@@ -31,7 +31,7 @@ const Map = () => {
     const marker = L.marker(companyLocation).addTo(map.current);
     marker.bindPopup(`
       <div style="font-family: system-ui, -apple-system, sans-serif; padding: 4px;">
-        <strong style="font-size: 14px; display: block; margin-bottom: 6px;">SachTech Solution Pvt. Ltd.</strong>
+        <strong style="font-size: 14px; display: block; margin-bottom: 6px;">Solario Tech Pvt. Ltd.</strong>
         <span style="font-size: 13px; color: #666;">
           C-86, Phase 7<br/>
           Industrial Area, Sector 74<br/>
@@ -52,7 +52,7 @@ const Map = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="h-[500px] rounded-3xl overflow-hidden shadow-lg relative z-10">          
+        <div className="h-[500px] rounded-3xl overflow-hidden shadow-lg relative z-10">
           <div ref={mapContainer} className="w-full h-full" />
         </div>
       </div>

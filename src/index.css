@@ -12,97 +12,101 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 85% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 85% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 85% 15%;
 
-    /* Brand Red-Orange - Primary */
-    --primary: 9 77% 50%;
+    /* Bright Orange/Gold - Primary (from TECH text and accents) */
+    --primary: 43 95% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 9 77% 95%;
-    
-    /* Dark Gray - For top bar and overlays */
-    --navy: 0 0% 20%;
+    --primary-light: 43 95% 95%;
+
+    /* Deep Navy Blue - For top bar and overlays (from main S shape) */
+    --navy: 210 85% 28%;
     --navy-foreground: 0 0% 100%;
 
-    --secondary: 8 70% 70%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 42 90% 65%;
+    --secondary-foreground: 210 85% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 20% 50%;
 
-    --accent: 188 72% 49%;
+    /* Teal/Cyan accent - From flowing circuit lines */
+    --accent: 186 75% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 9 77% 50%;
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 43 95% 55%;
 
     --radius: 0.5rem;
-    
-    /* Hero overlay */
-    --hero-overlay: 0 0% 20% / 0.95;
+
+    /* Hero overlay - Deep navy with opacity */
+    --hero-overlay: 210 85% 28% / 0.95;
 
     --sidebar-background: 0 0% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 210 50% 25%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 210 85% 28%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 210 40% 96%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 210 85% 28%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 210 30% 90%;
 
-    --sidebar-ring: 9 77% 50%;
+    --sidebar-ring: 43 95% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 85% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 80% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 80% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 9 77% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Bright Orange/Gold remains vibrant in dark mode */
+    --primary: 43 95% 55%;
+    --primary-foreground: 210 85% 10%;
 
-    --secondary: 8 70% 70%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 42 85% 60%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 50% 20%;
+    --muted-foreground: 210 20% 70%;
 
-    --accent: 188 72% 49%;
-    --accent-foreground: 210 40% 98%;
+    /* Teal/Cyan accent - slightly brighter for dark mode */
+    --accent: 186 75% 52%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 9 77% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 9 77% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 9 77% 50%;
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 43 95% 55%;
+
+    --sidebar-background: 210 85% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 95% 55%;
+    --sidebar-primary-foreground: 210 85% 10%;
+    --sidebar-accent: 210 60% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 50% 20%;
+    --sidebar-ring: 43 95% 55%;
   }
 }
 
@@ -116,13 +120,18 @@ All colors MUST be HSL.
   }
 
   /* Hide scrollbar while maintaining scroll functionality */
-  html, body {
-    -ms-overflow-style: none;  /* Internet Explorer and Edge */
-    scrollbar-width: none;      /* Firefox */
+  html,
+  body {
+    -ms-overflow-style: none;
+    /* Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
-  html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
   }
 }
 
@@ -131,10 +140,9 @@ All colors MUST be HSL.
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
     }
   }
-  
-
 }

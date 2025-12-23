@@ -15,15 +15,13 @@ const AnimatedHamburgerIcon = ({ isOpen }: { isOpen: boolean }) => {
     <div className="relative w-6 h-6">
       {/* Top line */}
       <span
-        className={`${commonClasses} ${
-          isOpen ? "rotate-45 top-[11px]" : "top-[8px]"
-        }`}
+        className={`${commonClasses} ${isOpen ? "rotate-45 top-[11px]" : "top-[8px]"
+          }`}
       />
       {/* Bottom line */}
       <span
-        className={`${commonClasses} ${
-          isOpen ? "-rotate-45 top-[11px]" : "top-[14px]"
-        }`}
+        className={`${commonClasses} ${isOpen ? "-rotate-45 top-[11px]" : "top-[14px]"
+          }`}
       />
     </div>
   );
@@ -72,7 +70,7 @@ const Navigation = ({ onNavigate }) => {
       <div className="container mx-auto px-4 py-3 sm:py-5 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-4" onClick={handleLinkClick}>
-          <img src={logo} alt="Sachtech Solutions" className="max-w-xs h-16 sm:w-50 sm:h-20" />
+          <img src={logo} alt="Sachtech Solutions" className="h-28 sm:h-24 w-auto object-contain" />
         </NavLink>
 
         {/* Navigation Links */}
@@ -84,9 +82,8 @@ const Navigation = ({ onNavigate }) => {
                 key={link.name}
                 to={link.href}
                 onClick={handleLinkClick}
-                className={`font-montserrat font-medium transition-colors text-sm lg:text-base ${
-                  isActive ? "text-primary" : "text-foreground"
-                }`}
+                className={`font-montserrat font-medium transition-colors text-sm lg:text-base ${isActive ? "text-primary" : "text-foreground"
+                  }`}
               >
                 {link.name}
               </NavLink>
@@ -116,7 +113,7 @@ const Navigation = ({ onNavigate }) => {
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto" // MODIFICATION: Removed 'translate-y-0'
             : "opacity-0 pointer-events-none" // MODIFICATION: Removed '-translate-y-full'
-        }`}
+          }`}
       >
         <div className="flex flex-col items-center gap-8">
           {navLinks.map((link, index) => {
@@ -129,13 +126,11 @@ const Navigation = ({ onNavigate }) => {
                   setIsMobileMenuOpen(false);
                   handleLinkClick();
                 }}
-                className={`font-montserrat font-medium transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] text-2xl ${
-                  isActive ? "text-primary" : "text-foreground"
-                } ${
-                  isMobileMenuOpen 
+                className={`font-montserrat font-medium transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] text-2xl ${isActive ? "text-primary" : "text-foreground"
+                  } ${isMobileMenuOpen
                     ? "opacity-100" // MODIFICATION: Removed 'translate-y-0'
                     : "opacity-0" // MODIFICATION: Removed 'translate-y-4'
-                }`}
+                  }`}
                 style={{
                   transitionDelay: isMobileMenuOpen ? `${100 + index * 50}ms` : "0ms"
                 }}
@@ -144,13 +139,12 @@ const Navigation = ({ onNavigate }) => {
               </NavLink>
             );
           })}
-          <Button 
-            size="lg" 
-            className={`mt-8 rounded-full text-sm font-montserrat font-medium h-12 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-              isMobileMenuOpen 
-                ? "opacity-100" // MODIFICATION: Removed 'translate-y-0'
-                : "opacity-0" // MODIFICATION: Removed 'translate-y-4'
-            }`}
+          <Button
+            size="lg"
+            className={`mt-8 rounded-full text-sm font-montserrat font-medium h-12 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMobileMenuOpen
+              ? "opacity-100" // MODIFICATION: Removed 'translate-y-0'
+              : "opacity-0" // MODIFICATION: Removed 'translate-y-4'
+              }`}
             style={{
               transitionDelay: isMobileMenuOpen ? `${100 + navLinks.length * 50}ms` : "0ms"
             }}

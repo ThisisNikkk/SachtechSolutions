@@ -21,7 +21,7 @@ const AboutComponent = () => {
 
           {/* Intro Paragraph */}
           <p className="text-sm sm:text-base text-foreground leading-relaxed font-montserrat">
-            SachTech Solution Private Limited, incorporated on August 11, 2016 under the Companies Act, 2013 (CIN: U72900CH2016PTC041177), is a leading technology company headquartered in Mohali, India. Driven by a team of passionate and innovative young entrepreneurs, SachTech has established a strong presence in the global IT industry. We proudly serve clients across multiple countries, including the USA, Canada, UK, Brazil, Spain, Malaysia, UAE, Egypt, Australia, Finland, and many others. Specializing in custom software development, mobile applications, and comprehensive web solutions, we are dedicated to transforming our clients' visions into tangible, high-quality products. Our core mission is to build robust, scalable, and innovative technology that delivers measurable results and helps businesses thrive in the digital age.
+            Solario Tech Private Limited, incorporated on August 11, 2016 under the Companies Act, 2013 (CIN: U72900CH2016PTC041177), is a leading technology company headquartered in Mohali, India. Driven by a team of passionate and innovative young entrepreneurs, Solario Tech has established a strong presence in the global IT industry. We proudly serve clients across multiple countries, including the USA, Canada, UK, Brazil, Spain, Malaysia, UAE, Egypt, Australia, Finland, and many others. Specializing in custom software development, mobile applications, and comprehensive web solutions, we are dedicated to transforming our clients' visions into tangible, high-quality products. Our core mission is to build robust, scalable, and innovative technology that delivers measurable results and helps businesses thrive in the digital age.
           </p>
         </div>
 
@@ -29,9 +29,9 @@ const AboutComponent = () => {
         <div className="grid grid-cols-4 gap-4"> {/* MODIFIED: Removed auto-rows-[200px] */}
           {/* Cell 1: The Image (2x2) */}
           <div className="col-span-4 md:col-span-2 row-span-2 rounded-[var(--radius)] overflow-hidden">
-            <img 
-              src={teamWorkingImage} 
-              alt="Team members collaborating at computer" 
+            <img
+              src={teamWorkingImage}
+              alt="Team members collaborating at computer"
               className="w-full h-full object-cover"
             />
           </div>
@@ -56,9 +56,9 @@ const AboutComponent = () => {
           <div className="col-span-4 md:col-span-2 row-span-2 rounded-[var(--radius)] bg-muted p-6">
             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 font-poppins">Our Culture</h3>
             <p className="text-foreground leading-relaxed font-montserrat text-sm lg:text-md ">
-              At SachTech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
-              <br/>
-              <br/>
+              At Solario Tech, we take pride in fostering a culture of integrity, collaboration, and social responsibility. We are dedicated to creating a positive impact in the communities where we live and work, while continuously striving to make technology accessible and beneficial for all.
+              <br />
+              <br />
               We believe in continuous learning and provide our team with the resources to grow both personally and professionally. Our open-door policy encourages transparent communication, and we celebrate diverse perspectives, knowing that the best ideas can come from anywhere.            </p>
           </div>
 
@@ -69,13 +69,13 @@ const AboutComponent = () => {
           </div>
 
           {/* Cell 6: Happy Clients Stat (1x1) - Pop Cell */}
-          <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-primary p-4 sm:p-6 flex flex-col items-center justify-center text-center"> {/* MODIFIED */}
+          <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-navy p-4 sm:p-6 flex flex-col items-center justify-center text-center"> {/* MODIFIED */}
             <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground font-poppins mb-2">300+</div> {/* MODIFIED */}
             <div className="text-xs sm:text-sm text-primary-foreground font-montserrat">Happy Clients</div> {/* MODIFIED */}
           </div>
 
           {/* Cell 7: Client Satisfaction Stat (1x1) - Pop Cell */}
-          <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-primary p-4 sm:p-6 flex flex-col items-center justify-center text-center"> {/* MODIFIED */}
+          <div className="col-span-2 md:col-span-1 row-span-1 rounded-[var(--radius)] bg-navy p-4 sm:p-6 flex flex-col items-center justify-center text-center"> {/* MODIFIED */}
             <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground font-poppins mb-2">99%</div> {/* MODIFIED */}
             <div className="text-xs sm:text-sm text-primary-foreground font-montserrat">Client Satisfaction</div> {/* MODIFIED */}
           </div>

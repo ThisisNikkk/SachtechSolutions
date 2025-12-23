@@ -16,7 +16,7 @@ const Hero = ({ onNavigate }) => {
   return (
     <section className="relative min-h-[630px] flex items-center">
 
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
@@ -46,7 +46,7 @@ const Hero = ({ onNavigate }) => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-7">
-            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-sm font-bold " onClick={handleExplore} >
+            <Button size="lg" className="gap-4 rounded-full h-12 font-montserrat text-sm font-bold hover:bg-foreground hover:text-background" onClick={handleExplore} >
               Explore More
               <ArrowRight className="w-10 h-10" />
             </Button>
