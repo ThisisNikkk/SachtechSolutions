@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, memo } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Loader from "@/components/Loader";
@@ -9,6 +9,52 @@ interface PortfolioItem {
   image: string;
   tags: string[];
 }
+
+const PortfolioGridItem = memo(({ item, isLoaded, onLoad }: { item: PortfolioItem; isLoaded: boolean; onLoad: (id: number) => void }) => (
+  <div
+    className="relative aspect-square rounded-3xl overflow-hidden group cursor-pointer bg-muted"
+  >
+    {/* Image with loading state */}
+    <img
+      src={item.image}
+      alt={item.title}
+      loading="lazy"
+      decoding="async"
+      onLoad={() => onLoad(item.id)}
+      className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-110 ${isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+    />
+
+    {/* Loading skeleton */}
+    {!isLoaded && (
+      <div className="absolute inset-0 bg-muted animate-pulse"></div>
+    )}
+
+    {/* Dark Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/10 to-transparent"></div>
+
+    {/* Content */}
+    <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
+      <div className="flex-1">
+        <h3 className="text-navy-foreground text-2xl font-bold mb-4">
+          {item.title}
+        </h3>
+        <div className="flex flex-wrap gap-2">
+          {item.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 rounded-full text-sm font-medium bg-navy-foreground/10 text-navy-foreground backdrop-blur-sm border border-navy-foreground/20"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+));
+
+PortfolioGridItem.displayName = "PortfolioGridItem";
 
 const PortfolioComponent = () => {
   const [activeTab, setActiveTab] = useState<'website' | 'mobile'>('website');
@@ -55,9 +101,13 @@ const PortfolioComponent = () => {
     setVisibleItems(currentItems.length);
   };
 
-  const handleImageLoad = (id: number) => {
-    setLoadedImages(prev => new Set(prev).add(id));
-  };
+  const handleImageLoad = useCallback((id: number) => {
+    setLoadedImages(prev => {
+      const newSet = new Set(prev);
+      newSet.add(id);
+      return newSet;
+    });
+  }, []);
 
   return (
     <section className="py-20 bg-background">
@@ -105,48 +155,12 @@ const PortfolioComponent = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {visibleItemsData.map((item) => (
-                <div
+                <PortfolioGridItem
                   key={item.id}
-                  className="relative aspect-square rounded-3xl overflow-hidden group cursor-pointer bg-muted"
-                >
-                  {/* Image with loading state */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    decoding="async"
-                    onLoad={() => handleImageLoad(item.id)}
-                    className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-110 ${loadedImages.has(item.id) ? 'opacity-100' : 'opacity-0'
-                      }`}
-                  />
-
-                  {/* Loading skeleton */}
-                  {!loadedImages.has(item.id) && (
-                    <div className="absolute inset-0 bg-muted animate-pulse"></div>
-                  )}
-
-                  {/* Dark Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/10 to-transparent"></div>
-
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-navy-foreground text-2xl font-bold mb-4">
-                        {item.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {item.tags.map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-4 py-2 rounded-full text-sm font-medium bg-navy-foreground/10 text-navy-foreground backdrop-blur-sm border border-navy-foreground/20"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  item={item}
+                  isLoaded={loadedImages.has(item.id)}
+                  onLoad={handleImageLoad}
+                />
               ))}
             </div>
           )}
