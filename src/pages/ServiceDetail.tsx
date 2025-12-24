@@ -123,7 +123,11 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ onNavigate }) => {
                             {service.expertise.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="p-6 rounded-3xl border border-border bg-card shadow-sm hover:shadow-lg transition-all duration-300 group"
+                                    onClick={() => {
+                                        onNavigate();
+                                        navigate(`/services/${slug}/expertise/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`);
+                                    }}
+                                    className="p-6 rounded-3xl border border-border bg-card shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer"
                                 >
                                     <div className="w-14 h-14 bg-[#FBBF24] rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                         <span className="text-white font-bold font-poppins text-xl">
