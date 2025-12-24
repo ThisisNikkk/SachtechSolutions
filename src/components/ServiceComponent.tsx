@@ -144,9 +144,11 @@ ServiceModalContent.displayName = "ServiceModalContent";
 
 const ServicesComponent = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleServiceClick = useCallback((service: Service) => {
     setSelectedService(service);
+    setIsModalOpen(true);
   }, []);
 
   return (
@@ -180,7 +182,7 @@ const ServicesComponent = () => {
       </div>
 
       {/* Service Modal */}
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
           <ScrollArea className="max-h-[90vh] [&>[data-orientation=vertical]]:hidden">
             {selectedService && <ServiceModalContent service={selectedService} />}
