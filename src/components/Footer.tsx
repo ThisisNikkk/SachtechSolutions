@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook, Github, Dribbble, Instagram, ChevronUp } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -62,118 +62,172 @@ const Footer = () => {
   };
 
   return (
-    <footer>
-      {/* Newsletter Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-2xl">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-12 h-0.5 bg-primary"></div>
-              <span className="text-foreground font-montserrat">Our Newsletter</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins">
-              <span className="text-foreground block mb-2">Subscribe{' '}
-                <span className="text-primary">For Expert IT
-                  <br />
-                  Tips And Social Offer
-                </span>
-              </span>
-            </h2>
-          </div>
+    <footer className="bg-navy text-navy-foreground relative">
+      <div className="container mx-auto px-4 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
-          <form onSubmit={handleSubmit(onSubmit)} className="flex items-center gap-4 max-w-lg mx-auto">
-            <div className="relative flex-1">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <Input
-                {...register("email")}
-                type="email"
-                placeholder="Enter Your Email"
-                className="pl-12 h-12 rounded-full border-border"
-              />
-            </div>
-            <Button type="submit" className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-10 border-foreground text-background hover:bg-foreground hover:text-background">
-              Subscribe
-            </Button>
-          </form>
-          {errors.email && (
-            <p className="text-destructive text-sm text-center mt-2">{errors.email.message}</p>
-          )}
-        </div>
-      </section>
-
-      {/* Main Footer */}
-      <section className="py-16 bg-navy">
-        <div className="container mx-auto px-4 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-20 lg:gap-48 mb-12">
-            {/* Column 1: Logo & Links */}
+          {/* Column 1: Branding & Newsletter */}
+          <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex items-center gap-3">
-                <img src={logo} alt="IT Company" className="h-28 sm:h-24 w-auto object-contain" />
-              </div>
-              <p className="text-background font-poppins md:text-sm">
-                Future-focused technology company, with a stronger emphasis on innovation, scalability, and global standards.
+              <img src={logo} alt="Solario Tech" className="h-28 sm:h-24 w-auto object-contain" />
+              <p className="text-navy-foreground/80 text-sm leading-relaxed font-montserrat max-w-xs">
+                Solario Tech is a software solutions company providing custom web & mobile applications, UI/UX design, and digital transformation services to help businesses grow.
               </p>
-              <nav className="flex flex-wrap gap-4 text-sm font-montserrat font-medium pb-4">
-                <a href="/services" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Service
-                </a>
-                <a href="/portfolio" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Portfolio
-                </a>
-                <a href="/about" className="text-navy-foreground hover:text-primary transition-colors  lg:text-[14px] md:text-[12px]">
-                  About Us
-                </a>
-                <a href="/career" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Careers
-                </a>
-                <a href="/contact" className="text-navy-foreground hover:text-primary transition-colors lg:text-[14px] md:text-[12px]">
-                  Contact Us
-                </a>
-              </nav>
             </div>
 
-            {/* Column 2: Contact */}
-            <div className="space-y-6">
-              <h3 className="text-navy-foreground font-bold font-poppins text-xl md:text-base">Contact</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-navy-foreground" />
-                  <span className="text-navy-foreground font-montserrat md:text-sm">+91 7087425488</span>
+            <div className="space-y-4">
+              <h4 className="font-poppins font-medium text-lg text-navy-foreground">Join our newsletter</h4>
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                <div className="flex flex-col gap-3">
+                  <Input
+                    {...register("email")}
+                    type="email"
+                    placeholder="name@gmail.com"
+                    className="bg-navy-foreground/10 border-navy-foreground/20 rounded-full h-12 text-navy-foreground placeholder:text-navy-foreground/50 focus:border-primary px-6"
+                  />
+                  <Button
+                    type="submit"
+                    className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-full h-12 px-8 font-poppins font-medium"
+                  >
+                    Subscribe
+                  </Button>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-navy-foreground" />
-                  <span className="text-navy-foreground font-montserrat md:text-sm">contact@solariotech.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-navy-foreground" />
-                  <span className="text-navy-foreground font-montserrat md:text-sm">C-86, Phase 7 Mohali, Punjab</span>
-                </div>
-              </div>
+                {errors.email && (
+                  <p className="text-red-400 text-xs pl-4">{errors.email.message}</p>
+                )}
+              </form>
             </div>
           </div>
 
-          {/* Sub-Footer */}
-          <div className="border-t border-white/8 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-navy-foreground text-sm font-montserrat ">
-                © 2026 Solario Tech . All rights reserved.
-              </p>
-              <div className="flex items-center gap-4">
-                <a href="https://www.linkedin.com/company/sachtech-solution-private-limited" className="text-navy-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://facebook.com/SachTechSol" className="text-navy-foreground hover:text-primary transition-colors">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="https://instagram.com/sach.tech" className="text-navy-foreground hover:text-primary transition-colors">
-                  <Instagram className="w-5 h-5" />
-                </a>
+          {/* Column 2: Quick Links */}
+          <div className="lg:pl-8">
+            <h3 className="text-xl font-poppins font-medium mb-6 text-navy-foreground">Quick Links</h3>
+            <ul className="space-y-4 font-montserrat text-navy-foreground/80 text-sm">
+              <li>
+                <a href="/" className="hover:text-primary transition-colors block w-fit">Home</a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-primary transition-colors block w-fit">About Us</a>
+              </li>
+              <li>
+                <a href="/services" className="hover:text-primary transition-colors block w-fit">Services</a>
+              </li>
+              <li>
+                <a href="/portfolio" className="hover:text-primary transition-colors block w-fit">Portfolio</a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-primary transition-colors block w-fit">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Services */}
+          <div>
+            <h3 className="text-xl font-poppins font-medium mb-6 text-navy-foreground">Services:</h3>
+            <ul className="space-y-4 font-montserrat text-navy-foreground/80 text-sm">
+              <li>
+                <a href="/services/ios-app-development" className="hover:text-primary transition-colors block w-fit">iOS App Development</a>
+              </li>
+              <li>
+                <a href="/services/android-app-development" className="hover:text-primary transition-colors block w-fit">Android App Development</a>
+              </li>
+              <li>
+                <a href="/services/artificial-intelligence" className="hover:text-primary transition-colors block w-fit">Artificial Intelligence</a>
+              </li>
+              <li>
+                <a href="/services/internet-of-things" className="hover:text-primary transition-colors block w-fit">Internet of Things</a>
+              </li>
+              <li>
+                <a href="/services/cloud-solutions" className="hover:text-primary transition-colors block w-fit">Cloud Solutions</a>
+              </li>
+              <li>
+                <a href="/services/automation" className="hover:text-primary transition-colors block w-fit">Automation</a>
+              </li>
+              <li>
+                <a href="/services/software-maintenance" className="hover:text-primary transition-colors block w-fit">Software Maintenance</a>
+              </li>
+              <li>
+                <a href="/services/it-strategy-and-consulting" className="hover:text-primary transition-colors block w-fit">IT Strategy & Consulting</a>
+              </li>
+              <li>
+                <a href="/services/data-analytics" className="hover:text-primary transition-colors block w-fit">Data Analytics</a>
+              </li>
+              <li>
+                <a href="/services/java-development" className="hover:text-primary transition-colors block w-fit">Java Development</a>
+              </li>
+              <li>
+                <a href="/services/services/open-gl" className="hover:text-primary transition-colors block w-fit">Open GL</a>
+              </li>
+              <li>
+                <a href="/services/app-maintenance" className="hover:text-primary transition-colors block w-fit">App Maintenance</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Info */}
+          <div>
+            <h3 className="text-xl font-poppins font-medium mb-6 text-navy-foreground">Contact Info</h3>
+            <div className="space-y-6 font-montserrat text-navy-foreground/80 text-sm">
+              <div className="space-y-1">
+                <p className="font-semibold text-navy-foreground mb-1">Location:</p>
+                <p>C-86, Phase 7 Mohali, Punjab</p>
+              </div>
+              <div className="space-y-1">
+                <p className="font-semibold text-navy-foreground mb-1">Email:</p>
+                <a href="mailto:contact@solariotech.com" className="hover:text-primary transition-colors">contact@solariotech.com</a>
+              </div>
+              <div className="space-y-1">
+                <p className="font-semibold text-navy-foreground mb-1">Phone:</p>
+                <a href="tel:+917087425488" className="hover:text-primary transition-colors">+91 7087425488</a>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-navy-foreground/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-navy-foreground/60 text-sm font-montserrat">
+            © {new Date().getFullYear()} Solario Tech. All Rights Reserved.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://facebook.com/SachTechSol"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wa.me/917087425488"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/sachtech-solution-private-limited"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex items-center gap-6 text-sm text-navy-foreground/60 font-montserrat">
+            <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</a>
+            <a href="/terms-conditions" className="hover:text-primary transition-colors">Terms</a>
+            <a href="/cookies" className="hover:text-primary transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll To Top Button */}
       {isVisible && (
         <Button
           size="icon"
