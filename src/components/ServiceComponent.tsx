@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { Smartphone, Monitor, ComputerIcon, Wrench, Search, Code, ShoppingCart, LayoutGrid, Mail, Briefcase, Router, Cloud, BarChart, CheckCircle } from "lucide-react";
+import { Smartphone, Monitor, ComputerIcon, Wrench, Search, Code, ShoppingCart, LayoutGrid, Mail, Briefcase, Router, Cloud, BarChart, Check } from "lucide-react";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
-
+import modernOffice from "@/assets/modern-office.jpg";
+import teamWorking from "@/assets/team-working.jpg";
 interface Service {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
@@ -380,47 +379,70 @@ const ServicesComponent = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
           <ScrollArea className="max-h-[90vh]">
             <div className="p-6 lg:p-8">
-              <DialogHeader className="mb-6">
-                <DialogTitle className="text-2xl lg:text-3xl font-bold font-poppins">
-                  About <span className="text-primary">{selectedService?.title}</span>
-                </DialogTitle>
-              </DialogHeader>
+              {/* Header */}
+              <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-6">
+                About <span className="text-primary">{selectedService?.title}</span>
+              </h2>
 
-              {/* Description */}
-              <div className="mb-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-primary-foreground font-bold text-sm">1</span>
+              {/* Numbered Paragraphs */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-primary-foreground font-bold text-xs">1</span>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {selectedService?.detailedDescription}
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-primary-foreground font-bold text-xs">2</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Our team of experts brings years of experience and proven methodologies to deliver exceptional results. We focus on understanding your unique requirements and crafting tailored solutions that drive real business value.
                   </p>
                 </div>
               </div>
 
               {/* Services Include */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 font-poppins italic">Services Include:</h3>
-                <p className="text-muted-foreground mb-4 text-sm">
-                  Our comprehensive {selectedService?.title.toLowerCase()} services cover all aspects of development and maintenance.
+                <h3 className="text-xl font-bold mb-3 font-poppins italic">Services Include:</h3>
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                  Our comprehensive {selectedService?.title.toLowerCase()} services cover all aspects of development and maintenance. We ensure quality delivery with attention to detail and industry best practices.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2">
                   {selectedService?.includes.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span className="text-sm text-foreground">{item}</span>
+                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Image Section */}
-              <div className="mb-8 rounded-xl overflow-hidden">
-                <img 
-                  src={teamCollaboration} 
-                  alt="Team collaboration" 
-                  className="w-full h-48 object-cover"
-                />
+              {/* Image Section - 3 images side by side */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="rounded-xl overflow-hidden">
+                  <img 
+                    src={teamCollaboration} 
+                    alt="Team collaboration" 
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <img 
+                    src={modernOffice} 
+                    alt="Modern office" 
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <img 
+                    src={teamWorking} 
+                    alt="Team working" 
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
               </div>
 
               {/* Our Expertise */}
@@ -428,37 +450,37 @@ const ServicesComponent = () => {
                 <h3 className="text-xl font-bold mb-2 font-poppins">
                   Our Expertise In <span className="text-primary">{selectedService?.title}</span>
                 </h3>
-                <p className="text-muted-foreground mb-6 text-sm">
-                  We bring years of experience and proven methodologies to deliver exceptional results.
+                <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                  We bring years of experience and proven methodologies to deliver exceptional results. Our approach combines technical excellence with creative problem-solving.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {selectedService?.expertise.map((item, index) => (
-                    <div key={index} className="bg-muted p-4 rounded-xl">
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mb-3">
-                        <span className="text-primary-foreground font-bold text-sm">
+                    <div key={index} className="p-4">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
+                        <span className="text-primary-foreground font-bold">
                           {String(index + 1).padStart(2, '0')}
                         </span>
                       </div>
                       <h4 className="font-bold text-foreground mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Service Benefits */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 font-poppins italic">Service Benefits:</h3>
-                <p className="text-muted-foreground mb-4 text-sm">
-                  Partnering with us for {selectedService?.title.toLowerCase()} brings numerous advantages to your business.
+              <div className="mb-6">
+                <h3 className="text-xl font-bold mb-3 font-poppins italic">Service benefits:</h3>
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                  Partnering with us for {selectedService?.title.toLowerCase()} brings numerous advantages to your business. We are committed to delivering solutions that exceed expectations.
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {selectedService?.benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-4 h-4 text-primary-foreground" />
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-primary-foreground font-bold text-xs">{index + 1}</span>
                       </div>
-                      <span className="text-foreground">{benefit}</span>
+                      <span className="text-muted-foreground text-sm leading-relaxed">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -466,7 +488,7 @@ const ServicesComponent = () => {
 
               {/* Bottom Ticker */}
               <div className="bg-primary rounded-full py-3 px-6 overflow-hidden">
-                <div className="flex items-center justify-center gap-4 text-primary-foreground font-semibold">
+                <div className="flex items-center justify-center gap-6 text-primary-foreground font-semibold text-sm">
                   <span>✦ Application Design</span>
                   <span>✦ UX/UI Design</span>
                   <span>✦ {selectedService?.title}</span>
