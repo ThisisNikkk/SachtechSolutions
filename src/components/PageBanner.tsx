@@ -12,13 +12,14 @@ import heroBackground from "@/assets/hero-background.jpg";
 interface PageBannerProps {
   title: string;
   breadcrumbs: Array<{ label: string; href?: string }>;
+  onNavigate?: () => void;
 }
 
-const PageBanner = ({ title, breadcrumbs }: PageBannerProps) => {
+const PageBanner = ({ title, breadcrumbs, onNavigate }: PageBannerProps) => {
   return (
     <section className="relative min-h-[320px] flex items-center justify-center">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
@@ -40,7 +41,11 @@ const PageBanner = ({ title, breadcrumbs }: PageBannerProps) => {
                 <BreadcrumbItem>
                   {crumb.href ? (
                     <BreadcrumbLink asChild>
-                      <Link to={crumb.href} className="text-navy-foreground font-montserrat hover:text-navy-foreground/80">
+                      <Link
+                        to={crumb.href}
+                        className="text-navy-foreground font-montserrat hover:text-navy-foreground/80"
+                        onClick={() => onNavigate?.()}
+                      >
                         {crumb.label}
                       </Link>
                     </BreadcrumbLink>

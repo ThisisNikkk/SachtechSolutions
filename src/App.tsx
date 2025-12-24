@@ -14,6 +14,8 @@ const Portfolio = lazy(() => import("./pages/Portfolio"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Careers = lazy(() => import("./pages/Careers"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const ServiceIncludeDetail = lazy(() => import("./pages/ServiceIncludeDetail"));
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index onNavigate={handleNavigation} />} />
               <Route path="/services" element={<Services onNavigate={handleNavigation} />} />
+              <Route path="/services/:slug" element={<ServiceDetail onNavigate={handleNavigation} />} />
+              <Route path="/services/:slug/:includeSlug" element={<ServiceIncludeDetail onNavigate={handleNavigation} />} />
               <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
               <Route path="/about" element={<About onNavigate={handleNavigation} />} />
               <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />

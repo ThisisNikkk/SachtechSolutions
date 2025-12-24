@@ -18,21 +18,21 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
     <div className="min-h-screen">
       <TopBar />
       <Navigation onNavigate={onNavigate} />
-      <PageBanner 
-        title="Services" 
+      <PageBanner
+        title="Services"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services' }
-        ]} 
+        ]}
       />
-      <ServicesComponent />
-      <ServicesTicker/>
+      <ServicesComponent onNavigate={onNavigate} />
+      <ServicesTicker />
       <WhyChooseUs />
       <ServicesTicker />
-      <Contact/>
-      <ServicesTicker/>
-      <FAQs/>
-      <ServicesTicker/>
+      <Contact />
+      <ServicesTicker />
+      <FAQs />
+      <ServicesTicker />
       <Footer />
     </div>
   );
