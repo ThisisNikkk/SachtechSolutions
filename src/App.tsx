@@ -3,21 +3,20 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import ScrollToTop from "./components/ScrollToTop";
-
-const Index = lazy(() => import("./pages/Index"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const Services = lazy(() => import("./pages/Services"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Careers = lazy(() => import("./pages/Careers"));
-const JobDetail = lazy(() => import("./pages/JobDetail"));
-const JobApplication = lazy(() => import("./pages/JobApplication"));
-const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
-const ServiceIncludeDetail = lazy(() => import("./pages/ServiceIncludeDetail"));
-const ServiceExpertiseDetail = lazy(() => import("./pages/ServiceExpertiseDetail"));
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import Services from "./pages/Services";
+import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import JobDetail from "./pages/JobDetail";
+import JobApplication from "./pages/JobApplication";
+import ServiceDetail from "./pages/ServiceDetail";
+import ServiceIncludeDetail from "./pages/ServiceIncludeDetail";
+import ServiceExpertiseDetail from "./pages/ServiceExpertiseDetail";
 
 const queryClient = new QueryClient();
 
@@ -33,22 +32,20 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
-          <Suspense fallback={null}>
-            <Routes>
-              <Route path="/" element={<Index onNavigate={handleNavigation} />} />
-              <Route path="/services" element={<Services onNavigate={handleNavigation} />} />
-              <Route path="/services/:slug" element={<ServiceDetail onNavigate={handleNavigation} />} />
-              <Route path="/services/:slug/:includeSlug" element={<ServiceIncludeDetail onNavigate={handleNavigation} />} />
-              <Route path="/services/:slug/expertise/:expertiseSlug" element={<ServiceExpertiseDetail onNavigate={handleNavigation} />} />
-              <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
-              <Route path="/about" element={<About onNavigate={handleNavigation} />} />
-              <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />
-              <Route path="/careers" element={<Careers onNavigate={handleNavigation} />} />
-              <Route path="/careers/:id" element={<JobDetail onNavigate={handleNavigation} />} />
-              <Route path="/careers/:id/apply" element={<JobApplication onNavigate={handleNavigation} />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+          <Routes>
+            <Route path="/" element={<Index onNavigate={handleNavigation} />} />
+            <Route path="/services" element={<Services onNavigate={handleNavigation} />} />
+            <Route path="/services/:slug" element={<ServiceDetail onNavigate={handleNavigation} />} />
+            <Route path="/services/:slug/:includeSlug" element={<ServiceIncludeDetail onNavigate={handleNavigation} />} />
+            <Route path="/services/:slug/expertise/:expertiseSlug" element={<ServiceExpertiseDetail onNavigate={handleNavigation} />} />
+            <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
+            <Route path="/about" element={<About onNavigate={handleNavigation} />} />
+            <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />
+            <Route path="/careers" element={<Careers onNavigate={handleNavigation} />} />
+            <Route path="/careers/:id" element={<JobDetail onNavigate={handleNavigation} />} />
+            <Route path="/careers/:id/apply" element={<JobApplication onNavigate={handleNavigation} />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
