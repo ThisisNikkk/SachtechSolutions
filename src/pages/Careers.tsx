@@ -297,6 +297,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
               filteredJobs.map(job => (
                 <JobCard
                   key={job.id}
+                  id={job.id}
                   title={job.title}
                   location={job.location}
                   type={job.type}

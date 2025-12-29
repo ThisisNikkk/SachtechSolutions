@@ -1,16 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface JobCardProps {
+  id: string;
   title: string;
   location: string;
   type: string;
   description: string;
 }
 
-const JobCard = ({ title, location, type, description }: JobCardProps) => {
+const JobCard = ({ id, title, location, type, description }: JobCardProps) => {
+  const navigate = useNavigate();
+
+  const handleViewJob = () => {
+    navigate(`/careers/${id}`);
+  };
+
   return (
-    <div className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+    <div 
+      className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+      onClick={handleViewJob}
+    >
       <h3 className="text-xl font-bold text-foreground mb-3 font-poppins">
         {title}
       </h3>
@@ -34,8 +45,12 @@ const JobCard = ({ title, location, type, description }: JobCardProps) => {
         <Button 
           size="sm"
           className="rounded-full font-montserrat font-semibold"
+          onClick={(e) => {
+            e.stopPropagation();
+            handleViewJob();
+          }}
         >
-          Apply Now
+          View Details
         </Button>
       </div>
     </div>

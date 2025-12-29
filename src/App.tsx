@@ -14,6 +14,7 @@ const Portfolio = lazy(() => import("./pages/Portfolio"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Careers = lazy(() => import("./pages/Careers"));
+const JobDetail = lazy(() => import("./pages/JobDetail"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 const ServiceIncludeDetail = lazy(() => import("./pages/ServiceIncludeDetail"));
 const ServiceExpertiseDetail = lazy(() => import("./pages/ServiceExpertiseDetail"));
@@ -56,6 +57,7 @@ const App = () => {
               <Route path="/about" element={<About onNavigate={handleNavigation} />} />
               <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />
               <Route path="/careers" element={<Careers onNavigate={handleNavigation} />} />
+              <Route path="/careers/:id" element={<JobDetail onNavigate={handleNavigation} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
