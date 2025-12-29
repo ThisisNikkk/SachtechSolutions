@@ -69,7 +69,7 @@ const Footer = () => {
           {/* Column 1: Branding & Newsletter */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <img src={logo} alt="Solario Tech" className="h-28 sm:h-24 w-auto object-contain" />
+              <img src={logo} alt="Solario Tech" className="h-16 md:h-24 w-auto object-contain" />
               <p className="text-navy-foreground/80 text-sm leading-relaxed font-montserrat max-w-xs">
                 Solario Tech is a software solutions company providing custom web & mobile applications, UI/UX design, and digital transformation services to help businesses grow.
               </p>

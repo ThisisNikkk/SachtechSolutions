@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Facebook, Twitter, Linkedin, Link2, Upload, X } from 'lucide-react';
+import { Facebook, Linkedin, Link2, Upload, X, Instagram } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import { useToast } from '@/hooks/use-toast';
 import { useState, useRef } from 'react';
@@ -293,9 +293,12 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         {formData.photo ? (
                           <p className="text-foreground font-montserrat">{formData.photo.name}</p>
                         ) : (
-                          <p className="text-muted-foreground font-montserrat">
-                            <span className="text-primary underline">Upload a file</span> or drag and drop here
-                          </p>
+                          <div className="flex flex-col items-center gap-3">
+                            <Upload className="w-8 h-8 text-foreground" />
+                            <p className="text-muted-foreground font-montserrat">
+                              <span className="text-primary underline">Upload a file</span> or drag and drop here
+                            </p>
+                          </div>
                         )}
                       </div>
                     </div>
@@ -334,9 +337,12 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         {formData.resume ? (
                           <p className="text-foreground font-montserrat">{formData.resume.name}</p>
                         ) : (
-                          <p className="text-muted-foreground font-montserrat">
-                            <span className="text-primary underline">Upload a file</span> or drag and drop here
-                          </p>
+                          <div className="flex flex-col items-center gap-3">
+                            <Upload className="w-8 h-8 text-foreground" />
+                            <p className="text-muted-foreground font-montserrat">
+                              <span className="text-primary underline">Upload a file</span> or drag and drop here
+                            </p>
+                          </div>
                         )}
                       </div>
                     </div>
@@ -397,28 +403,30 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
 
             {/* Social Share Sidebar */}
             <div className="lg:w-16">
-              <div className="sticky top-32 flex lg:flex-col gap-3 justify-center lg:justify-start">
-                <button
-                  className="w-10 h-10 mt-4 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
+              <div className="sticky top-36 flex lg:flex-col gap-3 justify-center lg:justify-start">
+                <a
+                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/80 transition-colors"
                   aria-label="Share on Facebook"
+                  href="https://facebook.com/SachTechSol"
                 >
-                  <Facebook className="w-5 h-5 text-primary-foreground" />
-                </button>
-                <button
-                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                  <Facebook className="w-5 h-5 text-text-foreground" />
+                </a>
+                <a
+                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/80 transition-colors"
                   aria-label="Share on Twitter"
                 >
-                  <Twitter className="w-5 h-5 text-foreground" />
-                </button>
-                <button
-                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                  <Instagram className="w-5 h-5 text-foreground" />
+                </a>
+                <a
+                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/80 transition-colors"
                   aria-label="Share on LinkedIn"
+                  href="https://www.linkedin.com/company/sachtech-solution-private-limited"
                 >
                   <Linkedin className="w-5 h-5 text-foreground" />
-                </button>
+                </a>
                 <button
                   onClick={handleCopyLink}
-                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary/80 transition-colors"
                   aria-label="Copy link"
                 >
                   <Link2 className="w-5 h-5 text-foreground" />
