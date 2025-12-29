@@ -3,8 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { Suspense, lazy, useState, useEffect } from "react";
-import Loader from "./components/Loader";
+import React, { Suspense, lazy } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -23,20 +22,8 @@ const ServiceExpertiseDetail = lazy(() => import("./pages/ServiceExpertiseDetail
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleNavigation = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    // Navigation handler placeholder
   };
 
   return (
@@ -46,8 +33,7 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
-          {loading && <Loader />}
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Index onNavigate={handleNavigation} />} />
               <Route path="/services" element={<Services onNavigate={handleNavigation} />} />
