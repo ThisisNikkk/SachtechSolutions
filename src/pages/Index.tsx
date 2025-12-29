@@ -32,7 +32,7 @@ const Index = ({ onNavigate }) => {
       <ServicesTicker />
       <FAQs />
       <ServicesTicker />
-      <Contact onNavigate={onNavigate} />
+      <Contact />
       <Footer />
     </div>
   );

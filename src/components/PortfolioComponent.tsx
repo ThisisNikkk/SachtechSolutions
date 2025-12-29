@@ -57,22 +57,28 @@ const PortfolioGridItem = memo(({ item, isLoaded, onLoad }: { item: PortfolioIte
 PortfolioGridItem.displayName = "PortfolioGridItem";
 
 const PortfolioComponent = () => {
-  const [activeTab, setActiveTab] = useState<'website' | 'mobile'>('website');
+  const [activeTab, setActiveTab] = useState<'website' | 'mobile' | 'figma' | 'logo'>('website');
   const [visibleItems, setVisibleItems] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
   const [websiteData, setWebsiteData] = useState<PortfolioItem[]>([]);
   const [mobileData, setMobileData] = useState<PortfolioItem[]>([]);
+  const [figmaData, setFigmaData] = useState<PortfolioItem[]>([]);
+  const [logoData, setLogoData] = useState<PortfolioItem[]>([]);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [websiteModule, mobileModule] = await Promise.all([
+        const [websiteModule, mobileModule, figmaModule, logoModule] = await Promise.all([
           import("@/data/portfolioData"),
-          import("@/data/mobilePortfolio")
+          import("@/data/mobilePortfolio"),
+          import("@/data/figmaPortfolio"),
+          import("@/data/logoPortfolio"),
         ]);
         setWebsiteData(websiteModule.portfolioItems);
         setMobileData(mobileModule.mobilePortfolioItems);
+        setFigmaData(figmaModule.figmaPortfolioItems);
+        setLogoData(logoModule.logoPortfolioItems);
       } catch (error) {
         console.error("Error loading portfolio data:", error);
       }
@@ -80,14 +86,14 @@ const PortfolioComponent = () => {
     loadData();
   }, []);
 
-  const currentItems = activeTab === 'website' ? websiteData : mobileData;
+  const currentItems = activeTab === 'website' ? websiteData : activeTab === 'mobile' ? mobileData : activeTab === 'figma' ? figmaData : logoData;
 
   const visibleItemsData = useMemo(() =>
     currentItems.slice(0, visibleItems),
     [currentItems, visibleItems]
   );
 
-  const handleTabChange = (tab: 'website' | 'mobile') => {
+  const handleTabChange = (tab: 'website' | 'mobile' | 'figma' | 'logo') => {
     setIsLoading(true);
     setLoadedImages(new Set());
     setTimeout(() => {
@@ -145,6 +151,26 @@ const PortfolioComponent = () => {
               }`}
           >
             Mobile Portfolio
+          </Button>
+          <Button
+            onClick={() => handleTabChange('figma')}
+            variant={activeTab === 'figma' ? 'default' : 'outline'}
+            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'figma'
+              ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+              : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
+              }`}
+          >
+            Figma Designs
+          </Button>
+          <Button
+            onClick={() => handleTabChange('logo')}
+            variant={activeTab === 'logo' ? 'default' : 'outline'}
+            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'logo'
+              ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+              : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
+              }`}
+          >
+            Logo Designs
           </Button>
         </div>
 

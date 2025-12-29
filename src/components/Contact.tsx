@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 import { z } from "zod";
 
 const contactFormSchema = z.object({
@@ -22,7 +22,8 @@ const contactFormSchema = z.object({
 });
 
 const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
-  const { toast } = useToast();
+  // Removed useToast hook
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,30 +33,62 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       contactFormSchema.parse(formData);
       setErrors({});
 
-      if (onNavigate) {
-        onNavigate();
+      const form = e.currentTarget;
+      const formPayload = new FormData(form);
+      formPayload.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+      const object = Object.fromEntries(formPayload);
+      const json = JSON.stringify(object);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        if (onNavigate) {
+          onNavigate();
+        }
+
+        toast.success("Message sent successfully!", {
+          className: "font-poppins",
+          description: "We'll get back to you soon.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        toast.error("Error sending message", {
+          className: "font-poppins",
+          description: "Something went wrong. Please try again.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
       }
-
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you soon.",
-      });
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
@@ -65,7 +98,18 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
           }
         });
         setErrors(newErrors);
+      } else {
+        toast.error("Error", {
+          className: "font-poppins",
+          description: "Failed to send message. Please try again.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+        console.error("Error:", error);
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -99,6 +143,8 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                   </label>
                   <Input
                     type="text"
+                    name="name"
+                    required
                     placeholder="Ex. John Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -115,6 +161,8 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                   </label>
                   <Input
                     type="email"
+                    name="email"
+                    required
                     placeholder="example@gmail.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -131,9 +179,12 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="+91-1234567890"
+                    name="phone"
+                    required
+                    placeholder="1234567890"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    maxLength={10}
                   />
                   {errors.phone && (
                     <p className="text-sm mt-1">{errors.phone}</p>
@@ -146,6 +197,8 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                     Service
                   </label>
                   <Select
+                    name="service"
+                    required
                     value={formData.service}
                     onValueChange={(value) => setFormData({ ...formData, service: value })}
                   >
@@ -153,13 +206,18 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                       <SelectValue placeholder="Select services" />
                     </SelectTrigger>
                     <SelectContent className="bg-card z-50 font-montserrat">
-                      <SelectItem value="android">Android Development</SelectItem>
-                      <SelectItem value="ios">iOS Development</SelectItem>
-                      <SelectItem value="web">Website Development</SelectItem>
-                      <SelectItem value="uiux">UX/UI Design</SelectItem>
-                      <SelectItem value="maintenance">App Maintenance</SelectItem>
-                      <SelectItem value="seo">SEO Optimization</SelectItem>
-                      <SelectItem value="cloud">Cloud Services</SelectItem>
+                      <SelectItem value="iOS App Development">iOS App Development</SelectItem>
+                      <SelectItem value="Android App Development">Android App Development</SelectItem>
+                      <SelectItem value="Artificial Intelligence">Artificial Intelligence</SelectItem>
+                      <SelectItem value="Internet of Things">Internet of Things</SelectItem>
+                      <SelectItem value="Cloud Solutions">Cloud Solutions</SelectItem>
+                      <SelectItem value="Automation">Automation</SelectItem>
+                      <SelectItem value="Software Maintenance">Software Maintenance</SelectItem>
+                      <SelectItem value="IT Strategy & Consulting">IT Strategy & Consulting</SelectItem>
+                      <SelectItem value="Data Analytics">Data Analytics</SelectItem>
+                      <SelectItem value="Java Development">Java Development</SelectItem>
+                      <SelectItem value="Open GL">Open GL</SelectItem>
+                      <SelectItem value="App Maintenance">App Maintenance</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.service && (
@@ -174,6 +232,7 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
                   Your Message
                 </label>
                 <Textarea
+                  name="message"
                   className="font-montserrat text-sm"
                   placeholder="Enter Here..."
                   rows={6}
@@ -186,8 +245,12 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
               </div>
 
               {/* Submit Button */}
-              <Button type="submit" className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-10 border-foreground text-background hover:bg-foreground hover:text-background">
-                Send Message
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="rounded-full px-8 py-6 text-base font-montserrat font-medium h-10 border-foreground text-background hover:bg-foreground hover:text-background disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>

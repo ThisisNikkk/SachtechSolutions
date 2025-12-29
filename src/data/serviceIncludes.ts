@@ -2134,12 +2134,12 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
         },
 
     ],
-    "window-app-development": [
+    "web3-development": [
         {
-            id: ".NET Development",
+            id: "Smart Contract Development",
             hero: {
-                title: "Build Secure, Scalable & High-Performance Solutions with .NET",
-                description: "Solario Tech delivers robust, enterprise-grade applications using Microsoft’s .NET platform.\nWith 12+ years of engineering experience, we help startups, SMBs, and enterprises build secure, scalable, and high-performing web, desktop, cloud, and backend solutions tailored to their business needs.",
+                title: "Build Secure, Audited & Production-Grade Smart Contracts",
+                description: "Solario Tech designs and develops secure, scalable smart contracts that power decentralized platforms across DeFi, NFTs, DAOs, and enterprise Web3 solutions.\nWith deep blockchain expertise, we help startups and enterprises build trustless systems with security, efficiency, and long-term scalability at the core.",
                 buttons: [
                     { label: "Book a Free Consultation" },
                     { label: "Start Your Project" }
@@ -2147,133 +2147,540 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             },
             content: [
                 {
-                    title: "What is .NET Development?",
-                    description: ".NET is a powerful, flexible development platform by Microsoft used to build web, desktop, mobile, cloud, and enterprise applications.",
+                    title: "What is Smart Contract Development?",
+                    description: "Smart contract development involves writing, testing, and deploying self-executing programs on blockchain networks that enforce business logic without intermediaries.",
                     list: [
-                        "Cross-platform development support",
-                        "High performance and scalability",
-                        "Strong security features",
-                        "Enterprise-ready framework"
+                        "Immutable and trustless execution",
+                        "Automated on-chain workflows",
+                        "Transparent and verifiable logic",
+                        "Decentralized transaction handling"
                     ]
                 },
                 {
-                    title: "Why Choose .NET?",
-                    description: ".NET is trusted by businesses worldwide for building reliable and long-lasting systems.",
+                    title: "Why Smart Contracts Matter",
+                    description: "Smart contracts are the foundation of decentralized ecosystems.",
                     list: [
-                        "Excellent performance and stability",
-                        "Strong security and authentication support",
-                        "Scalable for enterprise workloads",
-                        "Long-term Microsoft support"
+                        "Eliminate centralized intermediaries",
+                        "Reduce operational and trust costs",
+                        "Increase transparency and auditability",
+                        "Enable global permissionless access"
                     ]
                 },
                 {
-                    title: "Web Application Development",
-                    description: "We build modern, secure, and scalable web applications using .NET technologies.",
+                    title: "Smart Contract Architecture & Design",
+                    description: "We design contracts that are secure, modular, and upgrade-friendly.",
                     list: [
-                        "ASP.NET and ASP.NET Core applications",
-                        "MVC and API-based architectures",
-                        "High-performance web platforms",
-                        "Secure session and data handling"
+                        "Modular contract structures",
+                        "Upgradeable proxy patterns",
+                        "Gas-efficient execution",
+                        "Role-based access control"
                     ]
                 },
                 {
-                    title: "Backend & API Development",
-                    description: "We develop robust backend systems and APIs using .NET.",
+                    title: "Security-First Development",
+                    description: "Security is built into every contract from day one.",
                     list: [
-                        "RESTful and GraphQL APIs",
-                        "Microservices architecture",
-                        "High-availability backend services",
-                        "Cloud-ready API solutions"
+                        "Reentrancy protection",
+                        "Overflow and underflow prevention",
+                        "Access control enforcement",
+                        "Fail-safe logic patterns"
                     ]
                 },
                 {
-                    title: "Enterprise Application Development",
-                    description: "We design enterprise-grade solutions for complex business workflows.",
+                    title: "Testing & Audit Readiness",
+                    description: "We ensure contracts are production-ready before deployment.",
                     list: [
-                        "ERP and CRM systems",
-                        "Business process automation",
-                        "Internal enterprise tools",
-                        "Mission-critical applications"
+                        "Comprehensive unit testing",
+                        "Integration testing",
+                        "Automated test pipelines",
+                        "Audit preparation and remediation"
                     ]
                 },
                 {
-                    title: "Cloud & Azure Integration",
-                    description: "We build and deploy .NET applications on cloud platforms.",
+                    title: "Who Is Smart Contract Development Best For?",
+                    description: "Smart contracts are ideal for:",
                     list: [
-                        "Microsoft Azure integration",
-                        "Cloud-native application design",
-                        "Scalable and resilient architectures",
-                        "Secure cloud deployments"
+                        "DeFi protocols",
+                        "NFT platforms and marketplaces",
+                        "DAOs and governance systems",
+                        "Enterprise blockchain solutions"
                     ]
                 },
                 {
-                    title: "Database & System Integration",
-                    description: "We integrate .NET applications with databases and third-party systems.",
+                    title: "Why Solario Tech for Smart Contracts?",
+                    description: "Why clients trust us for smart contract development:",
                     list: [
-                        "SQL Server and NoSQL databases",
-                        "Legacy system integration",
-                        "Third-party service integration",
-                        "Data processing and reporting"
+                        "Security-first blockchain engineering",
+                        "Deep expertise in Web3 protocols",
+                        "Scalable and maintainable architectures",
+                        "Audit-ready codebases",
+                        "Long-term support and upgrades"
+                    ]
+                }
+            ],
+            cta: {
+                title: "Launch Secure Smart Contracts",
+                description: "Whether you’re launching DeFi, NFTs, or enterprise blockchain solutions, our smart contract development services help you build securely and confidently.",
+                buttons: [
+                    { label: "Start Your Project" },
+                    { label: "Book a Free Consultation" }
+                ]
+            }
+        },
+
+        {
+            id: "Decentralized Applications (dApps)",
+            hero: {
+                title: "Build Scalable & User-Friendly Decentralized Applications",
+                description: "Solario Tech builds full-stack decentralized applications that combine Web2-grade user experience with Web3 trust and transparency.\nWe help teams deliver production-ready dApps that scale securely and drive real adoption.",
+                buttons: [
+                    { label: "Book a Free Consultation" },
+                    { label: "Start Your Project" }
+                ]
+            },
+            content: [
+                {
+                    title: "What Are Decentralized Applications?",
+                    description: "dApps are applications that interact with blockchain smart contracts instead of centralized servers.",
+                    list: [
+                        "Blockchain-powered backend logic",
+                        "Wallet-based authentication",
+                        "Decentralized data handling",
+                        "Trustless execution model"
                     ]
                 },
                 {
-                    title: "Security & Performance Optimization",
-                    description: "We ensure .NET applications are secure and optimized for performance.",
+                    title: "Why Build dApps?",
+                    description: "Decentralized applications enable new trust models.",
                     list: [
-                        "Authentication and authorization",
-                        "Data encryption and secure storage",
-                        "Performance tuning and optimization",
-                        "Scalable resource management"
+                        "Censorship resistance",
+                        "User-owned assets",
+                        "Transparent logic",
+                        "Global accessibility"
+                    ]
+                },
+                {
+                    title: "dApp Architecture",
+                    description: "We design scalable and maintainable dApp architectures.",
+                    list: [
+                        "Smart contract backend",
+                        "Web3 frontend integration",
+                        "Indexing and APIs",
+                        "Off-chain services"
+                    ]
+                },
+                {
+                    title: "Performance & Scalability",
+                    description: "Optimized for real-world usage.",
+                    list: [
+                        "Layer 2 scaling solutions",
+                        "Gas-optimized interactions",
+                        "Caching and indexing layers",
+                        "High-throughput design"
+                    ]
+                },
+                {
+                    title: "Security & Reliability",
+                    description: "Security and reliability are core to every dApp.",
+                    list: [
+                        "Secure contract interactions",
+                        "Transaction state handling",
+                        "Error and failure recovery",
+                        "Monitoring and analytics"
+                    ]
+                },
+                {
+                    title: "Who Are dApps Best For?",
+                    description: "dApps are ideal for:",
+                    list: [
+                        "DeFi platforms",
+                        "NFT marketplaces",
+                        "DAO platforms",
+                        "Web3 SaaS products"
+                    ]
+                },
+                {
+                    title: "Why Solario Tech for dApps?",
+                    description: "Why businesses trust us for dApp development:",
+                    list: [
+                        "Full-stack Web3 expertise",
+                        "User-centric Web3 UX",
+                        "Scalable decentralized systems",
+                        "Security-first approach",
+                        "Ongoing support and optimization"
+                    ]
+                }
+            ],
+            cta: {
+                title: "Build Production-Ready dApps",
+                description: "From MVPs to enterprise platforms, our dApp development services help you launch scalable and secure Web3 applications.",
+                buttons: [
+                    { label: "Start Your Project" },
+                    { label: "Book a Free Consultation" }
+                ]
+            }
+        },
+        {
+            id: "Ethereum & EVM Chains",
+            hero: {
+                title: "Build Secure, Scalable & Future-Ready Solutions on Ethereum & EVM Chains",
+                description: "Solario Tech designs and builds decentralized applications and blockchain infrastructure on Ethereum and EVM-compatible networks.\nWith deep Web3 expertise, we help startups and enterprises leverage mature tooling, liquidity, and ecosystem support to launch secure, scalable, and production-ready blockchain solutions.",
+                buttons: [
+                    { label: "Book a Free Consultation" },
+                    { label: "Start Your Project" }
+                ]
+            },
+            content: [
+                {
+                    title: "What Are Ethereum & EVM-Compatible Chains?",
+                    description: "Ethereum Virtual Machine (EVM) compatible blockchains support Ethereum smart contracts and development tooling, enabling applications to run across multiple networks with minimal changes.",
+                    list: [
+                        "Ethereum Mainnet",
+                        "Polygon, BNB Chain, Avalanche, Arbitrum, Optimism",
+                        "Shared Solidity-based development environment",
+                        "Interoperability across EVM ecosystems"
+                    ]
+                },
+                {
+                    title: "Why Build on Ethereum & EVM?",
+                    description: "Ethereum and EVM-compatible networks offer the most mature and widely adopted blockchain infrastructure.",
+                    list: [
+                        "Battle-tested and secure execution environment",
+                        "Largest Web3 developer ecosystem",
+                        "Extensive tooling, libraries, and audit support",
+                        "Deep liquidity and ecosystem composability"
+                    ]
+                },
+                {
+                    title: "Smart Contract Development for EVM",
+                    description: "We develop secure and efficient smart contracts tailored for EVM-based blockchains.",
+                    list: [
+                        "Solidity smart contract development",
+                        "Upgradeable and modular contract architecture",
+                        "Gas-optimized contract logic",
+                        "Role-based access control and permissions"
+                    ]
+                },
+                {
+                    title: "Multi-Chain & Layer 2 Deployment",
+                    description: "We help projects scale by deploying across multiple EVM networks and Layer 2 solutions.",
+                    list: [
+                        "Layer 2 scaling (Arbitrum, Optimism, Polygon)",
+                        "Gas cost optimization strategies",
+                        "Chain-specific configuration and tuning",
+                        "Future-proof multi-chain architecture"
+                    ]
+                },
+                {
+                    title: "Cross-Chain Readiness & Interoperability",
+                    description: "Design systems that are ready for cross-chain expansion and interoperability.",
+                    list: [
+                        "Cross-chain messaging design",
+                        "Bridge-ready smart contract architecture",
+                        "Unified codebases across chains",
+                        "Scalable cross-network strategy"
+                    ]
+                },
+                {
+                    title: "Security & Best Practices",
+                    description: "Security is critical when building on public blockchain networks.",
+                    list: [
+                        "Reentrancy and attack-vector prevention",
+                        "Access control and permission management",
+                        "Secure upgrade and ownership patterns",
+                        "Audit-ready codebases"
+                    ]
+                },
+                {
+                    title: "Testing, Auditing & Reliability",
+                    description: "We ensure EVM applications are stable, secure, and production-ready.",
+                    list: [
+                        "Comprehensive unit and integration testing",
+                        "Automated test environments",
+                        "Pre-audit preparation and remediation",
+                        "Post-deployment monitoring support"
+                    ]
+                },
+                {
+                    title: "Who Are Ethereum & EVM Chains Best For?",
+                    description: "Ethereum and EVM-based solutions are ideal for:",
+                    list: [
+                        "DeFi protocols and financial platforms",
+                        "NFT platforms and marketplaces",
+                        "DAO and governance systems",
+                        "Enterprise and institutional blockchain solutions",
+                        "Web3 startups seeking ecosystem adoption"
+                    ]
+                },
+                {
+                    title: "Why Solario Tech for Ethereum & EVM Development?",
+                    description: "Why businesses trust Solario Tech for EVM-based blockchain solutions:",
+                    list: [
+                        "Deep expertise in Ethereum and EVM ecosystems",
+                        "Security-first smart contract development",
+                        "Scalable and maintainable architectures",
+                        "Multi-chain and Layer 2 experience",
+                        "Startup-friendly and enterprise-ready approach",
+                        "Long-term support and optimization"
+                    ]
+                }
+            ],
+            cta: {
+                title: "Launch & Scale on Ethereum & EVM Chains",
+                description: "Whether you’re building a new decentralized application or expanding across multiple blockchains, our Ethereum & EVM development services help you launch securely, scale efficiently, and grow confidently.",
+                buttons: [
+                    { label: "Start Your Project" },
+                    { label: "Book a Free Consultation" }
+                ]
+            }
+        },
+
+        {
+            id: "Solana Development",
+            hero: {
+                title: "High-Performance, Scalable & Real-Time Web3 Development on Solana",
+                description: "Solario Tech designs and builds high-performance Web3 applications on Solana, enabling businesses to process transactions at scale with minimal latency and cost.\nWith deep blockchain engineering expertise, we help startups and enterprises leverage Solana’s parallel execution model to build real-time, high-throughput decentralized systems.",
+                buttons: [
+                    { label: "Book a Free Consultation" },
+                    { label: "Start Your Project" }
+                ]
+            },
+            content: [
+                {
+                    title: "What Is Solana?",
+                    description: "Solana is a high-performance blockchain designed for speed, scalability, and low transaction costs, making it ideal for real-time and high-volume Web3 applications.",
+                    list: [
+                        "High-throughput blockchain architecture",
+                        "Sub-second transaction finality",
+                        "Low and predictable transaction fees",
+                        "Designed for scalable decentralized systems"
+                    ]
+                },
+                {
+                    title: "Why Choose Solana?",
+                    description: "Solana is purpose-built for applications that require speed and scale.",
+                    list: [
+                        "Parallel transaction execution (Sealevel)",
+                        "High transactions per second (TPS)",
+                        "Low-cost transactions suitable for mass adoption",
+                        "Strong ecosystem growth and developer support"
+                    ]
+                },
+                {
+                    title: "Solana Program Development",
+                    description: "We build secure and efficient on-chain programs using Rust, optimized for Solana’s execution environment.",
+                    list: [
+                        "Custom on-chain business logic",
+                        "State management and account design",
+                        "Performance-optimized program architecture",
+                        "Security-first Rust development"
+                    ]
+                },
+                {
+                    title: "Token & NFT Development on Solana",
+                    description: "We design and deploy Solana-based tokens and NFTs for scalable ecosystems.",
+                    list: [
+                        "SPL token development",
+                        "NFT minting and metadata standards",
+                        "Royalty and ownership enforcement",
+                        "Marketplace-ready assets"
+                    ]
+                },
+                {
+                    title: "High-Performance dApp Architecture",
+                    description: "We design Solana applications optimized for real-time user interactions.",
+                    list: [
+                        "Efficient account modeling",
+                        "Parallel execution optimization",
+                        "Low-latency transaction flows",
+                        "Scalable program design"
+                    ]
+                },
+                {
+                    title: "Security & Best Practices",
+                    description: "Security is critical when building high-speed blockchain systems.",
+                    list: [
+                        "Safe account ownership patterns",
+                        "Access control and permission management",
+                        "Protection against common Solana exploits",
+                        "Secure upgrade and deployment strategies"
+                    ]
+                },
+                {
+                    title: "Testing, Deployment & Monitoring",
+                    description: "We ensure Solana applications are production-ready and reliable.",
+                    list: [
+                        "Local and testnet program testing",
+                        "Automated test pipelines",
+                        "Mainnet deployment support",
+                        "Post-deployment monitoring and optimization"
+                    ]
+                },
+                {
+                    title: "Who Is Solana Development Best For?",
+                    description: "Solana-based solutions are ideal for:",
+                    list: [
+                        "High-frequency DeFi applications",
+                        "NFT marketplaces and gaming platforms",
+                        "Real-time trading and data platforms",
+                        "Consumer Web3 applications at scale",
+                        "Projects requiring low transaction costs"
+                    ]
+                },
+                {
+                    title: "Why Solario Tech for Solana Development?",
+                    description: "Why businesses trust Solario Tech for Solana-based Web3 solutions:",
+                    list: [
+                        "Deep expertise in Solana and Rust development",
+                        "Performance-focused blockchain architecture",
+                        "Security-first engineering approach",
+                        "Scalable and maintainable program design",
+                        "Startup-friendly and enterprise-ready delivery",
+                        "Ongoing support and optimization"
+                    ]
+                }
+            ],
+            cta: {
+                title: "Build Fast, Scalable Web3 Applications on Solana",
+                description: "Whether you’re launching a high-performance DeFi platform, NFT marketplace, or real-time Web3 product, our Solana development services help you build securely, scale efficiently, and deliver exceptional performance.",
+                buttons: [
+                    { label: "Start Your Project" },
+                    { label: "Book a Free Consultation" }
+                ]
+            }
+        },
+
+        {
+            id: "Web3 Frontend Integration",
+            hero: {
+                title: "Seamless, Secure & High-Performance Web3 Frontend Integration",
+                description: "Solario Tech integrates blockchain functionality into modern web frontends while maintaining excellent usability, performance, and security.\nWith deep Web3 and frontend engineering expertise, we help businesses bridge complex blockchain interactions with intuitive, user-friendly interfaces that drive real adoption.",
+                buttons: [
+                    { label: "Book a Free Consultation" },
+                    { label: "Start Your Project" }
+                ]
+            },
+            content: [
+                {
+                    title: "What Is Web3 Frontend Integration?",
+                    description: "Web3 frontend integration connects user interfaces to blockchain networks, smart contracts, and wallets, enabling users to interact with decentralized systems through familiar web experiences.",
+                    list: [
+                        "Frontend interaction with smart contracts",
+                        "Blockchain transaction execution and tracking",
+                        "Wallet-based user authentication",
+                        "On-chain and off-chain data synchronization"
+                    ]
+                },
+                {
+                    title: "Why Web3 Frontend Integration Matters",
+                    description: "Poor frontend integration is one of the biggest barriers to Web3 adoption.",
+                    list: [
+                        "Improves user trust and confidence",
+                        "Reduces transaction errors and drop-offs",
+                        "Simplifies complex blockchain interactions",
+                        "Enables mainstream user adoption"
+                    ]
+                },
+                {
+                    title: "Web3-Enabled Frontend Development",
+                    description: "We build modern frontends that interact seamlessly with blockchain logic.",
+                    list: [
+                        "Smart contract read and write operations",
+                        "Transaction lifecycle handling",
+                        "On-chain state management",
+                        "Event listening and real-time updates"
+                    ]
+                },
+                {
+                    title: "State Management & Error Handling",
+                    description: "Reliable state handling is essential for Web3 applications.",
+                    list: [
+                        "Pending, success, and failure states",
+                        "User-friendly error messages",
+                        "Retry and recovery mechanisms",
+                        "Graceful handling of network issues"
+                    ]
+                },
+                {
+                    title: "UX Optimization for Web3 Applications",
+                    description: "We design Web3 UX that reduces friction and increases adoption.",
+                    list: [
+                        "Gas fee estimation and transparency",
+                        "Clear transaction confirmations",
+                        "Wallet connection and disconnection flows",
+                        "Trust signals and security cues"
+                    ]
+                },
+                {
+                    title: "Performance & Scalability",
+                    description: "We ensure Web3 frontends remain fast and responsive at scale.",
+                    list: [
+                        "Optimized blockchain data fetching",
+                        "Caching and indexing strategies",
+                        "Efficient rendering and updates",
+                        "Scalable frontend architecture"
+                    ]
+                },
+                {
+                    title: "Security Best Practices",
+                    description: "Frontend security is critical in decentralized applications.",
+                    list: [
+                        "Input validation and sanitization",
+                        "Safe contract interaction patterns",
+                        "Protection against phishing vectors",
+                        "Secure handling of wallet interactions"
                     ]
                 },
                 {
                     title: "Testing & Quality Assurance",
-                    description: "Quality is built into every .NET solution we deliver.",
+                    description: "We test Web3 frontends across environments and scenarios.",
                     list: [
-                        "Unit and integration testing",
-                        "Automated testing frameworks",
-                        "Performance and load testing",
-                        "Continuous quality improvements"
+                        "Wallet interaction testing",
+                        "Transaction flow validation",
+                        "Cross-browser and device testing",
+                        "Mainnet and testnet readiness checks"
                     ]
                 },
                 {
-                    title: "Who Is .NET Development Best For?",
-                    description: ".NET development is ideal for:",
+                    title: "Who Is Web3 Frontend Integration Best For?",
+                    description: "Web3 frontend integration is ideal for:",
                     list: [
-                        "Enterprise and business applications",
-                        "Web and backend systems",
-                        "Cloud-based platforms",
-                        "High-security and compliance-driven products",
-                        "Legacy system modernization"
+                        "Decentralized applications (dApps)",
+                        "DeFi platforms",
+                        "NFT marketplaces",
+                        "DAO governance platforms",
+                        "Web3 SaaS products"
                     ]
                 },
                 {
-                    title: "Why Solario Tech for .NET Development?",
-                    description: "Why businesses trust us for .NET projects:",
+                    title: "Why Solario Tech for Web3 Frontend Integration?",
+                    description: "Why businesses trust Solario Tech for Web3 frontend development:",
                     list: [
-                        "12+ Years of Software Engineering Experience",
-                        "Deep expertise in Microsoft .NET ecosystem",
-                        "Scalable and secure system design",
-                        "Fast and cost-effective delivery",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Long-term maintenance and support"
+                        "Deep expertise in Web3 and modern frontend frameworks",
+                        "User-centric Web3 UX design",
+                        "Security-first integration approach",
+                        "Scalable and maintainable frontend architecture",
+                        "Startup-friendly and enterprise-ready delivery",
+                        "Ongoing support and optimization"
                     ]
                 }
             ],
             cta: {
-                title: "Build Powerful Solutions with .NET",
-                description: "Whether you’re building a new application or modernizing an existing system, our .NET development services help you deliver secure, scalable, and future-ready solutions.",
+                title: "Connect Your Frontend to Web3 with Confidence",
+                description: "Whether you’re launching a new dApp or enhancing an existing platform, our Web3 frontend integration services help you deliver intuitive, secure, and high-performing blockchain experiences.",
                 buttons: [
                     { label: "Start Your Project" },
                     { label: "Book a Free Consultation" }
                 ]
             }
         },
+
+
         {
-            id: "WPF Applications",
+            id: "Wallet Integration (MetaMask, WalletConnect)",
             hero: {
-                title: "Build Rich, Secure & High-Performance WPF Applications",
-                description: "Solario Tech develops powerful Windows Presentation Foundation (WPF) applications that deliver rich user interfaces, high performance, and enterprise-grade reliability.\nWith 12+ years of software engineering experience, we build WPF solutions tailored for desktop environments that demand robustness, scalability, and a polished user experience.",
+                title: "Secure, Reliable & User-Friendly Wallet Integration for Web3 Platforms",
+                description: "Solario Tech integrates leading Web3 wallets to enable secure authentication, transaction signing, and asset management across decentralized applications.\nWith deep Web3 expertise, we help businesses deliver wallet experiences that are safe, intuitive, and trusted by users — without compromising security or usability.",
                 buttons: [
                     { label: "Book a Free Consultation" },
                     { label: "Start Your Project" }
@@ -2281,122 +2688,112 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             },
             content: [
                 {
-                    title: "What are WPF Applications?",
-                    description: "WPF (Windows Presentation Foundation) is a Microsoft UI framework used to build visually rich and interactive desktop applications for Windows.",
+                    title: "What Is Wallet Integration?",
+                    description: "Wallet integration connects user wallets to Web3 applications, enabling secure identity verification, transaction signing, and asset interaction without centralized accounts.",
                     list: [
-                        "Rich desktop user interfaces",
-                        "XAML-based UI design",
-                        "High-performance rendering",
-                        "Deep integration with Windows OS"
+                        "Wallet-based authentication",
+                        "Non-custodial user identity",
+                        "Secure transaction signing",
+                        "On-chain asset access"
                     ]
                 },
                 {
-                    title: "Why Choose WPF?",
-                    description: "WPF is ideal for building modern desktop applications with advanced UI requirements.",
+                    title: "Supported Wallets & Standards",
+                    description: "We integrate industry-standard wallets and protocols.",
                     list: [
-                        "Powerful data binding",
-                        "Customizable UI and controls",
-                        "Hardware-accelerated graphics",
-                        "Long-term Microsoft support"
+                        "MetaMask browser and mobile wallets",
+                        "WalletConnect for mobile and multi-wallet access",
+                        "Multi-wallet compatibility and fallback handling",
+                        "EVM and non-EVM wallet support where required"
                     ]
                 },
                 {
-                    title: "Custom WPF Application Development",
-                    description: "We build tailor-made WPF applications aligned with your business workflows and requirements.",
+                    title: "Secure Authentication & Session Handling",
+                    description: "Wallets act as decentralized identity providers.",
                     list: [
-                        "Business and enterprise desktop apps",
-                        "Internal tools and dashboards",
-                        "Data-driven desktop solutions",
-                        "High-performance client applications"
+                        "Signature-based authentication",
+                        "Nonce and replay-attack prevention",
+                        "Session persistence without private key exposure",
+                        "Logout and account-switch handling"
                     ]
                 },
                 {
-                    title: "MVVM Architecture Implementation",
-                    description: "We follow MVVM best practices to ensure clean, maintainable, and testable WPF applications.",
+                    title: "Transaction Signing & Lifecycle Management",
+                    description: "We manage the full transaction flow for reliability and clarity.",
                     list: [
-                        "Clear separation of concerns",
-                        "Scalable application structure",
-                        "Improved testability",
-                        "Long-term maintainability"
+                        "Transaction creation and signing",
+                        "Pending, success, and failure states",
+                        "Gas estimation and confirmation prompts",
+                        "Clear transaction status feedback"
                     ]
                 },
                 {
-                    title: "UI/UX Design with XAML",
-                    description: "We design intuitive and visually appealing WPF user interfaces using XAML.",
+                    title: "Chain Switching & Multi-Network Support",
+                    description: "Enable seamless interactions across multiple blockchains.",
                     list: [
-                        "Custom styles and templates",
-                        "Responsive layouts",
-                        "Modern UI components",
-                        "Brand-aligned desktop UI"
+                        "Automatic network detection",
+                        "User-friendly chain switching",
+                        "Multi-chain compatibility",
+                        "Graceful handling of unsupported networks"
                     ]
                 },
                 {
-                    title: "Data Binding & Performance Optimization",
-                    description: "We optimize WPF apps for smooth performance and responsiveness.",
+                    title: "Security Best Practices",
+                    description: "Wallet security is critical to user trust.",
                     list: [
-                        "Efficient data binding strategies",
-                        "Asynchronous data loading",
-                        "Optimized rendering",
-                        "Reduced memory consumption"
+                        "Safe transaction prompting",
+                        "Clear permission and approval scopes",
+                        "Protection against phishing and spoofing",
+                        "Secure handling of wallet permissions"
                     ]
                 },
                 {
-                    title: "Integration with Backend & APIs",
-                    description: "We integrate WPF applications seamlessly with backend systems.",
+                    title: "UX Optimization for Wallet Interactions",
+                    description: "We design wallet flows that reduce friction for users.",
                     list: [
-                        ".NET-based backend integration",
-                        "RESTful API connectivity",
-                        "Database and service integration",
-                        "Secure data communication"
-                    ]
-                },
-                {
-                    title: "Security & Access Control",
-                    description: "We implement strong security practices for desktop applications.",
-                    list: [
-                        "Authentication and authorization",
-                        "Secure data storage",
-                        "Role-based access control",
-                        "Enterprise security standards"
+                        "Clear onboarding and connection flows",
+                        "Minimal signature requests",
+                        "User-friendly error messages",
+                        "Trust signals and confirmations"
                     ]
                 },
                 {
                     title: "Testing & Quality Assurance",
-                    description: "We ensure WPF applications are stable and reliable.",
+                    description: "We test wallet integrations across environments and scenarios.",
                     list: [
-                        "Unit and integration testing",
-                        "UI testing strategies",
-                        "Performance testing",
-                        "Bug fixing and optimization"
+                        "Cross-wallet compatibility testing",
+                        "Browser and device testing",
+                        "Testnet and mainnet validation",
+                        "Edge-case and failure scenario testing"
                     ]
                 },
                 {
-                    title: "Who Are WPF Applications Best For?",
-                    description: "WPF applications are ideal for:",
+                    title: "Who Is Wallet Integration Best For?",
+                    description: "Wallet integration is ideal for:",
                     list: [
-                        "Enterprise desktop applications",
-                        "Internal business tools",
-                        "Data-intensive desktop software",
-                        "Windows-only platforms",
-                        "Legacy WinForms modernization"
+                        "Decentralized applications (dApps)",
+                        "DeFi platforms",
+                        "NFT marketplaces",
+                        "DAO governance systems",
+                        "Web3 SaaS platforms"
                     ]
                 },
                 {
-                    title: "Why Solario Tech for WPF Applications?",
-                    description: "Why businesses trust us for WPF development:",
+                    title: "Why Solario Tech for Wallet Integration?",
+                    description: "Why businesses trust Solario Tech for Web3 wallet integrations:",
                     list: [
-                        "12+ Years of .NET & Desktop Development Experience",
-                        "Expertise in WPF, XAML, and MVVM",
-                        "High-performance and scalable solutions",
-                        "Clean, maintainable codebases",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Long-term support and enhancements"
+                        "Deep expertise in Web3 authentication flows",
+                        "Security-first wallet integration approach",
+                        "UX-focused design for mainstream adoption",
+                        "Multi-chain and multi-wallet experience",
+                        "Startup-friendly and enterprise-ready delivery",
+                        "Ongoing support and optimization"
                     ]
                 }
             ],
             cta: {
-                title: "Build Powerful Windows Desktop Applications",
-                description: "Whether you’re building a new desktop product or modernizing an existing one, our WPF application development services help you deliver secure, high-performance, and user-friendly Windows applications.",
+                title: "Enable Secure Wallet Access Across Your Platform",
+                description: "Whether you’re launching a new dApp or enhancing an existing Web3 product, our wallet integration services help you deliver secure, seamless, and trusted wallet experiences.",
                 buttons: [
                     { label: "Start Your Project" },
                     { label: "Book a Free Consultation" }
@@ -2404,11 +2801,12 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             }
         },
 
+
         {
-            id: "UWP Apps",
+            id: "Token & NFT Development",
             hero: {
-                title: "Build Secure, Modern & Scalable UWP Applications",
-                description: "Solario Tech helps businesses design and develop Universal Windows Platform (UWP) applications that run seamlessly across Windows devices.\nWith 12+ years of software engineering experience, we deliver secure, high-performance UWP apps optimized for desktops, tablets, Xbox, and other Windows-based devices.",
+                title: "Build Secure, Scalable Tokens & NFT Ecosystems",
+                description: "Solario Tech designs and deploys secure, scalable token and NFT solutions that power Web3 economies across DeFi, gaming, creator platforms, and enterprise blockchain use cases.\nWith deep expertise in token standards, smart contracts, and ecosystem design, we help businesses tokenize value responsibly and sustainably.",
                 buttons: [
                     { label: "Book a Free Consultation" },
                     { label: "Start Your Project" }
@@ -2416,122 +2814,122 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             },
             content: [
                 {
-                    title: "What are UWP Applications?",
-                    description: "UWP (Universal Windows Platform) allows developers to build applications that run across multiple Windows devices using a single codebase.",
+                    title: "What Is Token & NFT Development?",
+                    description: "Token and NFT development involves designing, implementing, and deploying digital assets on blockchain networks to represent value, ownership, access, or governance.",
                     list: [
-                        "Single codebase for multiple Windows devices",
-                        "Consistent user experience across platforms",
-                        "Secure and sandboxed app environment",
-                        "Deep integration with Windows OS"
+                        "Fungible and non-fungible digital assets",
+                        "On-chain ownership and transferability",
+                        "Programmable economic logic",
+                        "Transparent and verifiable asset behavior"
                     ]
                 },
                 {
-                    title: "Why Choose UWP?",
-                    description: "UWP is ideal for businesses targeting the Windows ecosystem with modern, secure applications.",
+                    title: "Why Tokenization Matters",
+                    description: "Tokenization enables new economic models and ownership structures.",
                     list: [
-                        "Broad device reach within Windows ecosystem",
-                        "Strong security and permission controls",
-                        "Optimized performance on Windows devices",
-                        "Future-ready Microsoft platform"
+                        "Decentralized value exchange",
+                        "User-owned digital assets",
+                        "Global and permissionless access",
+                        "Programmable incentives and governance"
                     ]
                 },
                 {
-                    title: "Custom UWP App Development",
-                    description: "We build tailor-made UWP applications aligned with your business goals.",
+                    title: "Token Development",
+                    description: "We design and deploy secure, standards-compliant fungible tokens.",
                     list: [
-                        "Enterprise and business applications",
-                        "Productivity and utility apps",
-                        "Media and content-driven apps",
-                        "Internal corporate tools"
+                        "ERC-20, ERC-777, and SPL token development",
+                        "Minting, burning, and supply control logic",
+                        "Utility, governance, and incentive tokens",
+                        "Upgradeable and modular token contracts"
                     ]
                 },
                 {
-                    title: "UI/UX Design for UWP",
-                    description: "We design intuitive and modern interfaces following Microsoft Fluent Design guidelines.",
+                    title: "Tokenomics Design & Economics",
+                    description: "Strong tokenomics are critical for long-term sustainability.",
                     list: [
-                        "Fluent Design System implementation",
-                        "Adaptive layouts for different screen sizes",
-                        "Touch, keyboard, and mouse-friendly design",
-                        "Accessible and user-centric UI"
+                        "Supply and distribution modeling",
+                        "Vesting and lockup mechanisms",
+                        "Incentive and reward structures",
+                        "Alignment of users, builders, and stakeholders"
                     ]
                 },
                 {
-                    title: "Cross-Device Windows Support",
-                    description: "Ensure consistent behavior across all supported Windows devices.",
+                    title: "NFT Development",
+                    description: "We build scalable and standards-compliant NFT solutions.",
                     list: [
-                        "Desktop and laptop support",
-                        "Tablet and touch-enabled devices",
-                        "Xbox and large-screen experiences",
-                        "Responsive and adaptive UI layouts"
+                        "ERC-721 and ERC-1155 NFTs",
+                        "Single and batch minting strategies",
+                        "On-chain and off-chain metadata",
+                        "Ownership, transfer, and lifecycle management"
                     ]
                 },
                 {
-                    title: "Backend & API Integration",
-                    description: "We integrate UWP apps seamlessly with backend systems and services.",
+                    title: "Royalties, Metadata & Storage",
+                    description: "Ensure long-term asset integrity and creator attribution.",
                     list: [
-                        "RESTful API integration",
-                        "Cloud and on-premise backend connectivity",
-                        "Secure data exchange",
-                        "Real-time data synchronization"
+                        "Royalty enforcement mechanisms",
+                        "IPFS and decentralized storage integration",
+                        "Metadata immutability strategies",
+                        "Upgradeable metadata where appropriate"
                     ]
                 },
                 {
-                    title: "Offline Functionality & Local Storage",
-                    description: "Enable apps to work reliably even without an internet connection.",
+                    title: "Marketplace & Platform Integration",
+                    description: "We integrate tokens and NFTs into broader Web3 ecosystems.",
                     list: [
-                        "Local data storage",
-                        "Offline-first workflows",
-                        "Background data sync",
-                        "Improved reliability"
+                        "NFT marketplace compatibility",
+                        "Wallet and dApp integration",
+                        "Trading, listing, and transfer flows",
+                        "Interoperability across platforms"
                     ]
                 },
                 {
-                    title: "Security & Compliance",
-                    description: "We ensure UWP applications meet enterprise security standards.",
+                    title: "Security & Compliance Best Practices",
+                    description: "Digital assets require strong security and careful design.",
                     list: [
-                        "Secure app sandboxing",
-                        "Authentication and authorization",
-                        "Data encryption",
-                        "Compliance with Microsoft Store policies"
+                        "Access control and permission management",
+                        "Protection against common token exploits",
+                        "Secure minting and distribution flows",
+                        "Audit-ready smart contract design"
                     ]
                 },
                 {
-                    title: "Testing & Performance Optimization",
-                    description: "We rigorously test and optimize UWP applications for stability and speed.",
+                    title: "Testing, Auditing & Deployment",
+                    description: "We ensure tokens and NFTs are production-ready.",
                     list: [
-                        "Multi-device testing",
-                        "Performance and memory optimization",
-                        "Bug fixing and stability improvements",
-                        "Release readiness validation"
+                        "Comprehensive unit and integration testing",
+                        "Testnet validation",
+                        "Pre-audit preparation and remediation",
+                        "Mainnet deployment support"
                     ]
                 },
                 {
-                    title: "Who Are UWP Apps Best For?",
-                    description: "UWP applications are ideal for:",
+                    title: "Who Is Token & NFT Development Best For?",
+                    description: "Token and NFT solutions are ideal for:",
                     list: [
-                        "Windows-focused enterprise solutions",
-                        "Internal business and productivity apps",
-                        "Apps targeting Microsoft Store distribution",
-                        "Cross-device Windows experiences",
-                        "Organizations standardized on Windows"
+                        "DeFi and governance platforms",
+                        "NFT marketplaces and creator economies",
+                        "Gaming and metaverse projects",
+                        "DAO and community-driven platforms",
+                        "Enterprises exploring asset tokenization"
                     ]
                 },
                 {
-                    title: "Why Solario Tech for UWP Apps?",
-                    description: "Why businesses trust us for UWP development:",
+                    title: "Why Solario Tech for Token & NFT Development?",
+                    description: "Why businesses trust Solario Tech with digital asset development:",
                     list: [
-                        "12+ Years of Windows & .NET Development Experience",
-                        "Expertise in UWP and Microsoft ecosystems",
-                        "Clean, scalable, and secure architectures",
-                        "Performance-focused implementations",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Long-term maintenance and support"
+                        "Deep expertise in token standards and NFT protocols",
+                        "Security-first smart contract engineering",
+                        "Strong focus on sustainable tokenomics",
+                        "Scalable and maintainable architectures",
+                        "Startup-friendly and enterprise-ready delivery",
+                        "Ongoing support and ecosystem evolution"
                     ]
                 }
             ],
             cta: {
-                title: "Build Powerful Apps for the Windows Ecosystem",
-                description: "Whether you’re building a new UWP application or modernizing an existing Windows solution, our UWP app development services help you deliver secure, scalable, and future-ready applications.",
+                title: "Tokenize Value with Confidence",
+                description: "Whether you’re launching a token, NFT collection, or a full digital asset ecosystem, our token and NFT development services help you build securely, scale sustainably, and grow with confidence.",
                 buttons: [
                     { label: "Start Your Project" },
                     { label: "Book a Free Consultation" }
@@ -2539,11 +2937,12 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             }
         },
 
+
         {
-            id: "Windows Forms",
+            id: "Blockchain Security Audits",
             hero: {
-                title: "Build Reliable & Efficient Desktop Applications with Windows Forms",
-                description: "Solario Tech develops stable, secure, and easy-to-use Windows Forms (WinForms) applications for businesses that need fast, reliable desktop solutions.\nWith 12+ years of software engineering experience, we build WinForms applications that are robust, maintainable, and well-suited for enterprise and internal business use.",
+                title: "Enterprise-Grade Blockchain Security Audits & Risk Mitigation",
+                description: "Solario Tech provides comprehensive blockchain security audits designed to identify vulnerabilities, mitigate risks, and protect digital assets before and after launch.\nWith deep expertise in smart contract security and Web3 threat models, we help startups and enterprises safeguard users, funds, and platform integrity.",
                 buttons: [
                     { label: "Book a Free Consultation" },
                     { label: "Start Your Project" }
@@ -2551,122 +2950,112 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             },
             content: [
                 {
-                    title: "What are Windows Forms (WinForms)?",
-                    description: "Windows Forms is a Microsoft UI framework for building desktop applications on Windows using the .NET platform.",
+                    title: "What Are Blockchain Security Audits?",
+                    description: "Blockchain security audits involve a detailed review of smart contracts, protocols, and system architecture to identify vulnerabilities, logic flaws, and security risks before deployment.",
                     list: [
-                        "Rapid desktop application development",
-                        "Event-driven programming model",
-                        "Rich set of built-in UI controls",
-                        "Deep integration with Windows OS"
+                        "Comprehensive smart contract code review",
+                        "Protocol and system-level security analysis",
+                        "Identification of attack vectors and exploits",
+                        "Risk classification and mitigation planning"
                     ]
                 },
                 {
-                    title: "Why Choose Windows Forms?",
-                    description: "WinForms is ideal for building stable desktop applications with quick development cycles.",
+                    title: "Why Blockchain Security Matters",
+                    description: "Security failures in Web3 systems can result in irreversible financial losses and reputational damage.",
                     list: [
-                        "Simple and proven technology",
-                        "Fast development and deployment",
-                        "Easy maintenance for long-term use",
-                        "Excellent for internal business tools"
+                        "Smart contracts are immutable once deployed",
+                        "Exploits can lead to permanent loss of funds",
+                        "Public blockchains are constantly targeted",
+                        "User trust depends on platform security"
                     ]
                 },
                 {
-                    title: "Custom Windows Forms Application Development",
-                    description: "We build custom WinForms applications tailored to your specific business workflows.",
+                    title: "Smart Contract Vulnerability Analysis",
+                    description: "We analyze contracts for common and advanced vulnerability patterns.",
                     list: [
-                        "Business and enterprise desktop apps",
-                        "Internal tools and utilities",
-                        "Data entry and management systems",
-                        "Legacy desktop application development"
+                        "Reentrancy and access control flaws",
+                        "Arithmetic and logic errors",
+                        "Unchecked external calls",
+                        "Privilege escalation vulnerabilities"
                     ]
                 },
                 {
-                    title: "WinForms UI Design & Customization",
-                    description: "We design clean, functional, and user-friendly WinForms interfaces.",
+                    title: "Threat Modeling & Risk Assessment",
+                    description: "We evaluate security risks across the entire Web3 system.",
                     list: [
-                        "Custom forms and layouts",
-                        "Reusable UI components",
-                        "User-friendly navigation",
-                        "Brand-aligned desktop interfaces"
+                        "Attack surface identification",
+                        "Threat modeling for DeFi, NFT, and DAO systems",
+                        "Risk severity classification",
+                        "Prioritized mitigation recommendations"
                     ]
                 },
                 {
-                    title: "Database & Backend Integration",
-                    description: "We integrate WinForms applications with databases and backend systems.",
+                    title: "Audit Preparation & Code Hardening",
+                    description: "We prepare your codebase for formal third-party audits.",
                     list: [
-                        "SQL Server and relational databases",
-                        "REST API integration",
-                        "Enterprise system connectivity",
-                        "Secure data handling"
+                        "Code refactoring and cleanup",
+                        "Implementation of security best practices",
+                        "Gas optimization without compromising security",
+                        "Documentation for auditors"
                     ]
                 },
                 {
-                    title: "Performance & Stability Optimization",
-                    description: "We ensure WinForms applications run efficiently and reliably.",
+                    title: "Audit Remediation & Support",
+                    description: "We assist teams in resolving audit findings efficiently.",
                     list: [
-                        "Optimized event handling",
-                        "Efficient data loading",
-                        "Memory and resource management",
-                        "Crash and error reduction"
+                        "Fixing reported vulnerabilities",
+                        "Security pattern improvements",
+                        "Re-testing and validation",
+                        "Post-remediation verification"
                     ]
                 },
                 {
-                    title: "Security & Access Control",
-                    description: "We implement essential security practices for desktop applications.",
+                    title: "Security Testing & Validation",
+                    description: "We validate fixes and ensure systems behave securely.",
                     list: [
-                        "Authentication and authorization",
-                        "Role-based access control",
-                        "Secure data storage",
-                        "Enterprise security standards"
+                        "Unit and integration security testing",
+                        "Edge-case and failure scenario testing",
+                        "Testnet validation",
+                        "Mainnet readiness checks"
                     ]
                 },
                 {
-                    title: "Legacy Application Maintenance & Modernization",
-                    description: "We support and modernize existing WinForms applications.",
+                    title: "Ongoing Security & Monitoring",
+                    description: "Security doesn’t end after deployment.",
                     list: [
-                        "Bug fixes and enhancements",
-                        "Performance improvements",
-                        "Code refactoring",
-                        "Migration planning to newer technologies"
+                        "Post-deployment security reviews",
+                        "Upgrade and migration risk assessment",
+                        "Continuous threat evaluation",
+                        "Security advisory and guidance"
                     ]
                 },
                 {
-                    title: "Testing & Quality Assurance",
-                    description: "We ensure WinForms applications are stable and production-ready.",
+                    title: "Who Are Blockchain Security Audits Best For?",
+                    description: "Blockchain security audits are essential for:",
                     list: [
-                        "Functional testing",
-                        "Regression testing",
-                        "Performance validation",
-                        "Release readiness checks"
+                        "DeFi protocols handling user funds",
+                        "NFT marketplaces and minting platforms",
+                        "DAO and governance systems",
+                        "Enterprise and institutional blockchain solutions",
+                        "Projects preparing for public launch"
                     ]
                 },
                 {
-                    title: "Who Are Windows Forms Best For?",
-                    description: "Windows Forms applications are ideal for:",
+                    title: "Why Solario Tech for Blockchain Security Audits?",
+                    description: "Why teams trust Solario Tech to secure their Web3 platforms:",
                     list: [
-                        "Internal enterprise tools",
-                        "Desktop-based data management systems",
-                        "Legacy system support",
-                        "Small to mid-sized business applications",
-                        "Windows-only environments"
-                    ]
-                },
-                {
-                    title: "Why Solario Tech for Windows Forms?",
-                    description: "Why businesses trust us for WinForms development:",
-                    list: [
-                        "12+ Years of .NET & Desktop Development Experience",
-                        "Strong expertise in Windows Forms architecture",
-                        "Reliable and maintainable solutions",
-                        "Fast and cost-effective delivery",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Long-term support and maintenance"
+                        "Deep expertise in smart contract security",
+                        "Security-first blockchain engineering approach",
+                        "Practical, actionable remediation guidance",
+                        "Experience across DeFi, NFT, and DAO ecosystems",
+                        "Startup-friendly and enterprise-ready engagement",
+                        "Long-term security partnership"
                     ]
                 }
             ],
             cta: {
-                title: "Build Reliable Windows Desktop Applications",
-                description: "Whether you’re developing a new Windows Forms application or maintaining an existing one, our WinForms development services help you deliver stable, secure, and efficient desktop solutions.",
+                title: "Secure Your Web3 Platform with Confidence",
+                description: "Whether you’re preparing for launch, undergoing an audit, or strengthening an existing system, our blockchain security audit services help you protect assets, users, and reputation.",
                 buttons: [
                     { label: "Start Your Project" },
                     { label: "Book a Free Consultation" }
@@ -2674,535 +3063,6 @@ export const serviceIncludes: Record<string, ServiceInclude[]> = {
             }
         },
 
-        {
-            id: "Azure Integration",
-            hero: {
-                title: "Build Scalable, Secure & Cloud-Ready Solutions with Azure",
-                description: "Solario Tech helps businesses seamlessly integrate Microsoft Azure to build secure, scalable, and high-performance cloud solutions.\nWith 12+ years of engineering experience, we design Azure architectures that support modern applications, enterprise workloads, and rapid business growth.",
-                buttons: [
-                    { label: "Book a Free Consultation" },
-                    { label: "Start Your Project" }
-                ]
-            },
-            content: [
-                {
-                    title: "What is Azure Integration?",
-                    description: "Azure integration involves connecting applications, services, and infrastructure with Microsoft Azure cloud services to enable scalability, security, and automation.",
-                    list: [
-                        "Cloud-based application hosting",
-                        "Secure data and service integration",
-                        "Scalable infrastructure management",
-                        "Enterprise-grade reliability"
-                    ]
-                },
-                {
-                    title: "Why Choose Microsoft Azure?",
-                    description: "Azure is a trusted cloud platform used by enterprises worldwide.",
-                    list: [
-                        "High availability and global reach",
-                        "Strong security and compliance standards",
-                        "Flexible cloud and hybrid solutions",
-                        "Seamless Microsoft ecosystem integration"
-                    ]
-                },
-                {
-                    title: "Azure App Services & Hosting",
-                    description: "We deploy and manage applications using Azure’s managed services.",
-                    list: [
-                        "Azure App Services",
-                        "Web and API hosting",
-                        "Auto-scaling configurations",
-                        "High-availability deployments"
-                    ]
-                },
-                {
-                    title: "Azure Backend & API Integration",
-                    description: "We build and integrate scalable backend systems on Azure.",
-                    list: [
-                        "RESTful and GraphQL APIs",
-                        "Azure Functions and serverless APIs",
-                        "Microservices architecture",
-                        "Secure service-to-service communication"
-                    ]
-                },
-                {
-                    title: "Azure Cloud Storage & Databases",
-                    description: "We design secure and efficient data storage solutions on Azure.",
-                    list: [
-                        "Azure SQL Database",
-                        "Cosmos DB and NoSQL solutions",
-                        "Blob and file storage",
-                        "Data backup and recovery strategies"
-                    ]
-                },
-                {
-                    title: "Azure Active Directory & Security",
-                    description: "We implement strong identity and security solutions using Azure.",
-                    list: [
-                        "Azure Active Directory (AAD)",
-                        "Role-based access control (RBAC)",
-                        "Single Sign-On (SSO)",
-                        "Secure authentication and authorization"
-                    ]
-                },
-                {
-                    title: "Hybrid & On-Premise Integration",
-                    description: "We connect on-premise systems with Azure cloud services.",
-                    list: [
-                        "Hybrid cloud architectures",
-                        "Secure VPN and gateway setup",
-                        "Legacy system integration",
-                        "Seamless data synchronization"
-                    ]
-                },
-                {
-                    title: "DevOps & CI/CD with Azure",
-                    description: "We streamline development and deployment using Azure DevOps tools.",
-                    list: [
-                        "Azure DevOps pipelines",
-                        "Automated build and release pipelines",
-                        "Infrastructure as Code (IaC)",
-                        "Continuous integration and delivery"
-                    ]
-                },
-                {
-                    title: "Monitoring, Performance & Optimization",
-                    description: "We ensure Azure-based systems run efficiently and reliably.",
-                    list: [
-                        "Azure Monitor and Application Insights",
-                        "Performance tuning and cost optimization",
-                        "Scalability and load management",
-                        "Proactive issue detection"
-                    ]
-                },
-                {
-                    title: "Who Is Azure Integration Best For?",
-                    description: "Azure integration is ideal for:",
-                    list: [
-                        "Enterprise and SaaS platforms",
-                        "Cloud-native and hybrid applications",
-                        "Businesses using Microsoft technologies",
-                        "Scalable backend and API systems",
-                        "Organizations migrating to the cloud"
-                    ]
-                },
-                {
-                    title: "Why Solario Tech for Azure Integration?",
-                    description: "Why businesses trust us for Azure solutions:",
-                    list: [
-                        "12+ Years of Cloud & Enterprise Experience",
-                        "Deep expertise in Microsoft Azure ecosystem",
-                        "Secure, scalable, and future-ready architectures",
-                        "Cost-effective cloud optimization",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Ongoing support and cloud management"
-                    ]
-                }
-            ],
-            cta: {
-                title: "Power Your Applications with Azure",
-                description: "Whether you’re migrating to the cloud or building a new Azure-based solution, our Azure integration services help you deliver secure, scalable, and high-performing cloud applications.",
-                buttons: [
-                    { label: "Start Your Project" },
-                    { label: "Book a Free Consultation" }
-                ]
-            }
-        },
-
-        {
-            id: "SQL Server",
-            hero: {
-                title: "Build Secure, High-Performance & Scalable Solutions with SQL Server",
-                description: "Solario Tech delivers reliable and scalable database solutions using Microsoft SQL Server to support data-driven applications and enterprise systems.\nWith 12+ years of experience, we design, optimize, and manage SQL Server databases that ensure data integrity, performance, and business continuity.",
-                buttons: [
-                    { label: "Book a Free Consultation" },
-                    { label: "Start Your Project" }
-                ]
-            },
-            content: [
-                {
-                    title: "What is SQL Server?",
-                    description: "Microsoft SQL Server is a powerful relational database management system used to store, manage, and process structured data securely and efficiently.",
-                    list: [
-                        "Relational database management system (RDBMS)",
-                        "High performance and reliability",
-                        "Enterprise-grade security",
-                        "Seamless integration with Microsoft ecosystem"
-                    ]
-                },
-                {
-                    title: "Why Choose SQL Server?",
-                    description: "SQL Server is trusted by enterprises for mission-critical data workloads.",
-                    list: [
-                        "High availability and reliability",
-                        "Advanced security and compliance",
-                        "Scalable for growing data needs",
-                        "Strong reporting and analytics support"
-                    ]
-                },
-                {
-                    title: "Database Design & Architecture",
-                    description: "We design robust SQL Server database architectures tailored to your application needs.",
-                    list: [
-                        "Normalized and optimized schemas",
-                        "Scalable database structures",
-                        "High-availability design",
-                        "Performance-focused architecture"
-                    ]
-                },
-                {
-                    title: "SQL Server Development",
-                    description: "We build efficient and secure database logic using SQL Server features.",
-                    list: [
-                        "Stored procedures and functions",
-                        "Views and complex queries",
-                        "Triggers and constraints",
-                        "Transactional data handling"
-                    ]
-                },
-                {
-                    title: "Performance Optimization & Tuning",
-                    description: "We optimize SQL Server databases for speed and efficiency.",
-                    list: [
-                        "Query optimization",
-                        "Indexing strategies",
-                        "Execution plan analysis",
-                        "Reduced latency and faster response times"
-                    ]
-                },
-                {
-                    title: "Data Security & Compliance",
-                    description: "We ensure your data is protected and compliant with industry standards.",
-                    list: [
-                        "Role-based access control",
-                        "Data encryption at rest and in transit",
-                        "Audit logging and monitoring",
-                        "Compliance-ready configurations"
-                    ]
-                },
-                {
-                    title: "Backup, Recovery & High Availability",
-                    description: "We design reliable backup and disaster recovery strategies.",
-                    list: [
-                        "Automated backup solutions",
-                        "Point-in-time recovery",
-                        "Failover and replication",
-                        "Business continuity planning"
-                    ]
-                },
-                {
-                    title: "SQL Server Integration",
-                    description: "We integrate SQL Server seamlessly with applications and services.",
-                    list: [
-                        ".NET and enterprise application integration",
-                        "API and backend connectivity",
-                        "ETL and data migration support",
-                        "Third-party system integration"
-                    ]
-                },
-                {
-                    title: "Reporting & Analytics",
-                    description: "Turn data into actionable insights using SQL Server tools.",
-                    list: [
-                        "Reporting and dashboards",
-                        "Business intelligence support",
-                        "Data analysis and aggregation",
-                        "Decision-support reporting"
-                    ]
-                },
-                {
-                    title: "Who Is SQL Server Best For?",
-                    description: "SQL Server solutions are ideal for:",
-                    list: [
-                        "Enterprise and business applications",
-                        "Data-driven platforms",
-                        "Financial and transactional systems",
-                        "ERP and CRM solutions",
-                        "High-availability systems"
-                    ]
-                },
-                {
-                    title: "Why Solario Tech for SQL Server?",
-                    description: "Why businesses trust us with SQL Server solutions:",
-                    list: [
-                        "12+ Years of Database & Enterprise Experience",
-                        "Deep expertise in Microsoft SQL Server",
-                        "Performance and security-focused design",
-                        "Scalable and future-ready solutions",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Ongoing database support and optimization"
-                    ]
-                }
-            ],
-            cta: {
-                title: "Build Reliable Data-Driven Systems",
-                description: "Whether you’re designing a new database or optimizing an existing SQL Server setup, our experts help you deliver secure, scalable, and high-performance data solutions.",
-                buttons: [
-                    { label: "Start Your Project" },
-                    { label: "Book a Free Consultation" }
-                ]
-            }
-        },
-
-        {
-            id: "MVVM Architecture",
-            hero: {
-                title: "Build Clean, Scalable & Maintainable Apps with MVVM Architecture",
-                description: "Solario Tech implements MVVM (Model-View-ViewModel) architecture to build applications that are clean, testable, and easy to scale.\nWith 12+ years of engineering experience, we use MVVM to ensure long-term maintainability, faster development, and a clear separation of concerns across mobile, web, and desktop applications.",
-                buttons: [
-                    { label: "Book a Free Consultation" },
-                    { label: "Start Your Project" }
-                ]
-            },
-            content: [
-                {
-                    title: "What is MVVM Architecture?",
-                    description: "MVVM (Model-View-ViewModel) is a software architectural pattern that separates business logic, UI, and data handling for better code organization.",
-                    list: [
-                        "Model handles data and business logic",
-                        "View manages UI and user interactions",
-                        "ViewModel acts as a bridge between View and Model",
-                        "Clear separation of concerns"
-                    ]
-                },
-                {
-                    title: "Why Use MVVM?",
-                    description: "MVVM improves application quality, scalability, and developer productivity.",
-                    list: [
-                        "Clean and maintainable codebase",
-                        "Easier testing and debugging",
-                        "Improved collaboration between teams",
-                        "Faster feature development"
-                    ]
-                },
-                {
-                    title: "MVVM for Mobile Applications",
-                    description: "We implement MVVM for Android and iOS applications using modern frameworks.",
-                    list: [
-                        "Android MVVM with ViewModel, LiveData, Flow",
-                        "iOS MVVM with Swift and Combine",
-                        "Jetpack Compose & SwiftUI compatibility",
-                        "Lifecycle-aware architecture"
-                    ]
-                },
-                {
-                    title: "MVVM for Web & Desktop Apps",
-                    description: "MVVM is also ideal for scalable web and desktop solutions.",
-                    list: [
-                        "WPF and UWP applications",
-                        "Frontend frameworks with MVVM principles",
-                        "Clean UI logic separation",
-                        "Scalable application structure"
-                    ]
-                },
-                {
-                    title: "Data Binding & State Management",
-                    description: "MVVM enables efficient UI updates through reactive data handling.",
-                    list: [
-                        "Two-way and one-way data binding",
-                        "State-driven UI updates",
-                        "Reduced UI-related bugs",
-                        "Improved user experience"
-                    ]
-                },
-                {
-                    title: "Repository Pattern & Data Layer",
-                    description: "We combine MVVM with repository patterns for robust data handling.",
-                    list: [
-                        "Single source of truth",
-                        "API and database abstraction",
-                        "Clean data flow",
-                        "Easier data testing"
-                    ]
-                },
-                {
-                    title: "Testability & Code Quality",
-                    description: "MVVM makes applications easier to test and maintain.",
-                    list: [
-                        "Unit testing for ViewModels",
-                        "Mockable data sources",
-                        "Reduced dependency on UI for testing",
-                        "Higher code reliability"
-                    ]
-                },
-                {
-                    title: "Scalability & Long-Term Maintainability",
-                    description: "MVVM supports growing applications with evolving requirements.",
-                    list: [
-                        "Modular and extensible architecture",
-                        "Easy feature additions",
-                        "Reduced technical debt",
-                        "Future-ready design"
-                    ]
-                },
-                {
-                    title: "Who Is MVVM Architecture Best For?",
-                    description: "MVVM is ideal for:",
-                    list: [
-                        "Mobile and web applications",
-                        "Large and scalable projects",
-                        "Apps with complex UI logic",
-                        "Enterprise-grade solutions",
-                        "Teams focused on clean architecture"
-                    ]
-                },
-                {
-                    title: "Why Solario Tech for MVVM Architecture?",
-                    description: "Why clients trust us for MVVM-based solutions:",
-                    list: [
-                        "12+ Years of Architecture & Development Experience",
-                        "Deep expertise in MVVM across platforms",
-                        "Clean, testable, and scalable implementations",
-                        "Performance-focused design approach",
-                        "Startup-friendly and enterprise-ready solutions",
-                        "Long-term support and architectural guidance"
-                    ]
-                }
-            ],
-            cta: {
-                title: "Build Future-Ready Applications with MVVM",
-                description: "Whether you’re starting a new project or refactoring an existing one, our MVVM architecture expertise helps you build clean, scalable, and maintainable applications.",
-                buttons: [
-                    { label: "Start Your Project" },
-                    { label: "Book a Free Consultation" }
-                ]
-            }
-        },
-
-        {
-            id: "Windows Services",
-            hero: {
-                title: "Build Reliable & Scalable Background Systems with Windows Services",
-                description: "Solario Tech develops robust Windows Services designed to run continuously in the background, handling critical business operations without user interaction.\nWith 12+ years of enterprise software experience, we build secure, high-performance Windows Services that ensure reliability, automation, and long-term stability.",
-                buttons: [
-                    { label: "Book a Free Consultation" },
-                    { label: "Start Your Project" }
-                ]
-            },
-            content: [
-                {
-                    title: "What are Windows Services?",
-                    description: "Windows Services are background applications that run automatically on Windows systems without requiring user login or UI interaction.",
-                    list: [
-                        "Runs continuously in the background",
-                        "Starts automatically with the system",
-                        "No user interface required",
-                        "Ideal for long-running tasks"
-                    ]
-                },
-                {
-                    title: "Why Use Windows Services?",
-                    description: "Windows Services are ideal for mission-critical and automated business processes.",
-                    list: [
-                        "High reliability and stability",
-                        "Uninterrupted background execution",
-                        "Automated task handling",
-                        "Low system overhead"
-                    ]
-                },
-                {
-                    title: "Custom Windows Service Development",
-                    description: "We build custom Windows Services tailored to your specific business requirements.",
-                    list: [
-                        "Data processing services",
-                        "Integration and middleware services",
-                        "Automation and scheduling services",
-                        "Monitoring and alerting services"
-                    ]
-                },
-                {
-                    title: "Background Processing & Automation",
-                    description: "Automate critical workflows with reliable background execution.",
-                    list: [
-                        "Scheduled job execution",
-                        "Continuous data synchronization",
-                        "File processing and transfers",
-                        "System monitoring tasks"
-                    ]
-                },
-                {
-                    title: "Integration with Databases & APIs",
-                    description: "We integrate Windows Services seamlessly with enterprise systems.",
-                    list: [
-                        "SQL Server and database integration",
-                        "REST and SOAP API communication",
-                        "Third-party system integration",
-                        "Secure data exchange"
-                    ]
-                },
-                {
-                    title: "Performance & Resource Optimization",
-                    description: "We design Windows Services for efficiency and scalability.",
-                    list: [
-                        "Optimized CPU and memory usage",
-                        "Multi-threaded processing",
-                        "High-throughput data handling",
-                        "Scalable service architecture"
-                    ]
-                },
-                {
-                    title: "Security & Access Control",
-                    description: "Security is built into every Windows Service we develop.",
-                    list: [
-                        "Secure service accounts",
-                        "Role-based access control",
-                        "Encrypted data handling",
-                        "Enterprise security standards"
-                    ]
-                },
-                {
-                    title: "Logging, Monitoring & Error Handling",
-                    description: "We ensure services are observable and easy to maintain.",
-                    list: [
-                        "Centralized logging",
-                        "Health checks and alerts",
-                        "Graceful error handling",
-                        "Automatic recovery mechanisms"
-                    ]
-                },
-                {
-                    title: "Deployment & Maintenance",
-                    description: "We handle installation, updates, and long-term maintenance.",
-                    list: [
-                        "Service installation and configuration",
-                        "Version upgrades and enhancements",
-                        "Ongoing monitoring and support",
-                        "Performance tuning and optimization"
-                    ]
-                },
-                {
-                    title: "Who Are Windows Services Best For?",
-                    description: "Windows Services are ideal for:",
-                    list: [
-                        "Enterprise and backend systems",
-                        "Data processing and ETL pipelines",
-                        "System integration and automation",
-                        "Monitoring and background utilities",
-                        "Mission-critical business operations"
-                    ]
-                },
-                {
-                    title: "Why Solario Tech for Windows Services?",
-                    description: "Why businesses trust us for Windows Service development:",
-                    list: [
-                        "12+ Years of Enterprise & .NET Experience",
-                        "Expertise in high-availability background systems",
-                        "Secure, scalable, and reliable implementations",
-                        "Performance-optimized service design",
-                        "Startup-friendly and enterprise-ready approach",
-                        "Long-term support and maintenance"
-                    ]
-                }
-            ],
-            cta: {
-                title: "Automate Your Business with Reliable Windows Services",
-                description: "Whether you need background automation, system integration, or continuous processing, our Windows Services help you run critical operations reliably and efficiently.",
-                buttons: [
-                    { label: "Start Your Project" },
-                    { label: "Book a Free Consultation" }
-                ]
-            }
-        },
 
     ],
     "artificial-intelligence": [

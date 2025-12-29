@@ -49,21 +49,54 @@ export const services: Service[] = [
     },
     {
         icon: Monitor,
-        title: "Window App Development",
-        description: "We develop robust and scalable applications for the Windows platform.",
+        title: "Web3 Development",
+        description: "We design and build decentralized applications and blockchain-powered solutions.",
         featured: false,
-        detailedDescription: "We specialize in creating powerful Windows desktop applications using the latest Microsoft technologies. Our solutions are designed for enterprise-grade performance and reliability.",
-        includes: [".NET Development", "WPF Applications", "UWP Apps", "Windows Forms", "Azure Integration", "SQL Server", "MVVM Architecture", "Windows Services"],
-        expertise: [
-            { title: "Enterprise Solutions", description: "Building robust applications for business-critical operations." },
-            { title: "System Integration", description: "Connecting with existing enterprise systems and databases." },
-            { title: "Custom UI Development", description: "Creating modern, responsive Windows interfaces." },
-            { title: "Data Management", description: "Efficient handling of large datasets and complex operations." },
-            { title: "Security Compliance", description: "Meeting enterprise security standards and regulations." },
-            { title: "Deployment Strategy", description: "Streamlined deployment across enterprise networks." },
+        detailedDescription: "We specialize in developing secure, scalable Web3 applications using modern blockchain technologies. Our solutions empower businesses with decentralization, transparency, and trust through smart contracts, dApps, and tokenized ecosystems.",
+        includes: [
+            "Smart Contract Development",
+            "Decentralized Applications (dApps)",
+            "Ethereum & EVM Chains",
+            "Solana Development",
+            "Web3 Frontend Integration",
+            "Wallet Integration (MetaMask, WalletConnect)",
+            "Token & NFT Development",
+            "Blockchain Security Audits"
         ],
-        benefits: ["Leverage existing Windows infrastructure", "Enterprise-grade security", "Seamless Microsoft ecosystem integration", "Powerful desktop computing capabilities"],
+        expertise: [
+            {
+                title: "Smart Contracts",
+                description: "Designing and deploying secure, efficient smart contracts."
+            },
+            {
+                title: "dApp Architecture",
+                description: "Building scalable decentralized application architectures."
+            },
+            {
+                title: "Blockchain Integration",
+                description: "Seamless integration with multiple blockchains and protocols."
+            },
+            {
+                title: "Tokenization",
+                description: "Creating fungible tokens, NFTs, and on-chain assets."
+            },
+            {
+                title: "Security & Auditing",
+                description: "Ensuring contract safety, compliance, and best practices."
+            },
+            {
+                title: "Deployment & Scaling",
+                description: "Optimizing deployment, gas efficiency, and network performance."
+            }
+        ],
+        benefits: [
+            "Decentralized and trustless systems",
+            "Enhanced transparency and security",
+            "Global, permissionless access",
+            "Future-proof blockchain-based solutions"
+        ],
     },
+
     {
         icon: Monitor,
         title: "Artificial Intelligence",

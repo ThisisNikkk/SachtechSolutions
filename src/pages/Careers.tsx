@@ -124,8 +124,8 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
                   <div className="w-12 h-0.5 bg-primary"></div>
                   <span className="text-foreground font-montserrat font-semibold">Our Culture</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-                  Why Work With <span className="text-primary">Solario Tech</span>?
+                <h2 className="text-4xl md:text-5xl font-bold font-poppins leading-relaxed">
+                  Why Work With<span className="text-primary"> SolarioTech</span>?
                 </h2>
               </div>
               <img
