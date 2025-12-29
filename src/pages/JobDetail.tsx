@@ -35,7 +35,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
   };
 
   const handleApply = () => {
-    navigate('/contact');
+    navigate(`/careers/${id}/apply`);
   };
 
   return (
