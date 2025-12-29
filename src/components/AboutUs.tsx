@@ -30,7 +30,7 @@ const AboutUs = ({ onNavigate }) => {
               {/* Pre-headline */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-primary"></div>
-                <span className="text-muted-foreground text-sm font-monntserrat">Why Choose Us</span>
+                <span className="text-muted-foreground text-sm font-montserrat">Why Choose Us</span>
               </div>
 
               {/* Main Headline */}

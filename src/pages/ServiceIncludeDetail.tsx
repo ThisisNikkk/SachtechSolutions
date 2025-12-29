@@ -75,7 +75,7 @@ const ServiceIncludeDetail: React.FC<ServiceIncludeDetailProps> = ({ onNavigate 
                         // Default hero if no specific data provided
                         <div className="max-w-4xl mx-auto mb-16 text-center">
                             <h1 className="text-4xl font-bold font-poppins mb-4">{includeItem.id}</h1>
-                            <p className="text-muted-foreground">Detailed information coming soon.</p>
+                            <p className="text-muted-foreground font-montserrat">Detailed information coming soon.</p>
                         </div>
                     )}
 
