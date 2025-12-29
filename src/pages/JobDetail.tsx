@@ -18,7 +18,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
-  
+
   const job = jobsData.find(j => j.id === id);
 
   if (!job) {
@@ -44,7 +44,7 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
       <Navigation onNavigate={onNavigate} />
 
       {/* Hero Banner */}
-      <section 
+      <section
         className="relative py-24 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
@@ -157,25 +157,25 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
             {/* Social Share Sidebar */}
             <div className="lg:w-16">
               <div className="sticky top-32 flex lg:flex-col gap-3 justify-center lg:justify-start">
-                <button 
-                  className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
+                <button
+                  className="w-10 h-10 mt-4 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
                   aria-label="Share on Facebook"
                 >
                   <Facebook className="w-5 h-5 text-primary-foreground" />
                 </button>
-                <button 
+                <button
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Share on Twitter"
                 >
                   <Twitter className="w-5 h-5 text-foreground" />
                 </button>
-                <button 
+                <button
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Share on LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-foreground" />
                 </button>
-                <button 
+                <button
                   onClick={handleCopyLink}
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Copy link"
@@ -189,11 +189,11 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
       </section>
 
       {/* Apply Button */}
-      <section className="py-8 bg-background border-t border-border">
+      <section className="py-8 bg-background border-t border-border ">
         <div className="container mx-auto px-4">
-          <Button 
+          <Button
             onClick={handleApply}
-            className="w-full max-w-md mx-auto block rounded-full font-montserrat font-semibold text-lg py-6"
+            className="w-full max-w-md mx-auto block rounded-full font-montserrat font-semibold text-lg py-6 text-center flex justify-center items-center"
           >
             Apply for this job
           </Button>

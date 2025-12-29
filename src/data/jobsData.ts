@@ -23,7 +23,7 @@ export const jobsData: Job[] = [
     description: "Develop and maintain advanced applications for the Android platform.",
     detailedDescription: [
       "We are looking for a passionate Android Developer to join our growing team. You will be responsible for developing and maintaining high-quality mobile applications for the Android platform, ensuring the best possible performance, quality, and responsiveness.",
-      "As an Android Developer at SachTech, you will work closely with our product and design teams to define and implement innovative solutions for product direction, visuals, and experience."
+      "As an Android Developer at SolarioTech, you will work closely with our product and design teams to define and implement innovative solutions for product direction, visuals, and experience."
     ],
     responsibilities: [
       "Design and build advanced applications for the Android platform",
@@ -42,12 +42,10 @@ export const jobsData: Job[] = [
       "Proficient in code versioning tools such as Git"
     ],
     benefits: [
-      "Training and development for career growth",
-      "25 Days Holiday, increasing with length of service",
-      "401(k) employee matching",
-      "Healthcare and dental coverage",
-      "Life, disability and accidental death & dismemberment insurance",
-      "Flexible working arrangements"
+      "Competitive salary and benefits package",
+      "One EL credited per month",
+      "Opportunities to work with cutting-edge technologies and innovative projects",
+      "Comprehensive training and development programs to support your career growth"
     ]
   },
   {
@@ -79,12 +77,10 @@ export const jobsData: Job[] = [
       "Familiarity with cloud message APIs and push notifications"
     ],
     benefits: [
-      "Training and development for career growth",
-      "25 Days Holiday, increasing with length of service",
-      "401(k) employee matching",
-      "Healthcare and dental coverage",
-      "Life, disability and accidental death & dismemberment insurance",
-      "Flexible working arrangements"
+      "Competitive salary and benefits package",
+      "One EL credited per month",
+      "Opportunities to work with cutting-edge technologies and innovative projects",
+      "Comprehensive training and development programs to support your career growth"
     ]
   },
   {
@@ -116,12 +112,10 @@ export const jobsData: Job[] = [
       "Portfolio demonstrating video editing skills"
     ],
     benefits: [
-      "Training and development for career growth",
-      "25 Days Holiday, increasing with length of service",
-      "401(k) employee matching",
-      "Healthcare and dental coverage",
-      "Life, disability and accidental death & dismemberment insurance",
-      "Flexible working arrangements"
+      "Competitive salary and benefits package",
+      "One EL credited per month",
+      "Opportunities to work with cutting-edge technologies and innovative projects",
+      "Comprehensive training and development programs to support your career growth"
     ]
   },
   {
@@ -134,7 +128,7 @@ export const jobsData: Job[] = [
     description: "Execute manual and automated tests to ensure software quality, identifying bugs for stability.",
     detailedDescription: [
       "We are seeking a detail-oriented Software Tester to join our quality assurance team. You will be responsible for testing our software products to ensure they meet the required standards before they are released to customers.",
-      "As a Tester at SachTech, you will work closely with developers and product managers to identify issues, document bugs, and verify fixes. Your work will directly impact the quality of our products."
+      "As a Tester at SolarioTech, you will work closely with developers and product managers to identify issues, document bugs, and verify fixes. Your work will directly impact the quality of our products."
     ],
     responsibilities: [
       "Review requirements, specifications, and technical design documents",
@@ -153,12 +147,10 @@ export const jobsData: Job[] = [
       "Strong analytical and problem-solving skills"
     ],
     benefits: [
-      "Training and development for career growth",
-      "25 Days Holiday, increasing with length of service",
-      "401(k) employee matching",
-      "Healthcare and dental coverage",
-      "Life, disability and accidental death & dismemberment insurance",
-      "Flexible working arrangements"
+      "Competitive salary and benefits package",
+      "One EL credited per month",
+      "Opportunities to work with cutting-edge technologies and innovative projects",
+      "Comprehensive training and development programs to support your career growth"
     ]
   }
 ];

@@ -36,7 +36,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
   const { toast } = useToast();
   const photoInputRef = useRef<HTMLInputElement>(null);
   const resumeInputRef = useRef<HTMLInputElement>(null);
-  
+
   const job = jobsData.find(j => j.id === id);
 
   const [formData, setFormData] = useState<FormData>({
@@ -98,7 +98,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.address) {
       toast({
@@ -122,7 +122,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
       title: "Application Submitted!",
       description: "Thank you for applying. We'll be in touch soon.",
     });
-    
+
     // Navigate back to careers after submission
     setTimeout(() => {
       navigate('/careers');
@@ -135,7 +135,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
       <Navigation onNavigate={onNavigate} />
 
       {/* Hero Banner */}
-      <section 
+      <section
         className="relative py-24 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
@@ -176,245 +176,247 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
 
       {/* Application Form */}
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Form */}
-            <div className="flex-1 max-w-4xl">
-              <h3 className="text-2xl font-bold font-poppins text-foreground mb-8">
-                Job Application
-              </h3>
+            <div className="flex-1">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold font-poppins text-foreground mb-8">
+                  Job Application
+                </h3>
 
-              <form onSubmit={handleSubmit}>
-                {/* Personal Information */}
-                <div className="mb-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-lg font-bold font-poppins text-foreground">
-                      Personal Information
-                    </h4>
-                    <button
-                      type="button"
-                      onClick={clearPersonalInfo}
-                      className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
-                    >
-                      <X className="w-4 h-4" /> Clear
-                    </button>
-                  </div>
+                <form onSubmit={handleSubmit}>
+                  {/* Personal Information */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-lg font-bold font-poppins text-foreground">
+                        Personal Information
+                      </h4>
+                      <button
+                        type="button"
+                        onClick={clearPersonalInfo}
+                        className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
+                      >
+                        <X className="w-4 h-4" /> Clear
+                      </button>
+                    </div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <Label htmlFor="firstName" className="font-montserrat text-foreground/80 mb-2 block">
-                        <span className="text-destructive">*</span> First Name
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <Label htmlFor="firstName" className="font-montserrat text-foreground/80 mb-2 block">
+                          <span className="text-destructive">*</span> First Name
+                        </Label>
+                        <Input
+                          id="firstName"
+                          name="firstName"
+                          placeholder="Example XYZ"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          className="h-12"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="lastName" className="font-montserrat text-foreground/80 mb-2 block">
+                          <span className="text-destructive">*</span> Last Name
+                        </Label>
+                        <Input
+                          id="lastName"
+                          name="lastName"
+                          placeholder="Example XYZ"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          className="h-12"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <Label htmlFor="email" className="font-montserrat text-foreground/80 mb-2 block">
+                          <span className="text-destructive">*</span> Email ID
+                        </Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Example@mail.com"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="h-12"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone" className="font-montserrat text-foreground/80 mb-2 block">
+                          <span className="text-destructive">*</span> Phone Number
+                        </Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="+91 XXXXXXXXXX"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="h-12"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <Label htmlFor="address" className="font-montserrat text-foreground/80 mb-2 block">
+                        <span className="text-destructive">*</span> Address
                       </Label>
                       <Input
-                        id="firstName"
-                        name="firstName"
+                        id="address"
+                        name="address"
                         placeholder="Example XYZ"
-                        value={formData.firstName}
+                        value={formData.address}
                         onChange={handleInputChange}
                         className="h-12"
                       />
                     </div>
+
                     <div>
-                      <Label htmlFor="lastName" className="font-montserrat text-foreground/80 mb-2 block">
-                        <span className="text-destructive">*</span> Last Name
+                      <Label className="font-montserrat text-foreground/80 mb-2 block">
+                        Photo ( Optional )
                       </Label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        placeholder="Example XYZ"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        className="h-12"
-                      />
+                      <div
+                        className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
+                        onClick={() => photoInputRef.current?.click()}
+                      >
+                        <input
+                          ref={photoInputRef}
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(e) => handleFileChange(e, 'photo')}
+                        />
+                        {formData.photo ? (
+                          <p className="text-foreground font-montserrat">{formData.photo.name}</p>
+                        ) : (
+                          <p className="text-muted-foreground font-montserrat">
+                            <span className="text-primary underline">Upload a file</span> or drag and drop here
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  {/* Profile */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-lg font-bold font-poppins text-foreground">
+                        Profile
+                      </h4>
+                      <button
+                        type="button"
+                        onClick={clearProfile}
+                        className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
+                      >
+                        <X className="w-4 h-4" /> Clear
+                      </button>
+                    </div>
+
                     <div>
-                      <Label htmlFor="email" className="font-montserrat text-foreground/80 mb-2 block">
-                        <span className="text-destructive">*</span> Email ID
+                      <Label className="font-montserrat text-foreground/80 mb-2 block">
+                        <span className="text-destructive">*</span> Resume
                       </Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Example@mail.com"
-                        value={formData.email}
+                      <div
+                        className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
+                        onClick={() => resumeInputRef.current?.click()}
+                      >
+                        <input
+                          ref={resumeInputRef}
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          className="hidden"
+                          onChange={(e) => handleFileChange(e, 'resume')}
+                        />
+                        {formData.resume ? (
+                          <p className="text-foreground font-montserrat">{formData.resume.name}</p>
+                        ) : (
+                          <p className="text-muted-foreground font-montserrat">
+                            <span className="text-primary underline">Upload a file</span> or drag and drop here
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Details */}
+                  <div className="mb-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-lg font-bold font-poppins text-foreground">
+                        Details
+                      </h4>
+                      <button
+                        type="button"
+                        onClick={clearDetails}
+                        className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
+                      >
+                        <X className="w-4 h-4" /> Clear
+                      </button>
+                    </div>
+
+                    <div className="mb-6">
+                      <Label htmlFor="interest" className="font-montserrat text-foreground/80 mb-2 block">
+                        <span className="text-destructive">*</span> Let the company know about your interest working here
+                      </Label>
+                      <Textarea
+                        id="interest"
+                        name="interest"
+                        value={formData.interest}
                         onChange={handleInputChange}
-                        className="h-12"
+                        className="min-h-[120px] resize-none"
                       />
                     </div>
+
                     <div>
-                      <Label htmlFor="phone" className="font-montserrat text-foreground/80 mb-2 block">
-                        <span className="text-destructive">*</span> Phone Number
+                      <Label htmlFor="additionalLinks" className="font-montserrat text-foreground/80 mb-2 block">
+                        <span className="text-destructive">*</span> Additional Links <span className="text-muted-foreground">( Portfolio, Website, LinkedIn )</span>
                       </Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="+91 XXXXXXXXXX"
-                        value={formData.phone}
+                      <Textarea
+                        id="additionalLinks"
+                        name="additionalLinks"
+                        value={formData.additionalLinks}
                         onChange={handleInputChange}
-                        className="h-12"
+                        className="min-h-[120px] resize-none"
                       />
                     </div>
                   </div>
 
-                  <div className="mb-6">
-                    <Label htmlFor="address" className="font-montserrat text-foreground/80 mb-2 block">
-                      <span className="text-destructive">*</span> Address
-                    </Label>
-                    <Input
-                      id="address"
-                      name="address"
-                      placeholder="Example XYZ"
-                      value={formData.address}
-                      onChange={handleInputChange}
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <Label className="font-montserrat text-foreground/80 mb-2 block">
-                      Photo ( Optional )
-                    </Label>
-                    <div 
-                      className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
-                      onClick={() => photoInputRef.current?.click()}
-                    >
-                      <input
-                        ref={photoInputRef}
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={(e) => handleFileChange(e, 'photo')}
-                      />
-                      {formData.photo ? (
-                        <p className="text-foreground font-montserrat">{formData.photo.name}</p>
-                      ) : (
-                        <p className="text-muted-foreground font-montserrat">
-                          <span className="text-primary underline">Upload a file</span> or drag and drop here
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Profile */}
-                <div className="mb-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-lg font-bold font-poppins text-foreground">
-                      Profile
-                    </h4>
-                    <button
-                      type="button"
-                      onClick={clearProfile}
-                      className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
-                    >
-                      <X className="w-4 h-4" /> Clear
-                    </button>
-                  </div>
-
-                  <div>
-                    <Label className="font-montserrat text-foreground/80 mb-2 block">
-                      <span className="text-destructive">*</span> Resume
-                    </Label>
-                    <div 
-                      className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
-                      onClick={() => resumeInputRef.current?.click()}
-                    >
-                      <input
-                        ref={resumeInputRef}
-                        type="file"
-                        accept=".pdf,.doc,.docx"
-                        className="hidden"
-                        onChange={(e) => handleFileChange(e, 'resume')}
-                      />
-                      {formData.resume ? (
-                        <p className="text-foreground font-montserrat">{formData.resume.name}</p>
-                      ) : (
-                        <p className="text-muted-foreground font-montserrat">
-                          <span className="text-primary underline">Upload a file</span> or drag and drop here
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="mb-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-lg font-bold font-poppins text-foreground">
-                      Details
-                    </h4>
-                    <button
-                      type="button"
-                      onClick={clearDetails}
-                      className="text-sm text-muted-foreground hover:text-foreground font-montserrat flex items-center gap-1"
-                    >
-                      <X className="w-4 h-4" /> Clear
-                    </button>
-                  </div>
-
-                  <div className="mb-6">
-                    <Label htmlFor="interest" className="font-montserrat text-foreground/80 mb-2 block">
-                      <span className="text-destructive">*</span> Let the company know about your interest working here
-                    </Label>
-                    <Textarea
-                      id="interest"
-                      name="interest"
-                      value={formData.interest}
-                      onChange={handleInputChange}
-                      className="min-h-[120px] resize-none"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="additionalLinks" className="font-montserrat text-foreground/80 mb-2 block">
-                      <span className="text-destructive">*</span> Additional Links <span className="text-muted-foreground">( Portfolio, Website, LinkedIn )</span>
-                    </Label>
-                    <Textarea
-                      id="additionalLinks"
-                      name="additionalLinks"
-                      value={formData.additionalLinks}
-                      onChange={handleInputChange}
-                      className="min-h-[120px] resize-none"
-                    />
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <Button 
-                  type="submit"
-                  className="w-full rounded-full font-montserrat font-semibold text-lg py-6"
-                >
-                  Apply for this job
-                </Button>
-              </form>
+                  {/* Submit Button */}
+                  <Button
+                    type="submit"
+                    className="w-full rounded-full font-montserrat font-semibold text-lg py-6"
+                  >
+                    Apply for this job
+                  </Button>
+                </form>
+              </div>
             </div>
 
             {/* Social Share Sidebar */}
             <div className="lg:w-16">
               <div className="sticky top-32 flex lg:flex-col gap-3 justify-center lg:justify-start">
-                <button 
-                  className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
+                <button
+                  className="w-10 h-10 mt-4 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
                   aria-label="Share on Facebook"
                 >
                   <Facebook className="w-5 h-5 text-primary-foreground" />
                 </button>
-                <button 
+                <button
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Share on Twitter"
                 >
                   <Twitter className="w-5 h-5 text-foreground" />
                 </button>
-                <button 
+                <button
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Share on LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-foreground" />
                 </button>
-                <button 
+                <button
                   onClick={handleCopyLink}
                   className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                   aria-label="Copy link"
