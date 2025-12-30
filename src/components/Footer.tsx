@@ -193,12 +193,20 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://facebook.com/SachTechSol"
+              href="https://www.facebook.com/solariotechglobal/"
               target="_blank"
               rel="noreferrer"
               className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
             >
               <Facebook className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/solariotechglobal/"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
             <a
               href="https://wa.me/917087425488"
@@ -222,7 +230,6 @@ const Footer = () => {
           <div className="flex items-center gap-6 text-sm text-navy-foreground/60 font-montserrat">
             <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</a>
             <a href="/terms-conditions" className="hover:text-primary transition-colors">Terms</a>
-            <a href="/cookies" className="hover:text-primary transition-colors">Cookies</a>
           </div>
         </div>
       </div>

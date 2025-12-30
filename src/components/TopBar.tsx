@@ -26,7 +26,7 @@ const TopBar = () => {
             <Linkedin className="w-4 h-4" />
           </a>
           <a
-            href="https://facebook.com/SachTechSol"
+            href="https://www.facebook.com/solariotechglobal/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-full flex items-center justify-center bg-background text-primary hover:bg-primary hover:text-white transition-all"
@@ -35,7 +35,7 @@ const TopBar = () => {
             <Facebook className="w-4 h-4" />
           </a>
           <a
-            href="https://instagram.com/sach.tech"
+            href="https://www.instagram.com/solariotechglobal/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8 rounded-full flex items-center justify-center bg-background text-primary hover:bg-primary hover:text-white transition-all"

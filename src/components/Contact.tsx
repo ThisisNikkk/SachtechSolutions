@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -285,28 +285,28 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
               <h3 className="text-2xl font-medium font-poppins mb-4">Stay Connected</h3>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/solariotechglobal/"
                   className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/sachtech-solution-private-limited/posts/?feedView=all"
                   className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Twitter"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/solariotechglobal/"
                   className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@STSMentor"
                   className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform hover:bg-background hover:text-primary"
                   aria-label="YouTube"
                 >
