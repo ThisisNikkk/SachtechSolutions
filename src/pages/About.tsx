@@ -17,25 +17,23 @@ interface AboutProps {
 function About({ onNavigate }: AboutProps) {
   return (
     <div className="min-h-screen">
-       <TopBar/>
-       <Navigation onNavigate={onNavigate} />
-       <PageBanner
-        title="About Us" 
+      <TopBar />
+      <Navigation onNavigate={onNavigate} />
+      <PageBanner
+        title="About Us"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About Us' }
-        ]} 
+        ]}
       />
-      <AboutComponent/>
-      <WorkProcess/>
-      <ServicesTicker/>
-      <WhyChooseUs/>
-      <ServicesTicker/>
-      <TeamComponent/>
-      <ServicesTicker/>
-      <FAQs/>
-      <ServicesTicker/>
-      <Footer/>
+      <AboutComponent />
+      <WorkProcess />
+      <ServicesTicker />
+      <WhyChooseUs />
+      <ServicesTicker />
+      <FAQs />
+      <ServicesTicker />
+      <Footer />
     </div>
   )
 }
