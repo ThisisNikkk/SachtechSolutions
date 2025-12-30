@@ -131,11 +131,11 @@ const PortfolioComponent = () => {
         </div>
 
         {/* Portfolio Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-12 px-2">
           <Button
             onClick={() => handleTabChange('website')}
             variant={activeTab === 'website' ? 'default' : 'outline'}
-            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'website'
+            className={`rounded-full px-3 py-2 text-xs h-9 sm:px-4 sm:py-3 sm:text-sm sm:h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium whitespace-nowrap ${activeTab === 'website'
               ? 'bg-primary text-primary-foreground hover:bg-primary/90'
               : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
               }`}
@@ -145,7 +145,7 @@ const PortfolioComponent = () => {
           <Button
             onClick={() => handleTabChange('mobile')}
             variant={activeTab === 'mobile' ? 'default' : 'outline'}
-            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'mobile'
+            className={`rounded-full px-3 py-2 text-xs h-9 sm:px-4 sm:py-3 sm:text-sm sm:h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium whitespace-nowrap ${activeTab === 'mobile'
               ? 'bg-primary text-primary-foreground hover:bg-primary/90'
               : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
               }`}
@@ -155,7 +155,7 @@ const PortfolioComponent = () => {
           <Button
             onClick={() => handleTabChange('figma')}
             variant={activeTab === 'figma' ? 'default' : 'outline'}
-            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'figma'
+            className={`rounded-full px-3 py-2 text-xs h-9 sm:px-4 sm:py-3 sm:text-sm sm:h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium whitespace-nowrap ${activeTab === 'figma'
               ? 'bg-primary text-primary-foreground hover:bg-primary/90'
               : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
               }`}
@@ -165,7 +165,7 @@ const PortfolioComponent = () => {
           <Button
             onClick={() => handleTabChange('logo')}
             variant={activeTab === 'logo' ? 'default' : 'outline'}
-            className={`rounded-full px-4 py-3 text-sm h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium ${activeTab === 'logo'
+            className={`rounded-full px-3 py-2 text-xs h-9 sm:px-4 sm:py-3 sm:text-sm sm:h-10 md:px-8 md:py-6 md:text-base md:h-12 font-montserrat font-medium whitespace-nowrap ${activeTab === 'logo'
               ? 'bg-primary text-primary-foreground hover:bg-primary/90'
               : 'bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background'
               }`}

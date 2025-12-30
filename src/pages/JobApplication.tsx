@@ -9,14 +9,26 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Facebook, Linkedin, Link2, Upload, X, Instagram } from 'lucide-react';
+import { Facebook, Linkedin, Link2, X, Instagram } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
-import { useToast } from '@/hooks/use-toast';
-import { useState, useRef } from 'react';
+import { toast } from 'sonner';
+import { z } from 'zod';
+import { useState } from 'react';
 
 interface JobApplicationProps {
   onNavigate: () => void;
 }
+
+const jobApplicationSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(25, "First name must be less than 25 characters"),
+  lastName: z.string().trim().min(1, "Last name is required").max(25, "Last name must be less than 25 characters"),
+  email: z.string().trim().email("Invalid email address"),
+  phone: z.string().trim().length(10, "Phone number must be exactly 10 digits"),
+  address: z.string().trim().min(1, "Address is required").max(100, "Address must be less than 100 characters"),
+  resumeLink: z.string().trim().url("Please enter a valid URL").min(1, "Resume link is required"),
+  interest: z.string().trim().min(1, "Please tell us about your interest").max(500, "Interest must be less than 500 characters"),
+  additionalLinks: z.string().trim().max(100, "Additional links must be less than 100 characters").optional(),
+});
 
 interface FormData {
   firstName: string;
@@ -24,8 +36,7 @@ interface FormData {
   email: string;
   phone: string;
   address: string;
-  photo: File | null;
-  resume: File | null;
+  resumeLink: string;
   interest: string;
   additionalLinks: string;
 }
@@ -33,9 +44,8 @@ interface FormData {
 const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { toast } = useToast();
-  const photoInputRef = useRef<HTMLInputElement>(null);
-  const resumeInputRef = useRef<HTMLInputElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const job = jobsData.find(j => j.id === id);
 
@@ -45,8 +55,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
     email: '',
     phone: '',
     address: '',
-    photo: null,
-    resume: null,
+    resumeLink: '',
     interest: '',
     additionalLinks: '',
   });
@@ -61,10 +70,6 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, field: 'photo' | 'resume') => {
-    const file = e.target.files?.[0] || null;
-    setFormData(prev => ({ ...prev, [field]: file }));
-  };
 
   const clearPersonalInfo = () => {
     setFormData(prev => ({
@@ -74,14 +79,11 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
       email: '',
       phone: '',
       address: '',
-      photo: null,
     }));
-    if (photoInputRef.current) photoInputRef.current.value = '';
   };
 
   const clearProfile = () => {
-    setFormData(prev => ({ ...prev, resume: null }));
-    if (resumeInputRef.current) resumeInputRef.current.value = '';
+    setFormData(prev => ({ ...prev, resumeLink: '' }));
   };
 
   const clearDetails = () => {
@@ -90,43 +92,110 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
-    toast({
-      title: "Link copied!",
+    toast.success("Link copied!", {
+      className: "font-poppins",
       description: "Application link has been copied to clipboard.",
+      classNames: {
+        description: "font-montserrat"
+      }
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.address) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
+    try {
+      // Validate form data with Zod
+      jobApplicationSchema.parse(formData);
+      setErrors({});
+
+      // Prepare form data for Web3Forms
+      const form = e.currentTarget;
+      const formPayload = new FormData(form);
+      formPayload.append("access_key", import.meta.env.VITE_WEB3APPLICATIONFORM_ACCESS_KEY);
+      formPayload.append("position", job.title); // Add job title to submission
+
+      const object = Object.fromEntries(formPayload);
+      const json = JSON.stringify(object);
+
+      // Submit to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
       });
-      return;
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Application Submitted!", {
+          className: "font-poppins",
+          description: "Thank you for applying. We'll be in touch soon.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          address: '',
+          resumeLink: '',
+          interest: '',
+          additionalLinks: '',
+        });
+
+        // Navigate back to careers after submission
+        setTimeout(() => {
+          navigate('/careers');
+        }, 2000);
+      } else {
+        toast.error("Submission Failed", {
+          className: "font-poppins",
+          description: "Something went wrong. Please try again.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+      }
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        // Handle validation errors
+        const newErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            newErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(newErrors);
+
+        toast.error("Validation Error", {
+          className: "font-poppins",
+          description: "Please check the form and fix any errors.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+      } else {
+        toast.error("Error", {
+          className: "font-poppins",
+          description: "Failed to submit application. Please try again.",
+          classNames: {
+            description: "font-montserrat"
+          }
+        });
+        console.error("Error:", error);
+      }
+    } finally {
+      setIsSubmitting(false);
     }
-
-    if (!formData.resume) {
-      toast({
-        title: "Resume Required",
-        description: "Please upload your resume.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for applying. We'll be in touch soon.",
-    });
-
-    // Navigate back to careers after submission
-    setTimeout(() => {
-      navigate('/careers');
-    }, 2000);
   };
 
   return (
@@ -209,11 +278,15 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         <Input
                           id="firstName"
                           name="firstName"
-                          placeholder="Example XYZ"
+                          placeholder="John"
                           value={formData.firstName}
                           onChange={handleInputChange}
                           className="h-12"
+                          maxLength={25}
                         />
+                        {errors.firstName && (
+                          <p className="text-sm text-destructive mt-1 font-montserrat">{errors.firstName}</p>
+                        )}
                       </div>
                       <div>
                         <Label htmlFor="lastName" className="font-montserrat text-foreground/80 mb-2 block">
@@ -222,11 +295,15 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         <Input
                           id="lastName"
                           name="lastName"
-                          placeholder="Example XYZ"
+                          placeholder="Doe"
                           value={formData.lastName}
                           onChange={handleInputChange}
                           className="h-12"
+                          maxLength={25}
                         />
+                        {errors.lastName && (
+                          <p className="text-sm text-destructive mt-1 font-montserrat">{errors.lastName}</p>
+                        )}
                       </div>
                     </div>
 
@@ -239,11 +316,14 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="Example@mail.com"
+                          placeholder="johndoe@mail.com"
                           value={formData.email}
                           onChange={handleInputChange}
                           className="h-12"
                         />
+                        {errors.email && (
+                          <p className="text-sm text-destructive mt-1 font-montserrat">{errors.email}</p>
+                        )}
                       </div>
                       <div>
                         <Label htmlFor="phone" className="font-montserrat text-foreground/80 mb-2 block">
@@ -253,11 +333,15 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                           id="phone"
                           name="phone"
                           type="tel"
-                          placeholder="+91 XXXXXXXXXX"
+                          placeholder="1234567890"
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="h-12"
+                          maxLength={10}
                         />
+                        {errors.phone && (
+                          <p className="text-sm text-destructive mt-1 font-montserrat">{errors.phone}</p>
+                        )}
                       </div>
                     </div>
 
@@ -268,39 +352,15 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                       <Input
                         id="address"
                         name="address"
-                        placeholder="Example XYZ"
+                        placeholder="XYZ Street, New York, NY"
                         value={formData.address}
                         onChange={handleInputChange}
                         className="h-12"
+                        maxLength={100}
                       />
-                    </div>
-
-                    <div>
-                      <Label className="font-montserrat text-foreground/80 mb-2 block">
-                        Photo ( Optional )
-                      </Label>
-                      <div
-                        className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
-                        onClick={() => photoInputRef.current?.click()}
-                      >
-                        <input
-                          ref={photoInputRef}
-                          type="file"
-                          accept="image/*"
-                          className="hidden"
-                          onChange={(e) => handleFileChange(e, 'photo')}
-                        />
-                        {formData.photo ? (
-                          <p className="text-foreground font-montserrat">{formData.photo.name}</p>
-                        ) : (
-                          <div className="flex flex-col items-center gap-3">
-                            <Upload className="w-8 h-8 text-foreground" />
-                            <p className="text-muted-foreground font-montserrat">
-                              <span className="text-primary underline">Upload a file</span> or drag and drop here
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                      {errors.address && (
+                        <p className="text-sm text-destructive mt-1 font-montserrat">{errors.address}</p>
+                      )}
                     </div>
                   </div>
 
@@ -320,31 +380,24 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                     </div>
 
                     <div>
-                      <Label className="font-montserrat text-foreground/80 mb-2 block">
-                        <span className="text-destructive">*</span> Resume
+                      <Label htmlFor="resumeLink" className="font-montserrat text-foreground/80 mb-2 block">
+                        <span className="text-destructive">*</span> Resume (Google Drive Link)
                       </Label>
-                      <div
-                        className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
-                        onClick={() => resumeInputRef.current?.click()}
-                      >
-                        <input
-                          ref={resumeInputRef}
-                          type="file"
-                          accept=".pdf,.doc,.docx"
-                          className="hidden"
-                          onChange={(e) => handleFileChange(e, 'resume')}
-                        />
-                        {formData.resume ? (
-                          <p className="text-foreground font-montserrat">{formData.resume.name}</p>
-                        ) : (
-                          <div className="flex flex-col items-center gap-3">
-                            <Upload className="w-8 h-8 text-foreground" />
-                            <p className="text-muted-foreground font-montserrat">
-                              <span className="text-primary underline">Upload a file</span> or drag and drop here
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                      <Input
+                        id="resumeLink"
+                        name="resumeLink"
+                        type="url"
+                        placeholder="https://drive.google.com/file/d/..."
+                        value={formData.resumeLink}
+                        onChange={handleInputChange}
+                        className="h-12"
+                      />
+                      {errors.resumeLink && (
+                        <p className="text-sm text-destructive mt-1 font-montserrat">{errors.resumeLink}</p>
+                      )}
+                      <p className="text-xs text-muted-foreground font-montserrat mt-2">
+                        Please ensure your Google Drive link is set to "Anyone with the link can view"
+                      </p>
                     </div>
                   </div>
 
@@ -373,7 +426,11 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         value={formData.interest}
                         onChange={handleInputChange}
                         className="min-h-[120px] resize-none"
+                        maxLength={500}
                       />
+                      {errors.interest && (
+                        <p className="text-sm text-destructive mt-1 font-montserrat">{errors.interest}</p>
+                      )}
                     </div>
 
                     <div>
@@ -386,16 +443,21 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
                         value={formData.additionalLinks}
                         onChange={handleInputChange}
                         className="min-h-[120px] resize-none"
+                        maxLength={100}
                       />
+                      {errors.additionalLinks && (
+                        <p className="text-sm text-destructive mt-1 font-montserrat">{errors.additionalLinks}</p>
+                      )}
                     </div>
                   </div>
 
                   {/* Submit Button */}
                   <Button
                     type="submit"
-                    className="w-full rounded-full font-montserrat font-semibold text-lg py-6"
+                    disabled={isSubmitting}
+                    className="w-full rounded-full font-montserrat font-semibold text-lg py-6 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Apply for this job
+                    {isSubmitting ? 'Submitting...' : 'Apply for this job'}
                   </Button>
                 </form>
               </div>
