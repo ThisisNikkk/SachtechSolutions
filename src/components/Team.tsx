@@ -4,7 +4,7 @@ import xIcon from "@/assets/x-icon.jpg";
 import team1 from "@/assets/team1.png";
 import team2 from "@/assets/team2.png";
 import team3 from "@/assets/team3.png";
-import team4 from "@/assets/team-4.jpg";
+import team4 from "@/assets/team4.png";
 import team5 from "@/assets/team5.png";
 import team6 from "@/assets/team6.png";
 import team7 from "@/assets/team7.png";
@@ -19,8 +19,9 @@ const Team = ({ onNavigate }) => {
       name: "Kapil Dhawan",
       title: "Founder & CEO",
       image: team1,
+      description: "Visionary leader driving the company's strategic direction and growth.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/kapil-dhawan-91128a42/",
       },
     },
     {
@@ -28,8 +29,9 @@ const Team = ({ onNavigate }) => {
       name: "Mohit Asija",
       title: "CFO & Managing Director",
       image: team2,
+      description: "Financial expert and strategic leader ensuring the company's fiscal health and operational excellence.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/mohit-asija-987a5140/",
       },
     },
     {
@@ -37,6 +39,7 @@ const Team = ({ onNavigate }) => {
       name: "Sahil Dhawan",
       title: "Business Manager",
       image: team3,
+      description: "Experienced manager overseeing business operations and driving efficiency.",
       social: {
         linkedin: "#",
       },
@@ -46,8 +49,9 @@ const Team = ({ onNavigate }) => {
       name: "Diwanshu Tangri",
       title: "Project Manager",
       image: team4,
+      description: "Detail-oriented project manager ensuring timely and successful project delivery.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/diwanshu-tangri-45667b7b/",
       },
     },
     {
@@ -55,8 +59,9 @@ const Team = ({ onNavigate }) => {
       name: "Sunil Bhatia",
       title: "Project Manager",
       image: team8,
+      description: "Dedicated project manager focused on delivering high-quality results for our clients.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/sunil-b-2a0800a7/",
       },
     },
     {
@@ -64,6 +69,7 @@ const Team = ({ onNavigate }) => {
       name: "Shivali Sharma",
       title: "Project Manager",
       image: team5,
+      description: "Proactive project manager with a knack for creative problem-solving and team collaboration.",
       social: {
         linkedin: "#",
       },
@@ -71,10 +77,11 @@ const Team = ({ onNavigate }) => {
     {
       id: 7,
       name: "Nardeep Sandhu",
-      title: "Senior Android Developer",
+      title: "Operational Manager",
       image: team6,
+      description: "Streamlining workflows and enhancing productivity through effective operational strategies.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/nardeep-sandhu-829b5169/",
       },
     },
     {
@@ -82,8 +89,9 @@ const Team = ({ onNavigate }) => {
       name: "Ashish Bhardwaj",
       title: "Operational Manager",
       image: team7,
+      description: "Focused on optimizing operational processes and ensuring smooth business functions.",
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/ashish-bhardwaj-257b50123/",
       },
     },
   ];
@@ -143,6 +151,9 @@ const Team = ({ onNavigate }) => {
 
               {/* Title */}
               <p className="text-primary font-poppins mb-3">{member.title}</p>
+              <p className="text-sm text-muted-foreground font-montserrat leading-relaxed mb-4">
+                {member.description}
+              </p>
 
               {/* Social Links */}
               <div className="flex items-center justify-center gap-3">
@@ -150,6 +161,7 @@ const Team = ({ onNavigate }) => {
                   href={member.social.linkedin}
                   className="w-8 h-8 rounded-full bg-background flex items-center justify-center hover:bg-secondary transition-colors"
                   aria-label={`${member.name}'s LinkedIn`}
+                  target="_blank"
                 >
                   <Linkedin className="w-4 h-4 text-black" />
                 </a>
