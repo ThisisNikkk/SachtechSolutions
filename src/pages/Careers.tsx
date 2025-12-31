@@ -11,10 +11,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Check, Plane, GraduationCap, Users, Trophy, Clock, Smile, PartyPopper } from 'lucide-react';
 import { jobsData } from '@/data/jobsData';
 import teamCollaborating from '@/assets/team-collaboration.jpg';
-import officeSpace from '@/assets/office-space.jpg';
-import teamLunch from '@/assets/team-lunch.jpg';
-import casualGathering from '@/assets/casual-gathering.jpg';
-import modernOffice from '@/assets/modern-office.jpg';
+import life1 from '@/assets/life1.jpg';
+import life2 from '@/assets/life2.jpg';
+import life3 from '@/assets/life3.jpg';
+import life4 from '@/assets/life4.jpg';
+import life5 from '@/assets/life5.jpg';
+import life6 from '@/assets/life6.jpg';
+import life7 from '@/assets/life7.jpg';
+import life8 from '@/assets/life8.jpg';
+
 
 interface CareersProps {
   onNavigate: () => void;
@@ -183,42 +188,42 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <img
-              src={modernOffice}
+              src={life1}
               alt="Modern office space"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={officeSpace}
+              src={life4}
               alt="Team collaboration"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={teamLunch}
+              src={life8}
               alt="Team lunch"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={casualGathering}
+              src={life7}
               alt="Casual gathering"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={modernOffice}
+              src={life6}
               alt="Modern office space"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={officeSpace}
+              src={life2}
               alt="Team collaboration"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={teamLunch}
+              src={life5}
               alt="Team lunch"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
-              src={casualGathering}
+              src={life3}
               alt="Casual gathering"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
             />
