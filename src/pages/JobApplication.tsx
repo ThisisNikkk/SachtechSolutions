@@ -14,6 +14,7 @@ import heroBackground from '@/assets/hero-background.jpg';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { useState } from 'react';
+import SEO from '@/components/SEO';
 
 interface JobApplicationProps {
   onNavigate: () => void;
@@ -200,6 +201,11 @@ const JobApplication: React.FC<JobApplicationProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`Apply for ${job.title} - Solario Tech`}
+        description={`Ready to join our team? Apply for the ${job.title} position at Solario Tech. Submit your application and take the next step in your career.`}
+        keywords={`job application, apply, ${job.title}, careers, ${job.location}`}
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
 

@@ -8,6 +8,7 @@ import { serviceIncludes } from '@/data/serviceIncludes';
 import { services } from '@/data/ServiceData';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '@/components/SEO';
 
 interface ServiceIncludeDetailProps {
     onNavigate: () => void;
@@ -37,6 +38,11 @@ const ServiceIncludeDetail: React.FC<ServiceIncludeDetailProps> = ({ onNavigate 
 
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title={`${includeItem.id} - ${service?.title || 'Services'} | Solario Tech`}
+                description={`Learn about our ${includeItem.id} services as part of our comprehensive ${service?.title || 'software development'} solutions.`}
+                keywords={`${includeItem.id}, ${service?.title}, software development, technology services`}
+            />
             <TopBar />
             <Navigation onNavigate={onNavigate} />
             <PageBanner

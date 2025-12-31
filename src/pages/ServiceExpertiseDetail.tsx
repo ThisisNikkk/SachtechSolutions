@@ -8,6 +8,7 @@ import { serviceExpertise } from '@/data/serviceExpertise';
 import { services } from '@/data/ServiceData';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '@/components/SEO';
 
 interface ServiceExpertiseDetailProps {
     onNavigate: () => void;
@@ -37,6 +38,11 @@ const ServiceExpertiseDetail: React.FC<ServiceExpertiseDetailProps> = ({ onNavig
 
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title={`${expertiseItem.id} - ${service?.title || 'Services'} Expertise | Solario Tech`}
+                description={`Discover our expertise in ${expertiseItem.id} as part of our ${service?.title || 'software development'} services.`}
+                keywords={`${expertiseItem.id}, ${service?.title}, expertise, software development, technology solutions`}
+            />
             <TopBar />
             <Navigation onNavigate={onNavigate} />
             <PageBanner

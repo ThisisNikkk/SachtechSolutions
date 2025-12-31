@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import illustration from "@/assets/NotFound.svg";
+import SEO from "@/components/SEO";
 
 const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
   const location = useLocation();
@@ -29,18 +30,23 @@ const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="404 - Page Not Found | Solario Tech"
+        description="Sorry, the page you are looking for could not be found. Navigate back to our homepage to explore our software development services."
+        keywords="404, page not found, error"
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
-      
+
       {/* 404 Hero Section */}
       <section className="py-10 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
             {/* Robot Illustration */}
             <div className="mb-8">
-              <img 
-                src={illustration} 
-                alt="404 Robot" 
+              <img
+                src={illustration}
+                alt="404 Robot"
                 className="w-full max-w-lg h-96 mx-auto"
               />
             </div>
@@ -56,9 +62,9 @@ const NotFound = ({ onNavigate }: { onNavigate?: () => void }) => {
             </p>
 
             {/* Back to Home Button */}
-            <Button 
+            <Button
               onClick={handleBackHome}
-              size="lg" 
+              size="lg"
               className="rounded-full gap-2 font-montserrat font-medium"
               disabled={isNavigating}
             >

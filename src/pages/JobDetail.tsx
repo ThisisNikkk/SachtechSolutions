@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Facebook, Twitter, Linkedin, Link2, Instagram } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '@/components/SEO';
 
 interface JobDetailProps {
   onNavigate: () => void;
@@ -40,6 +41,11 @@ const JobDetail: React.FC<JobDetailProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${job.title} - Career Opportunity at Solario Tech`}
+        description={`${job.description} Join our team as a ${job.title} in ${job.location}. ${job.type} position with competitive benefits.`}
+        keywords={`${job.title}, ${job.department}, jobs, careers, ${job.location}, ${job.type}, employment`}
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
 

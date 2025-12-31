@@ -8,6 +8,7 @@ import { services } from '@/data/ServiceData';
 import { Check } from 'lucide-react';
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import modernOffice from "@/assets/modern-office.jpg";
+import SEO from '@/components/SEO';
 
 interface ServiceDetailProps {
     onNavigate: () => void;
@@ -31,6 +32,11 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ onNavigate }) => {
 
     return (
         <div className="min-h-screen flex flex-col">
+            <SEO
+                title={`${service.title} Services - Solario Tech`}
+                description={service.detailedDescription.substring(0, 155)}
+                keywords={`${service.title}, ${service.title.toLowerCase()} services, software development, technology solutions`}
+            />
             <TopBar />
             <Navigation onNavigate={onNavigate} />
             <PageBanner

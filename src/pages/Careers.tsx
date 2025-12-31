@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Check, Plane, GraduationCap, Users, Trophy, Clock, Smile, PartyPopper } from 'lucide-react';
 import { jobsData } from '@/data/jobsData';
+import SEO from '@/components/SEO';
 import teamCollaborating from '@/assets/team-collaboration.jpg';
 import life1 from '@/assets/life1.jpg';
 import life2 from '@/assets/life2.jpg';
@@ -105,8 +106,14 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
   ];
 
 
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Careers - Join Our Team at Solario Tech"
+        description="Explore exciting career opportunities at Solario Tech. Join our innovative team and work on cutting-edge technology projects. View open positions and apply today."
+        keywords="careers, jobs, employment, software developer jobs, tech careers, join our team, job openings, hiring"
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
 

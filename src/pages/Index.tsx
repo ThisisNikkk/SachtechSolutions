@@ -12,10 +12,16 @@ import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import FAQs from "@/components/FAQs";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Solario Tech - Leading Software Development & Technology Solutions Company"
+        description="Transform your business with cutting-edge software development, mobile app development, AI, IoT, and cloud solutions from Solario Tech. Innovation meets excellence."
+        keywords="software development company, mobile app development, web development, AI solutions, IoT, cloud computing, digital transformation, technology consulting, custom software"
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
       <Hero onNavigate={onNavigate} />

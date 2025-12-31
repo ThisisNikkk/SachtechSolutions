@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import ScrollToTop from "./components/ScrollToTop";
+import StructuredData from "./components/StructuredData";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
@@ -31,6 +32,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <StructuredData />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index onNavigate={handleNavigation} />} />

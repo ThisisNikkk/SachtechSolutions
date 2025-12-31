@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import React from 'react';
 import ServicesTicker from '@/components/ServicesTicker';
 import Contact from '@/components/Contact';
+import SEO from '@/components/SEO';
 
 interface PortfolioProps {
   onNavigate: () => void;
@@ -14,19 +15,24 @@ interface PortfolioProps {
 const Portfolio: React.FC<PortfolioProps> = ({ onNavigate }) => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Our Portfolio - Successful Projects & Case Studies | Solario Tech"
+        description="Explore our portfolio of successful mobile apps, web applications, and enterprise software solutions delivered to clients worldwide. See our work in action."
+        keywords="portfolio, projects, case studies, mobile apps, web applications, software projects, client work, success stories"
+      />
       <TopBar />
       <Navigation onNavigate={onNavigate} />
-      <PageBanner 
-        title="Portfolio" 
+      <PageBanner
+        title="Portfolio"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Portfolio' }
-        ]} 
+        ]}
       />
       <PortfolioComponent />
-      <ServicesTicker/>
-      <Contact/>
-      <ServicesTicker/>
+      <ServicesTicker />
+      <Contact />
+      <ServicesTicker />
       <Footer />
     </div>
   );
