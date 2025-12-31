@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import TopBar from '@/components/TopBar';
 import PageBanner from '@/components/PageBanner';
@@ -15,6 +15,7 @@ interface ServiceIncludeDetailProps {
 
 const ServiceIncludeDetail: React.FC<ServiceIncludeDetailProps> = ({ onNavigate }) => {
     const { slug, includeSlug } = useParams<{ slug: string; includeSlug: string }>();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -65,6 +66,7 @@ const ServiceIncludeDetail: React.FC<ServiceIncludeDetailProps> = ({ onNavigate 
                                         key={idx}
                                         size="lg"
                                         className={`${idx === 0 ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/5'} font-semibold px-8`}
+                                        onClick={() => navigate('/contact')}
                                     >
                                         {btn.label}
                                     </Button>
@@ -116,6 +118,7 @@ const ServiceIncludeDetail: React.FC<ServiceIncludeDetailProps> = ({ onNavigate 
                                         key={idx}
                                         size="lg"
                                         className={`${idx === 0 ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-transparent border-2 border-primary text-primary hover:bg-primary/5'} font-semibold px-8`}
+                                        onClick={() => navigate('/contact')}
                                     >
                                         {btn.label}
                                     </Button>

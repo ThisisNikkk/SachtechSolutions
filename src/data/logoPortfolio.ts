@@ -1,28 +1,26 @@
-import afrohook from "@/assets/logo/Afrohook Presentation 4.png";
-import airSpraySystems from "@/assets/logo/Air Spray Systems Presentation 1.png";
-import logoPresentation from "@/assets/logo/Logo Presentation 1.png";
-import logo1 from "@/assets/logo/Rectangle 68.png";
-import logo2 from "@/assets/logo/Rectangle 68-1.png";
-import logo3 from "@/assets/logo/Rectangle 68-2.png";
-import logo4 from "@/assets/logo/Rectangle 68-3.png";
-import logo5 from "@/assets/logo/Rectangle 68-4.png";
-import logo6 from "@/assets/logo/Rectangle 68-5.png";
-import logo7 from "@/assets/logo/Rectangle 68-6.png";
-import logo8 from "@/assets/logo/Rectangle 68-7.png";
-import logo9 from "@/assets/logo/Rectangle 68-8.png";
-import logo10 from "@/assets/logo/Rectangle 68-9.png";
-import logo11 from "@/assets/logo/Rectangle 68-10.png";
-import logo12 from "@/assets/logo/Rectangle 68-11.png";
-import logo13 from "@/assets/logo/Rectangle 68-12.png";
-import logo14 from "@/assets/logo/Rectangle 68-13.png";
-import logo15 from "@/assets/logo/Rectangle 68-14.png";
-import logo16 from "@/assets/logo/Rectangle 68-15.png";
-import logo17 from "@/assets/logo/Rectangle 68-16.png";
-import logo18 from "@/assets/logo/Rectangle 68-17.png";
-import logo19 from "@/assets/logo/Rectangle 68-18.png";
-import logo20 from "@/assets/logo/Rectangle 68-19.png";
-import logo21 from "@/assets/logo/Rectangle 68-20.png";
-import logo22 from "@/assets/logo/Rectangle 68-21.png";
+import afrohook from "@/assets/logo/1.png";
+import airSpraySystems from "@/assets/logo/2.png";
+import logoPresentation from "@/assets/logo/3.png";
+import logo1 from "@/assets/logo/4.png";
+import logo2 from "@/assets/logo/5.png";
+import logo3 from "@/assets/logo/6.png";
+import logo4 from "@/assets/logo/7.png";
+import logo5 from "@/assets/logo/8.png";
+import logo6 from "@/assets/logo/9.png";
+import logo7 from "@/assets/logo/10.png";
+import logo8 from "@/assets/logo/11.png";
+import logo9 from "@/assets/logo/12.png";
+import logo10 from "@/assets/logo/13.png";
+import logo11 from "@/assets/logo/14.png";
+import logo12 from "@/assets/logo/15.png";
+import logo13 from "@/assets/logo/16.png";
+import logo14 from "@/assets/logo/17.png";
+import logo15 from "@/assets/logo/18.png";
+import logo16 from "@/assets/logo/19.png";
+import logo17 from "@/assets/logo/20.png";
+import logo19 from "@/assets/logo/22.png";
+import logo20 from "@/assets/logo/23.png";
+import logo21 from "@/assets/logo/24.png";
 
 export const logoPortfolioItems = [
     {
@@ -35,144 +33,138 @@ export const logoPortfolioItems = [
         id: 2,
         title: "Air Spray Systems",
         image: airSpraySystems,
-        tags: ["Logo Design", "Industrial", "Branding"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 3,
-        title: "Brand Identity Collection",
+        title: "A1 Truck Parking",
         image: logoPresentation,
-        tags: ["Logo Design", "Branding", "Portfolio"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 4,
-        title: "Modern Tech Logo",
+        title: "VOO",
         image: logo1,
-        tags: ["Logo Design", "Technology", "Minimalist"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 5,
-        title: "Creative Studio Logo",
+        title: "Turkestan Lines",
         image: logo2,
-        tags: ["Logo Design", "Creative", "Branding"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 6,
-        title: "Business Brand Identity",
+        title: "What Happened Here?",
         image: logo3,
-        tags: ["Logo Design", "Corporate", "Professional"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 7,
-        title: "Startup Logo Design",
+        title: "Culture Code",
         image: logo4,
-        tags: ["Logo Design", "Startup", "Modern"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 8,
-        title: "E-commerce Brand",
+        title: "Eatsy",
         image: logo5,
-        tags: ["Logo Design", "E-commerce", "Retail"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 9,
-        title: "Healthcare Logo",
+        title: "LOK8R",
         image: logo6,
-        tags: ["Logo Design", "Healthcare", "Medical"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 10,
-        title: "Food & Beverage Brand",
+        title: "TapN",
         image: logo7,
-        tags: ["Logo Design", "Food & Beverage", "Restaurant"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 11,
-        title: "Fitness Brand Identity",
+        title: "SUPERSENSES",
         image: logo8,
-        tags: ["Logo Design", "Fitness", "Sports"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 12,
-        title: "Education Logo",
+        title: "Medilepsy",
         image: logo9,
-        tags: ["Logo Design", "Education", "Learning"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 13,
-        title: "Real Estate Brand",
+        title: "UFndr",
         image: logo10,
-        tags: ["Logo Design", "Real Estate", "Property"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 14,
-        title: "Fashion Brand Identity",
+        title: "SuperCar Connect",
         image: logo11,
-        tags: ["Logo Design", "Fashion", "Lifestyle"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 15,
-        title: "Financial Services Logo",
+        title: "Clindle",
         image: logo12,
-        tags: ["Logo Design", "Finance", "Banking"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 16,
-        title: "Travel & Tourism Brand",
+        title: "Ask Trump Anything",
         image: logo13,
-        tags: ["Logo Design", "Travel", "Tourism"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 17,
-        title: "Entertainment Logo",
+        title: "Collabify",
         image: logo14,
-        tags: ["Logo Design", "Entertainment", "Media"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 18,
-        title: "Automotive Brand",
+        title: "Employee Care",
         image: logo15,
-        tags: ["Logo Design", "Automotive", "Transport"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 19,
-        title: "Consulting Firm Logo",
+        title: "Payback",
         image: logo16,
-        tags: ["Logo Design", "Consulting", "Professional"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 20,
-        title: "Beauty & Wellness Brand",
+        title: "Retriever",
         image: logo17,
-        tags: ["Logo Design", "Beauty", "Wellness"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
-    {
-        id: 21,
-        title: "Construction Company Logo",
-        image: logo18,
-        tags: ["Logo Design", "Construction", "Industrial"],
-    },
+    // {
+    //     id: 21,
+    //     title: "Construction Company Logo",
+    //     image: logo18,
+    //     tags: ["Logo Design", "Construction", "Industrial"],
+    // },
     {
         id: 22,
-        title: "Hospitality Brand",
+        title: "Swipe Right Sports",
         image: logo19,
-        tags: ["Logo Design", "Hospitality", "Hotel"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 23,
-        title: "Non-Profit Organization",
+        title: "California Tools & Equipment",
         image: logo20,
-        tags: ["Logo Design", "Non-Profit", "Community"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
     {
         id: 24,
-        title: "Gaming Brand Identity",
+        title: "View",
         image: logo21,
-        tags: ["Logo Design", "Gaming", "Esports"],
-    },
-    {
-        id: 25,
-        title: "Luxury Brand Logo",
-        image: logo22,
-        tags: ["Logo Design", "Luxury", "Premium"],
+        tags: ["Logo Design", "Branding", "Identity"],
     },
 ];

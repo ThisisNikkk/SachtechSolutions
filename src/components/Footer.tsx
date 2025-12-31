@@ -30,6 +30,7 @@ const Footer = () => {
   });
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -53,12 +54,16 @@ const Footer = () => {
     };
   }, []);
 
-  const onSubmit = (data: NewsletterForm) => {
+  const onSubmit = async (data: NewsletterForm) => {
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     toast({
       title: "Subscribed!",
       description: "Thank you for subscribing to our newsletter.",
     });
     reset();
+    setIsSubmitting(false);
   };
 
   return (
@@ -87,9 +92,10 @@ const Footer = () => {
                   />
                   <Button
                     type="submit"
-                    className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-full h-12 px-8 font-poppins font-medium"
+                    disabled={isSubmitting}
+                    className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-full h-12 px-8 font-poppins font-medium disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Subscribe
+                    {isSubmitting ? "Subscribing..." : "Subscribe"}
                   </Button>
                 </div>
                 {errors.email && (
@@ -186,7 +192,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-navy-foreground/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-navy-foreground/60 text-sm font-montserrat">
+          <p className="text-navy-foreground/70 text-sm font-montserrat">
             © {new Date().getFullYear()} Solario Tech. All Rights Reserved.
           </p>
 
@@ -228,8 +234,7 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div className="flex items-center gap-6 text-sm text-navy-foreground/60 font-montserrat">
-            <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy</a>
-            <a href="/terms-conditions" className="hover:text-primary transition-colors">Terms</a>
+            <p className="text-navy-foreground/70 text-sm font-montserrat">Let’s Build Together</p>
           </div>
         </div>
       </div>

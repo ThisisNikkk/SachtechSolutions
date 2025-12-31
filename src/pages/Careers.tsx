@@ -8,7 +8,7 @@ import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Check, HeartPulse, Plane, GraduationCap, Users, Trophy, Clock, Smile } from 'lucide-react';
+import { Check, Plane, GraduationCap, Users, Trophy, Clock, Smile, PartyPopper } from 'lucide-react';
 import { jobsData } from '@/data/jobsData';
 import teamCollaborating from '@/assets/team-collaboration.jpg';
 import officeSpace from '@/assets/office-space.jpg';
@@ -78,9 +78,9 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
 
   const perks = [
     {
-      icon: HeartPulse,
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance, gym memberships, and wellness programs."
+      icon: PartyPopper,
+      title: "Fun Fridays",
+      description: "Casual team activities and light-hearted games to unwind and connect at the end of the week."
     },
     {
       icon: Plane,
@@ -90,14 +90,15 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
     {
       icon: GraduationCap,
       title: "Professional Development",
-      description: "Annual learning budget for courses, books, and conference attendance."
+      description: "Opportunities to grow through mentorship, internal training, and hands-on project experience."
     },
     {
       icon: Smile,
-      title: "Team Events",
-      description: "Regular team building activities, social events, and celebrations."
+      title: "Team Culture",
+      description: "A friendly, collaborative environment that values teamwork and shared success."
     }
   ];
+
 
   return (
     <div className="min-h-screen">
@@ -228,7 +229,7 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
       <ServicesTicker />
 
       {/* Open Positions Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted" id="open-positions">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
@@ -366,9 +367,16 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
             size="lg"
             className="rounded-full font-montserrat font-semibold text-lg px-8"
             onClick={() => {
-              const element = document.querySelector('#open-positions') as HTMLElement;
+              const element = document.getElementById('open-positions');
               if (element) {
-                window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+                const headerOffset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth"
+                });
               }
             }}
           >
