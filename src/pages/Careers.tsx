@@ -197,42 +197,58 @@ const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
             <img
               src={life1}
               alt="Modern office space"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life4}
               alt="Team collaboration"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life8}
               alt="Team lunch"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life7}
               alt="Casual gathering"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life6}
               alt="Modern office space"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life2}
               alt="Team collaboration"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life5}
               alt="Team lunch"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
             <img
               src={life3}
               alt="Casual gathering"
+              loading="lazy"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+              style={{ imageRendering: 'auto' as const }}
             />
           </div>
         </div>
