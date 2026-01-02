@@ -77,7 +77,7 @@ const Team = ({ onNavigate }) => {
     {
       id: 7,
       name: "Nardeep Sandhu",
-      title: "Operational Manager",
+      title: "Operations Manager",
       image: team6,
       description: "Streamlining workflows and enhancing productivity through effective operational strategies.",
       social: {
@@ -87,7 +87,7 @@ const Team = ({ onNavigate }) => {
     {
       id: 8,
       name: "Ashish Bhardwaj",
-      title: "Operational Manager",
+      title: "Operations Manager",
       image: team7,
       description: "Focused on optimizing operational processes and ensuring smooth business functions.",
       social: {
