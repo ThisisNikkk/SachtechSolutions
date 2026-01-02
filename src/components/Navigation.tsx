@@ -67,10 +67,10 @@ const Navigation = ({ onNavigate }) => {
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3 sm:py-5 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 sm:py-3 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-4" onClick={handleLinkClick}>
-          <img src={logo} alt="Solario Tech" className="h-16 md:h-24 w-auto object-contain" />
+          <img src={logo} alt="Solario Tech" className="h-12 md:h-16 w-auto object-contain" />
         </NavLink>
 
         {/* Navigation Links */}
@@ -92,7 +92,7 @@ const Navigation = ({ onNavigate }) => {
         </div>
 
         {/* CTA Button */}
-        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-montserrat font-medium h-12 hover:bg-foreground hover:text-background" onClick={handleGetAQuoteClick}>
+        <Button size="lg" className="hidden lg:inline-flex rounded-full text-sm font-montserrat font-medium h-10 hover:bg-foreground hover:text-background" onClick={handleGetAQuoteClick}>
           Get A Quote
         </Button>
 
@@ -108,7 +108,7 @@ const Navigation = ({ onNavigate }) => {
 
       {/* Mobile Menu Overlay - Fullscreen Animated */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center 
+        className={`lg:hidden fixed inset-0 bg-background z-50 font-montserrat font-medium flex flex-col items-center justify-center
           transition-opacity duration-300 ease-in-out ${ // MODIFICATION: Changed 'transition-all' to 'transition-opacity' and adjusted duration/easing
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto" // MODIFICATION: Removed 'translate-y-0'

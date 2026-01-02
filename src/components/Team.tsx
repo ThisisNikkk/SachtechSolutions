@@ -27,7 +27,7 @@ const Team = ({ onNavigate }) => {
     {
       id: 2,
       name: "Mohit Asija",
-      title: "CFO & Managing Director",
+      title: "Co-Founder & Managing Director",
       image: team2,
       description: "Financial expert and strategic leader ensuring the company's fiscal health and operational excellence.",
       social: {

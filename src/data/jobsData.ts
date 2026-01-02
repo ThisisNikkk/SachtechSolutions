@@ -152,5 +152,40 @@ export const jobsData: Job[] = [
       "Opportunities to work with cutting-edge technologies and innovative projects",
       "Comprehensive training and development programs to support your career growth"
     ]
+  },
+  {
+    id: "5",
+    title: "Business Analyst",
+    location: "Mohali, India",
+    type: "Full-time",
+    department: "Business",
+    experience: "1 to 3 Years",
+    description: "Analyze business needs and translate them into technical requirements for development teams.",
+    detailedDescription: [
+      "We are looking for a detailed-oriented Business Analyst to bridge the gap between business needs and technical solutions. You will work closely with stakeholders to understand their requirements and translate them into specifications for our development team.",
+      "The ideal candidate will have 1-3 years of experience, strong analytical skills, and the ability to communicate complex ideas effectively."
+    ],
+    responsibilities: [
+      "Gather and document business requirements from clients and stakeholders",
+      "Translate business needs into detailed technical specifications and user stories",
+      "Collaborate with development and QA teams to ensure successful delivery",
+      "Conduct market research and competitor analysis",
+      "Create wireframes, process flows, and diagrams to visualize solutions",
+      "Assist in user acceptance testing (UAT) and training"
+    ],
+    skills: [
+      "1-3 years of proven experience as a Business Analyst in IT",
+      "Strong proficiency in documentation tools and Microsoft Office suite",
+      "Knowledge of Agile/Scrum methodologies",
+      "Excellent verbal and written communication skills",
+      "Analytical mindset with critical thinking capabilities",
+      "Basic understanding of web and mobile technologies"
+    ],
+    benefits: [
+      "Competitive salary and benefits package",
+      "One EL credited per month",
+      "Opportunities to work with cutting-edge technologies and innovative projects",
+      "Comprehensive training and development programs to support your career growth"
+    ]
   }
 ];
