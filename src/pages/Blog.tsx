@@ -20,30 +20,30 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative rounded-2xl overflow-hidden h-[400px] md:h-[450px]"
+          className="relative rounded-xl overflow-hidden h-[350px] md:h-[400px]"
         >
           <img
             src={post.image}
             alt={post.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-            <div className="flex items-center gap-2 text-white/80 text-sm mb-3">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-center">
+            <div className="flex items-center justify-center gap-2 text-white/80 text-sm mb-3">
               <span>{post.date}</span>
               <span>•</span>
               <span>{post.category}</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 font-poppins group-hover:text-primary transition-colors">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-poppins group-hover:text-primary transition-colors max-w-lg mx-auto">
               {post.title}
             </h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center gap-3">
               <img
                 src={post.author.avatar}
                 alt={post.author.name}
-                className="w-10 h-10 rounded-full object-cover border-2 border-white/30"
+                className="w-8 h-8 rounded-full object-cover border-2 border-white/30"
               />
-              <span className="text-white font-medium">{post.author.name}</span>
+              <span className="text-white font-medium text-sm">{post.author.name}</span>
             </div>
           </div>
         </motion.div>
@@ -58,34 +58,30 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl overflow-hidden bg-card shadow-lg hover:shadow-xl transition-shadow"
+        className="relative rounded-xl overflow-hidden h-[220px] md:h-[240px]"
       >
-        <div className="relative h-48 overflow-hidden">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-4 left-4 right-4">
-            <div className="flex items-center gap-2 text-white/90 text-xs mb-2">
-              <span>{post.date}</span>
-              <span>•</span>
-              <span>{post.category}</span>
-            </div>
-            <h3 className="text-lg font-bold text-white font-poppins line-clamp-2 group-hover:text-primary-light transition-colors">
-              {post.title}
-            </h3>
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+          <div className="flex items-center gap-2 text-white/80 text-xs mb-2">
+            <span>{post.date}</span>
+            <span>•</span>
+            <span>{post.category}</span>
           </div>
-        </div>
-        <div className="p-4">
-          <div className="flex items-center gap-3">
+          <h3 className="text-base md:text-lg font-bold text-white font-poppins line-clamp-2 group-hover:text-primary transition-colors mb-3">
+            {post.title}
+          </h3>
+          <div className="flex items-center gap-2">
             <img
               src={post.author.avatar}
               alt={post.author.name}
-              className="w-8 h-8 rounded-full object-cover"
+              className="w-6 h-6 rounded-full object-cover"
             />
-            <span className="text-sm text-muted-foreground">{post.author.name}</span>
+            <span className="text-xs text-white/90">{post.author.name}</span>
           </div>
         </div>
       </motion.div>
@@ -126,13 +122,13 @@ const Blog = ({ onNavigate }: BlogProps) => {
         onNavigate={onNavigate}
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
-              <p className="text-muted-foreground mb-2 font-montserrat">— News & Blogs</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-poppins">
+              <p className="text-muted-foreground mb-2 font-montserrat text-sm">— News & Blogs</p>
+              <h2 className="text-2xl md:text-3xl font-bold font-poppins">
                 Our Latest <span className="text-primary">News & Blogs</span>
               </h2>
             </div>
@@ -148,10 +144,10 @@ const Blog = ({ onNavigate }: BlogProps) => {
                     setActiveCategory(category);
                     setVisiblePosts(5);
                   }}
-                  className={`rounded-full px-6 ${
+                  className={`rounded-full px-5 py-1.5 h-8 text-sm ${
                     activeCategory === category
                       ? "bg-primary text-primary-foreground"
-                      : "border-border hover:bg-primary hover:text-primary-foreground"
+                      : "border-border bg-background hover:bg-primary hover:text-primary-foreground"
                   }`}
                 >
                   {category}
@@ -166,8 +162,8 @@ const Blog = ({ onNavigate }: BlogProps) => {
               {/* Featured Post */}
               {featuredPost && <BlogCard post={featuredPost} featured />}
 
-              {/* Regular Posts Grid */}
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
+              {/* Regular Posts Grid - 2x2 layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                 {regularPosts.slice(0, visiblePosts - 1).map((post) => (
                   <BlogCard key={post.id} post={post} />
                 ))}
@@ -175,10 +171,10 @@ const Blog = ({ onNavigate }: BlogProps) => {
 
               {/* View More Button */}
               {regularPosts.length > visiblePosts - 1 && (
-                <div className="flex justify-center mt-12">
+                <div className="flex justify-center mt-10">
                   <Button
                     onClick={handleViewMore}
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8"
+                    className="bg-navy text-navy-foreground hover:bg-navy/90 rounded-full px-8 py-2"
                   >
                     View More
                   </Button>
@@ -194,14 +190,14 @@ const Blog = ({ onNavigate }: BlogProps) => {
       </section>
 
       {/* Services Ticker */}
-      <section className="bg-primary py-4 overflow-hidden">
+      <section className="bg-primary py-3 overflow-hidden">
         <div className="flex animate-scroll-left whitespace-nowrap">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="flex items-center gap-8 px-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex items-center gap-6 px-3">
               {["Application Design", "UX/UI Design", "Website Development", "Mobile Apps", "Cloud Solutions"].map((service, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <span className="text-primary-foreground font-semibold text-lg">{service}</span>
-                  <span className="text-primary-foreground text-2xl">✦</span>
+                <div key={idx} className="flex items-center gap-6">
+                  <span className="text-primary-foreground font-semibold text-base">{service}</span>
+                  <span className="text-primary-foreground text-xl">✦</span>
                 </div>
               ))}
             </div>
