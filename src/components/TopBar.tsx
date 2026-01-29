@@ -5,9 +5,9 @@ const TopBar = () => {
     <div className="hidden sm:flex bg-navy text-navy-foreground py-2">
       <div className="container mx-auto px-4 flex items-center justify-between text-sm">
         <div className="flex items-center gap-6">
-          <a href="tel:7087425488" className="flex items-center gap-2 hover:text-primary transition-colors font-montserrat text-sm">
+          <a href="tel:7814081762" className="flex items-center gap-2 hover:text-primary transition-colors font-montserrat text-sm">
             <Phone className="w-4 h-4" />
-            <span>+91 7087425488</span>
+            <span>+91 7814081762</span>
           </a>
           <a href="mailto:example@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors font-montserrat text-sm">
             <Mail className="w-4 h-4" />

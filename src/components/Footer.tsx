@@ -176,7 +176,7 @@ const Footer = () => {
             <div className="space-y-6 font-montserrat text-navy-foreground/80 text-sm">
               <div className="space-y-1">
                 <p className="font-semibold text-navy-foreground mb-1">Location:</p>
-                <p>C-86, Phase 7 Mohali, Punjab</p>
+                <p>C-86, Phase 7, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160055</p>
               </div>
               <div className="space-y-1">
                 <p className="font-semibold text-navy-foreground mb-1">Email:</p>
@@ -184,7 +184,7 @@ const Footer = () => {
               </div>
               <div className="space-y-1">
                 <p className="font-semibold text-navy-foreground mb-1">Phone:</p>
-                <a href="tel:+917087425488" className="hover:text-primary transition-colors">+91 7087425488</a>
+                <a href="tel:+917814081762" className="hover:text-primary transition-colors">+91 7814081762</a>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ const Footer = () => {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="https://wa.me/917087425488"
+              href="https://wa.me/917814081762"
               target="_blank"
               rel="noreferrer"
               className="w-10 h-10 rounded-xl border border-primary/50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"

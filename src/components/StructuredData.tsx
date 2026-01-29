@@ -21,7 +21,7 @@ const StructuredData: React.FC = () => {
         },
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+91-7087425488',
+            telephone: '+91-7814081762',
             contactType: 'Customer Service',
             email: 'contact@solariotech.com',
             availableLanguage: 'English',
@@ -55,7 +55,7 @@ const StructuredData: React.FC = () => {
         '@id': 'https://solariotech.com',
         name: 'Solario Tech',
         image: 'https://solariotech.com/og-image.jpg',
-        telephone: '+91-7087425488',
+        telephone: '+91-7814081762',
         email: 'contact@solariotech.com',
         address: {
             '@type': 'PostalAddress',

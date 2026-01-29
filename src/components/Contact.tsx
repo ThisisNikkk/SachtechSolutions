@@ -270,8 +270,10 @@ const Contact = ({ onNavigate }: { onNavigate?: () => void }) => {
             {/* Contact */}
             <div className="mb-8">
               <h3 className="text-2xl font-medium font-poppins mb-3">Contact</h3>
-              <p className="opacity-90 font-montserrat text-sm">Phone: +(91) 7087425488</p>
-              <p className="opacity-90 font-montserrat text-sm">Email: contact@solariotech.com</p>
+              <div className="space-y-1">
+                <a href="tel:+917814081762" className="opacity-90 font-montserrat text-sm block">Phone: +(91) 7814081762</a>
+                <a href="mailto:contact@solariotech.com" className="opacity-90 font-montserrat text-sm block">Email: contact@solariotech.com</a>
+              </div>
             </div>
 
             {/* Open Time */}
