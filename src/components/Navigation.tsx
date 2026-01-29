@@ -37,6 +37,7 @@ const Navigation = ({ onNavigate }) => {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
     { name: "Contact Us", href: "/contact" },

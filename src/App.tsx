@@ -18,6 +18,8 @@ import JobApplication from "./pages/JobApplication";
 import ServiceDetail from "./pages/ServiceDetail";
 import ServiceIncludeDetail from "./pages/ServiceIncludeDetail";
 import ServiceExpertiseDetail from "./pages/ServiceExpertiseDetail";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +43,8 @@ const App = () => {
             <Route path="/services/:slug/:includeSlug" element={<ServiceIncludeDetail onNavigate={handleNavigation} />} />
             <Route path="/services/:slug/expertise/:expertiseSlug" element={<ServiceExpertiseDetail onNavigate={handleNavigation} />} />
             <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
+            <Route path="/blog" element={<Blog onNavigate={handleNavigation} />} />
+            <Route path="/blog/:id" element={<BlogDetail onNavigate={handleNavigation} />} />
             <Route path="/about" element={<About onNavigate={handleNavigation} />} />
             <Route path="/contact" element={<Contact onNavigate={handleNavigation} />} />
             <Route path="/careers" element={<Careers onNavigate={handleNavigation} />} />
